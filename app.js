@@ -1,6 +1,61 @@
 (() => {
   'use strict';
 
+
+  function installBlobUrlRepairPatch() {
+    const fixBlobUrl = (value) => {
+      if (typeof value !== 'string') return value;
+      return value.replace(/^blob:(https?)(\/\/)/i, 'blob:$1:$2');
+    };
+
+    if (!XMLHttpRequest.prototype.__l2dpeBlobUrlRepair) {
+      const originalOpen = XMLHttpRequest.prototype.open;
+      XMLHttpRequest.prototype.open = function(method, url, ...args) {
+        return originalOpen.call(this, method, fixBlobUrl(url), ...args);
+      };
+      Object.defineProperty(XMLHttpRequest.prototype, '__l2dpeBlobUrlRepair', { value: true });
+    }
+
+    if (window.fetch && !window.fetch.__l2dpeBlobUrlRepair) {
+      const originalFetch = window.fetch.bind(window);
+      const patchedFetch = (input, init) => {
+        if (typeof input === 'string') {
+          input = fixBlobUrl(input);
+        } else if (input instanceof Request) {
+          const fixedUrl = fixBlobUrl(input.url);
+          if (fixedUrl !== input.url) input = new Request(fixedUrl, input);
+        }
+        return originalFetch(input, init);
+      };
+      Object.defineProperty(patchedFetch, '__l2dpeBlobUrlRepair', { value: true });
+      window.fetch = patchedFetch;
+    }
+
+    if (!HTMLImageElement.prototype.__l2dpeBlobUrlRepair) {
+      const srcDescriptor = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
+      if (srcDescriptor?.get && srcDescriptor?.set) {
+        Object.defineProperty(HTMLImageElement.prototype, 'src', {
+          get: srcDescriptor.get,
+          set(value) { srcDescriptor.set.call(this, fixBlobUrl(value)); },
+          enumerable: srcDescriptor.enumerable,
+          configurable: true
+        });
+      }
+
+      const originalSetAttribute = Element.prototype.setAttribute;
+      Element.prototype.setAttribute = function(name, value) {
+        if (this instanceof HTMLImageElement && String(name).toLowerCase() === 'src') {
+          value = fixBlobUrl(String(value));
+        }
+        return originalSetAttribute.call(this, name, value);
+      };
+
+      Object.defineProperty(HTMLImageElement.prototype, '__l2dpeBlobUrlRepair', { value: true });
+    }
+  }
+
+  installBlobUrlRepairPatch();
+
   const I18N = {
     ja: {
       subtitle: '作成済みLive2Dモデルを操作して、透過PNGで書き出すブラウザアプリ',
