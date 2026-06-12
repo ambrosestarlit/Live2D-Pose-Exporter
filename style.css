@@ -294,6 +294,30 @@ input[type="range"] {
   gap: 8px;
 }
 
+.pose-tool-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: #f7fbfa;
+}
+
+.pose-tool {
+  padding: 6px 10px !important;
+  border-radius: 11px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.pose-tool.active {
+  background: var(--mint-dark);
+  border-color: var(--mint-dark);
+  color: #fff;
+  font-weight: 700;
+}
+
 .preview-toolbar button { padding: 7px 10px; }
 
 .model-info {
@@ -510,6 +534,7 @@ input[type="range"] {
   .left-panel { grid-area: left; }
   .right-panel { grid-area: right; }
   .preview-column { grid-area: preview; min-height: 720px; }
+  .preview-toolbar { height: auto; min-height: 46px; flex-wrap: wrap; }
 }
 
 @media (max-width: 820px) {

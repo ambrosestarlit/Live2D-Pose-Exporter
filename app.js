@@ -63,7 +63,7 @@
       loadFolder: 'モデルフォルダを読み込み', loadZip: 'モデルZIPを読み込み', foundModels: '検出モデル', displaySelectedModel: '選択モデルを表示',
       canvasExport: 'キャンバス / 書き出し', width: '幅', height: '高さ', showChecker: '市松背景を表示（書き出しは透明）', applyCanvas: 'キャンバスサイズ反映',
       exportCurrentPng: '現在ポーズを透過PNG保存', exportSelectedZip: '選択プリセットをPNG ZIP保存', modelView: '表示調整', scale: '拡大率', fitModel: '全体表示', resetView: '表示リセット',
-      center: '中央', resetParams: 'パラメータ初期化', noModel: 'モデル未読み込み', live2dFeatures: 'Live2D操作', idleMotion: '待機モーションON', breath: '自動呼吸ON', physics: '物理演算ON', autoBlink: '自動まばたきON',
+      center: '中央', resetParams: 'パラメータ初期化', faceDirectionTool: '顔の向き', faceTiltTool: '顔の傾き', eyeMoveTool: '視線移動', poseToolMissing: 'この操作に必要なパラメータが見つかりません: {ids}', poseToolChanged: '操作ツール: {name}', noModel: 'モデル未読み込み', live2dFeatures: 'Live2D操作', idleMotion: '待機モーションON', breath: '自動呼吸ON', physics: '物理演算ON', autoBlink: '自動まばたきON',
       expression: '表情', applyExpression: '表情を適用', motion: 'モーション', playMotion: '再生', stopMotion: '停止', presets: 'プリセット', presetNamePlaceholder: 'プリセット名',
       save: '保存', selectAll: '全選択', clearSelection: '選択解除', exportPresetJson: 'JSON保存', importPresetJson: 'JSON読込', parameters: 'パラメータ', searchParams: '検索',
       helpTitle: '取扱説明', help1: 'Live2D Cubism SDK for Web から live2dcubismcore.min.js を取得し、vendor フォルダへ配置します。',
@@ -82,7 +82,7 @@
       loadFolder: 'Load Model Folder', loadZip: 'Load Model ZIP', foundModels: 'Detected Models', displaySelectedModel: 'Display Selected Model',
       canvasExport: 'Canvas / Export', width: 'Width', height: 'Height', showChecker: 'Show checkerboard background (exports stay transparent)', applyCanvas: 'Apply Canvas Size',
       exportCurrentPng: 'Save Current Pose as Transparent PNG', exportSelectedZip: 'Save Selected Presets as PNG ZIP', modelView: 'View', scale: 'Scale', fitModel: 'Fit Model', resetView: 'Reset View',
-      center: 'Center', resetParams: 'Reset Parameters', noModel: 'No model loaded', live2dFeatures: 'Live2D Controls', idleMotion: 'Idle motion ON', breath: 'Auto breath ON', physics: 'Physics ON', autoBlink: 'Auto blink ON',
+      center: 'Center', resetParams: 'Reset Parameters', faceDirectionTool: 'Face Direction', faceTiltTool: 'Face Tilt', eyeMoveTool: 'Eye Direction', poseToolMissing: 'Required parameters were not found: {ids}', poseToolChanged: 'Pose tool: {name}', noModel: 'No model loaded', live2dFeatures: 'Live2D Controls', idleMotion: 'Idle motion ON', breath: 'Auto breath ON', physics: 'Physics ON', autoBlink: 'Auto blink ON',
       expression: 'Expression', applyExpression: 'Apply Expression', motion: 'Motion', playMotion: 'Play', stopMotion: 'Stop', presets: 'Presets', presetNamePlaceholder: 'Preset name',
       save: 'Save', selectAll: 'Select All', clearSelection: 'Clear Selection', exportPresetJson: 'Export JSON', importPresetJson: 'Import JSON', parameters: 'Parameters', searchParams: 'Search',
       helpTitle: 'Guide', help1: 'Download live2dcubismcore.min.js from Live2D Cubism SDK for Web and place it in the vendor folder.',
@@ -101,7 +101,7 @@
       loadFolder: '모델 폴더 불러오기', loadZip: '모델 ZIP 불러오기', foundModels: '감지된 모델', displaySelectedModel: '선택한 모델 표시',
       canvasExport: '캔버스 / 내보내기', width: '너비', height: '높이', showChecker: '체커보드 배경 표시(내보내기는 투명)', applyCanvas: '캔버스 크기 적용',
       exportCurrentPng: '현재 포즈를 투명 PNG로 저장', exportSelectedZip: '선택 프리셋을 PNG ZIP으로 저장', modelView: '표시 조정', scale: '확대율', fitModel: '전체 표시', resetView: '표시 초기화',
-      center: '중앙', resetParams: '파라미터 초기화', noModel: '모델을 불러오지 않음', live2dFeatures: 'Live2D 조작', idleMotion: '대기 모션 ON', breath: '자동 호흡 ON', physics: '물리 연산 ON', autoBlink: '자동 눈깜박임 ON',
+      center: '중앙', resetParams: '파라미터 초기화', faceDirectionTool: '얼굴 방향', faceTiltTool: '얼굴 기울기', eyeMoveTool: '시선 이동', poseToolMissing: '필요한 파라미터를 찾을 수 없습니다: {ids}', poseToolChanged: '조작 도구: {name}', noModel: '모델을 불러오지 않음', live2dFeatures: 'Live2D 조작', idleMotion: '대기 모션 ON', breath: '자동 호흡 ON', physics: '물리 연산 ON', autoBlink: '자동 눈깜박임 ON',
       expression: '표정', applyExpression: '표정 적용', motion: '모션', playMotion: '재생', stopMotion: '정지', presets: '프리셋', presetNamePlaceholder: '프리셋 이름',
       save: '저장', selectAll: '전체 선택', clearSelection: '선택 해제', exportPresetJson: 'JSON 저장', importPresetJson: 'JSON 읽기', parameters: '파라미터', searchParams: '검색',
       helpTitle: '사용 설명', help1: 'Live2D Cubism SDK for Web에서 live2dcubismcore.min.js를 받아 vendor 폴더에 넣습니다.',
@@ -136,7 +136,8 @@
     allowManualMotion: false,
     featureHooks: new WeakMap(),
     isDragging: false,
-    dragStart: { x: 0, y: 0, modelX: 0, modelY: 0 }
+    activePoseTool: 'faceDirection',
+    dragStart: { x: 0, y: 0, modelX: 0, modelY: 0, params: {} }
   };
 
   const $ = (id) => document.getElementById(id);
@@ -160,6 +161,9 @@
     resetViewButton: $('resetViewButton'),
     centerModelButton: $('centerModelButton'),
     resetParamsButton: $('resetParamsButton'),
+    faceDirectionTool: $('faceDirectionTool'),
+    faceTiltTool: $('faceTiltTool'),
+    eyeMoveTool: $('eyeMoveTool'),
     stageWrap: $('stageWrap'),
     canvas: $('live2dCanvas'),
     log: $('log'),
@@ -523,6 +527,172 @@
     if (values && param.index in values) values[param.index] = numeric;
   }
 
+
+  const POSE_TOOL_PARAM_CANDIDATES = {
+    faceDirection: {
+      x: ['ParamAngleX', 'ParamHeadAngleX', 'ParamFaceAngleX', 'ParamHeadX', 'AngleX'],
+      y: ['ParamAngleY', 'ParamHeadAngleY', 'ParamFaceAngleY', 'ParamHeadY', 'AngleY']
+    },
+    faceTilt: {
+      z: ['ParamAngleZ', 'ParamHeadAngleZ', 'ParamFaceAngleZ', 'ParamHeadZ', 'AngleZ']
+    },
+    eyeMove: {
+      x: ['ParamEyeBallX', 'ParamEyeX', 'ParamEyeMoveX', 'ParamEyeDirectionX', 'EyeBallX'],
+      y: ['ParamEyeBallY', 'ParamEyeY', 'ParamEyeMoveY', 'ParamEyeDirectionY', 'EyeBallY']
+    }
+  };
+
+  function normalizeParamName(text) {
+    return String(text || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  }
+
+  function findParameterByCandidates(candidates) {
+    const normalizedCandidates = candidates.map(normalizeParamName);
+    const pool = state.parameters.map((param) => ({
+      param,
+      id: normalizeParamName(param.id),
+      name: normalizeParamName(param.name)
+    }));
+
+    for (const candidate of normalizedCandidates) {
+      const found = pool.find((item) => item.id === candidate || item.name === candidate);
+      if (found) return found.param;
+    }
+    for (const candidate of normalizedCandidates) {
+      const found = pool.find((item) => item.id.endsWith(candidate) || item.name.endsWith(candidate));
+      if (found) return found.param;
+    }
+    for (const candidate of normalizedCandidates) {
+      const found = pool.find((item) => item.id.includes(candidate) || item.name.includes(candidate));
+      if (found) return found.param;
+    }
+    return null;
+  }
+
+  function getPoseToolTargets(tool = state.activePoseTool) {
+    const aliases = POSE_TOOL_PARAM_CANDIDATES[tool];
+    if (!aliases) return {};
+    const targets = {};
+    for (const [axis, candidates] of Object.entries(aliases)) {
+      targets[axis] = findParameterByCandidates(candidates);
+    }
+    return targets;
+  }
+
+  function clampParameterValue(param, value) {
+    const min = Number.isFinite(Number(param.min)) ? Number(param.min) : -Infinity;
+    const max = Number.isFinite(Number(param.max)) ? Number(param.max) : Infinity;
+    return Math.max(min, Math.min(max, Number(value)));
+  }
+
+  function setManualParameterValue(param, rawValue, refresh = true) {
+    if (!param) return;
+    let next = Number(rawValue);
+    if (!Number.isFinite(next)) next = param.defaultValue || 0;
+    next = clampParameterValue(param, next);
+    state.manualValues.set(param.id, next);
+    param.value = next;
+    setCoreParameter(param, next);
+    if (refresh) refreshParameterControls([param.id]);
+  }
+
+  function refreshParameterControls(paramIds) {
+    const targetIds = new Set(paramIds || []);
+    for (const item of els.parameterList.querySelectorAll('.param-item')) {
+      const id = item.dataset.paramId;
+      if (!targetIds.has(id)) continue;
+      const param = state.parameters.find((entry) => entry.id === id);
+      if (!param) continue;
+      const value = state.manualValues.has(param.id) ? state.manualValues.get(param.id) : param.value;
+      const numberInput = item.querySelector('.param-value');
+      const rangeInput = item.querySelector('.param-range');
+      if (numberInput) numberInput.value = formatNumber(value);
+      if (rangeInput) rangeInput.value = String(value);
+    }
+  }
+
+  function getCurrentParamValue(param) {
+    return state.manualValues.has(param.id) ? state.manualValues.get(param.id) : param.value;
+  }
+
+  function getToolLabel(tool) {
+    const key = tool === 'faceTilt' ? 'faceTiltTool' : tool === 'eyeMove' ? 'eyeMoveTool' : 'faceDirectionTool';
+    return t(key);
+  }
+
+  function setActivePoseTool(tool, silent = false) {
+    state.activePoseTool = tool;
+    for (const button of document.querySelectorAll('.pose-tool')) {
+      button.classList.toggle('active', button.dataset.tool === tool);
+    }
+    if (!silent) log(t('poseToolChanged', { name: getToolLabel(tool) }), 'ok');
+  }
+
+  function getToolSensitivity(param, canvasSize, divisor = 280) {
+    const range = Math.max(0.001, Math.abs((Number(param.max) || 1) - (Number(param.min) || 0)));
+    const base = Math.max(160, Math.min(520, canvasSize || 280));
+    return range / Math.min(base, divisor);
+  }
+
+  function applyPoseToolDrag(event) {
+    if (!state.model) return;
+    const rect = els.canvas.getBoundingClientRect();
+    const dx = event.clientX - state.dragStart.x;
+    const dy = event.clientY - state.dragStart.y;
+    const targets = getPoseToolTargets();
+    const changed = [];
+
+    if (state.activePoseTool === 'faceDirection') {
+      if (targets.x) {
+        const sx = getToolSensitivity(targets.x, rect.width);
+        setManualParameterValue(targets.x, state.dragStart.params[targets.x.id] + dx * sx, false);
+        changed.push(targets.x.id);
+      }
+      if (targets.y) {
+        const sy = getToolSensitivity(targets.y, rect.height);
+        setManualParameterValue(targets.y, state.dragStart.params[targets.y.id] - dy * sy, false);
+        changed.push(targets.y.id);
+      }
+    } else if (state.activePoseTool === 'faceTilt') {
+      if (targets.z) {
+        const sx = getToolSensitivity(targets.z, rect.width, 340);
+        setManualParameterValue(targets.z, state.dragStart.params[targets.z.id] + dx * sx, false);
+        changed.push(targets.z.id);
+      }
+    } else if (state.activePoseTool === 'eyeMove') {
+      if (targets.x) {
+        const sx = getToolSensitivity(targets.x, rect.width, 260);
+        setManualParameterValue(targets.x, state.dragStart.params[targets.x.id] + dx * sx, false);
+        changed.push(targets.x.id);
+      }
+      if (targets.y) {
+        const sy = getToolSensitivity(targets.y, rect.height, 260);
+        setManualParameterValue(targets.y, state.dragStart.params[targets.y.id] - dy * sy, false);
+        changed.push(targets.y.id);
+      }
+    }
+
+    if (changed.length) {
+      refreshParameterControls(changed);
+      state.app?.renderer?.render(state.app.stage);
+    }
+  }
+
+  function capturePoseToolStartParams(tool = state.activePoseTool) {
+    const targets = getPoseToolTargets(tool);
+    const params = {};
+    const missing = [];
+    for (const [axis, param] of Object.entries(targets)) {
+      if (param) params[param.id] = getCurrentParamValue(param);
+      else missing.push(axis.toUpperCase());
+    }
+    if (missing.length) {
+      const labels = Object.keys(POSE_TOOL_PARAM_CANDIDATES[tool] || {}).join('/').toUpperCase();
+      log(t('poseToolMissing', { ids: labels }), 'error');
+    }
+    return params;
+  }
+
   function applyManualValuesToModel() {
     if (!state.model) return;
     for (const param of state.parameters) {
@@ -542,6 +712,7 @@
     for (const param of filtered) {
       const wrap = document.createElement('div');
       wrap.className = 'param-item';
+      wrap.dataset.paramId = param.id;
       const value = state.manualValues.has(param.id) ? state.manualValues.get(param.id) : param.value;
       wrap.innerHTML = `
         <div class="param-label-row">
@@ -560,14 +731,10 @@
       const numberInput = wrap.querySelector('.param-value');
       const rangeInput = wrap.querySelector('.param-range');
       const update = (raw) => {
-        let next = Number(raw);
-        if (!Number.isFinite(next)) next = param.defaultValue;
-        next = Math.max(param.min, Math.min(param.max, next));
-        state.manualValues.set(param.id, next);
-        param.value = next;
+        setManualParameterValue(param, raw, false);
+        const next = state.manualValues.get(param.id);
         numberInput.value = formatNumber(next);
         rangeInput.value = String(next);
-        setCoreParameter(param, next);
       };
       numberInput.addEventListener('input', () => update(numberInput.value));
       rangeInput.addEventListener('input', () => update(rangeInput.value));
@@ -1032,21 +1199,22 @@
   function setupDragAndZoom() {
     els.canvas.addEventListener('pointerdown', (event) => {
       if (!state.model) return;
+      event.preventDefault();
       state.isDragging = true;
       els.canvas.classList.add('dragging');
       els.canvas.setPointerCapture(event.pointerId);
-      state.dragStart = { x: event.clientX, y: event.clientY, modelX: state.model.x, modelY: state.model.y };
+      state.dragStart = {
+        x: event.clientX,
+        y: event.clientY,
+        modelX: state.model.x,
+        modelY: state.model.y,
+        params: capturePoseToolStartParams()
+      };
     });
     els.canvas.addEventListener('pointermove', (event) => {
       if (!state.isDragging || !state.model) return;
-      const rect = els.canvas.getBoundingClientRect();
-      const sx = (Number(els.canvasWidth.value) || rect.width) / rect.width;
-      const sy = (Number(els.canvasHeight.value) || rect.height) / rect.height;
-      const nx = state.dragStart.modelX + (event.clientX - state.dragStart.x) * sx;
-      const ny = state.dragStart.modelY + (event.clientY - state.dragStart.y) * sy;
-      state.model.position.set(nx, ny);
-      els.modelX.value = Math.round(nx);
-      els.modelY.value = Math.round(ny);
+      event.preventDefault();
+      applyPoseToolDrag(event);
     });
     window.addEventListener('pointerup', () => {
       state.isDragging = false;
@@ -1104,6 +1272,9 @@
     els.resetViewButton.addEventListener('click', resetView);
     els.centerModelButton.addEventListener('click', centerModel);
     els.resetParamsButton.addEventListener('click', resetParameters);
+    document.querySelectorAll('.pose-tool').forEach((button) => {
+      button.addEventListener('click', () => setActivePoseTool(button.dataset.tool || 'faceDirection'));
+    });
     els.idleMotionToggle.addEventListener('change', applyFeatureToggles);
     els.breathToggle.addEventListener('change', applyFeatureToggles);
     els.physicsToggle.addEventListener('change', applyFeatureToggles);
@@ -1136,6 +1307,7 @@
   function bootstrap() {
     bindEvents();
     applyI18n();
+    setActivePoseTool(state.activePoseTool, true);
     checkCoreStatus();
     initPixi();
     resizeCanvas();
