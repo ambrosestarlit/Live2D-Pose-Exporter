@@ -47,7 +47,13 @@
             <span data-i18n="foundModels">検出モデル</span>
             <select id="modelSelect"></select>
           </label>
-          <button id="loadSelectedModelButton" type="button" data-i18n="displaySelectedModel">選択モデルを表示</button>
+          <button id="loadSelectedModelButton" type="button" data-i18n="addSelectedModel">選択モデルを追加</button>
+        </section>
+
+        <section class="card">
+          <h2 data-i18n="characterList">キャラ一覧</h2>
+          <div id="characterList" class="character-list"></div>
+          <p class="hint" data-i18n="characterListHint">一覧の上にあるキャラほど前面に表示されます。</p>
         </section>
 
         <section class="card">
@@ -106,7 +112,9 @@
             <button id="resetParamsButton" type="button" data-i18n="resetParams">パラメータ初期化</button>
           </div>
           <div class="pose-tool-group" role="group" aria-label="Pose tools">
-            <button id="faceDirectionTool" class="pose-tool active" type="button" data-tool="faceDirection" data-i18n="faceDirectionTool">顔の向き</button>
+            <button id="modelMoveTool" class="pose-tool active" type="button" data-tool="modelMove" data-i18n="modelMoveTool">モデル移動</button>
+            <button id="modelScaleTool" class="pose-tool" type="button" data-tool="modelScale" data-i18n="modelScaleTool">モデルサイズ</button>
+            <button id="faceDirectionTool" class="pose-tool" type="button" data-tool="faceDirection" data-i18n="faceDirectionTool">顔の向き</button>
             <button id="faceTiltTool" class="pose-tool" type="button" data-tool="faceTilt" data-i18n="faceTiltTool">顔の傾き</button>
             <button id="eyeMoveTool" class="pose-tool" type="button" data-tool="eyeMove" data-i18n="eyeMoveTool">視線移動</button>
           </div>
