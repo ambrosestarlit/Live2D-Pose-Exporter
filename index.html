@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Live2D Pose Exporter</title>
+  <title>Live2D Animation Studio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,8 +12,8 @@
       <div class="brand">
         <div class="brand-mark">L2D</div>
         <div>
-          <h1>Live2D Pose Exporter</h1>
-          <p data-i18n="subtitle">作成済みLive2Dモデルを操作して、透過PNGで書き出すブラウザアプリ</p>
+          <h1>Live2D Animation Studio</h1>
+          <p data-i18n="subtitle">作成済みLive2Dモデルと画像素材でキーフレームアニメーションを作り、連番PNGで書き出すブラウザアプリ</p>
         </div>
       </div>
       <div class="top-actions">
@@ -31,6 +31,26 @@
 
     <main class="workspace">
       <aside class="panel left-panel">
+        <section class="card scene-management-card">
+          <h2 data-i18n="sceneManagement">シーン管理 / プロジェクト</h2>
+          <label class="field stacked">
+            <span data-i18n="sceneSelect">Scene選択</span>
+            <select id="sceneSelect"></select>
+          </label>
+          <div class="button-row scene-button-row">
+            <button id="addSceneButton" type="button" data-i18n="addScene">シーン追加</button>
+            <button id="deleteSceneButton" type="button" data-i18n="deleteScene">シーン削除</button>
+          </div>
+          <div class="button-row scene-button-row">
+            <button id="saveProjectButton" class="primary" type="button" data-i18n="saveProjectJson">プロジェクトJSON保存</button>
+            <label class="mini-file-button project-load-button">
+              <span data-i18n="loadProjectJson">プロジェクトJSON読込</span>
+              <input id="loadProjectInput" type="file" accept=".json,application/json" />
+            </label>
+          </div>
+          <p class="hint" data-i18n="projectSaveHint">シーン、モデルデータ、画像、音声、キーフレームをまとめてJSON保存できます。</p>
+        </section>
+
         <section class="card">
           <h2 data-i18n="loadModel">モデル読み込み</h2>
           <p class="hint" data-i18n="coreHint">Cubism Coreは vendor/live2dcubismcore.min.js に配置してください。</p>
@@ -57,6 +77,20 @@
         </section>
 
         <section class="card">
+          <h2 data-i18n="assetLoad">素材読み込み</h2>
+          <label class="file-button secondary">
+            <span data-i18n="loadImages">画像を読み込み</span>
+            <input id="imageInput" type="file" accept="image/png,image/jpeg,image/webp,image/gif" multiple />
+          </label>
+          <label class="file-button secondary">
+            <span data-i18n="loadAudio">音声を読み込み</span>
+            <input id="audioInput" type="file" accept="audio/*" />
+          </label>
+          <audio id="audioPlayer" class="audio-player" controls></audio>
+          <p class="hint" data-i18n="assetHint">画像は移動・回転・拡大縮小をキーフレーム化できます。</p>
+        </section>
+
+        <section class="card">
           <h2 data-i18n="canvasExport">キャンバス / 書き出し</h2>
           <div class="grid2">
             <label class="field">
@@ -68,12 +102,16 @@
               <input id="canvasHeight" type="number" min="16" max="8192" value="1080" />
             </label>
           </div>
-          <div class="preset-buttons compact">
-            <button id="originalCanvasButton" type="button" data-i18n="originalSize">原寸</button>
-            <button data-size="1000x1000" type="button">1000×1000</button>
-            <button data-size="1920x1080" type="button">1920×1080</button>
-            <button data-size="1080x1920" type="button">1080×1920</button>
-          </div>
+          <label class="field stacked canvas-preset-field">
+            <span data-i18n="canvasPreset">キャンバスサイズ選択</span>
+            <select id="canvasPresetSelect">
+              <option value="" data-i18n="canvasPresetPlaceholder">選択してください</option>
+              <option value="original" data-i18n="originalSize">原寸</option>
+              <option value="1000x1000">1000×1000</option>
+              <option value="1920x1080">1920×1080</option>
+              <option value="1080x1920">1080×1920</option>
+            </select>
+          </label>
           <label class="check-row">
             <input id="checkerToggle" type="checkbox" checked />
             <span data-i18n="showChecker">市松背景を表示（確認用）</span>
@@ -87,7 +125,8 @@
             <input id="exportBackgroundColor" type="color" value="#ffffff" />
           </label>
           <button id="applyCanvasButton" type="button" data-i18n="applyCanvas">キャンバスサイズ反映</button>
-          <button id="exportPngButton" class="primary" type="button" data-i18n="exportCurrentPng">現在ポーズをPNG保存</button>
+          <button id="exportPngButton" class="primary" type="button" data-i18n="exportCurrentPng">現在フレームをPNG保存</button>
+          <button id="exportAnimationZipButton" class="primary" type="button" data-i18n="exportAnimationZip">連番PNG ZIP書き出し</button>
           <button id="exportZipButton" class="primary muted" type="button" data-i18n="exportSelectedZip">選択プリセットをPNG ZIP保存</button>
         </section>
 
@@ -123,9 +162,24 @@
             </label>
             <button id="modelMoveTool" class="pose-tool active" type="button" data-tool="modelMove" data-i18n="modelMoveTool">モデル移動</button>
             <button id="modelScaleTool" class="pose-tool" type="button" data-tool="modelScale" data-i18n="modelScaleTool">モデルサイズ</button>
+            <button id="imageMoveTool" class="pose-tool" type="button" data-tool="imageMove" data-i18n="imageMoveTool">画像移動</button>
+            <button id="imageRotateTool" class="pose-tool" type="button" data-tool="imageRotate" data-i18n="imageRotateTool">画像回転</button>
+            <button id="imageScaleTool" class="pose-tool" type="button" data-tool="imageScale" data-i18n="imageScaleTool">画像サイズ</button>
             <label class="toolbar-scale-control" title="Scale">
               <input id="toolbarScaleNumber" class="toolbar-scale-number" type="number" min="0.05" max="5" step="0.01" value="1" />
               <input id="toolbarScaleRange" class="toolbar-scale-range" type="range" min="0.05" max="5" step="0.01" value="1" />
+            </label>
+            <label class="preview-zoom-control" title="Preview zoom">
+              <span data-i18n="previewZoom">表示倍率</span>
+              <select id="previewZoom">
+                <option value="fit" data-i18n="zoomFit">全体表示</option>
+                <option value="0.5">50%</option>
+                <option value="0.75">75%</option>
+                <option value="1">100%</option>
+                <option value="1.5">150%</option>
+                <option value="2">200%</option>
+                <option value="3">300%</option>
+              </select>
             </label>
             <button id="faceDirectionTool" class="pose-tool" type="button" data-tool="faceDirection" data-i18n="faceDirectionTool">顔の向き</button>
             <button id="faceTiltTool" class="pose-tool" type="button" data-tool="faceTilt" data-i18n="faceTiltTool">顔の傾き</button>
@@ -143,10 +197,50 @@
           </div>
           <div id="canvasSizeBadge" class="canvas-size-badge">1080×1080</div>
         </div>
+        <section class="timeline-control-panel card" aria-label="Timeline controls">
+          <div class="timeline-head fixed-timeline-head">
+            <h2 data-i18n="timeline">タイムライン</h2>
+            <div class="timeline-actions timeline-main-row">
+              <button id="timelinePlayButton" type="button" data-i18n="playTimeline">再生</button>
+              <button id="timelineStopButton" type="button" data-i18n="stopTimeline">停止</button>
+              <button id="addKeyframeButton" type="button" data-i18n="addKeyframe">キーフレーム追加</button>
+              <button id="deleteSelectedKeyframeButton" type="button" data-i18n="deleteKeyframe">キー削除</button>
+              <button id="duplicateSelectedKeyframeButton" type="button" data-i18n="duplicateKeyframe">キー複製</button>
+              <button id="prevKeyframeButton" type="button" data-i18n="prevKeyframe">前キー</button>
+              <button id="nextKeyframeButton" type="button" data-i18n="nextKeyframe">次キー</button>
+              <button id="hairSwayButton" type="button" data-i18n="hairSwayButton">髪揺れ自動入力</button>
+              <button id="loopKeysButton" type="button" data-i18n="loopKeysButton">ループ挿入</button>
+              <label class="field timeline-inline-field duration-field"><span data-i18n="duration">長さ(秒)</span><input id="timelineDuration" type="number" min="0.1" max="600" step="0.1" value="5" /></label>
+              <label class="field timeline-inline-field fps-field"><span data-i18n="fps">FPS</span><input id="timelineFps" type="number" min="1" max="60" step="1" value="24" /></label>
+              <label class="field timeline-inline-field time-field"><span data-i18n="currentTime">現在秒</span><input id="timelineTime" type="number" min="0" step="0.001" value="0" /></label>
+              <label class="check-row compact-check timeline-inline-check"><input id="autoKeyframeToggle" type="checkbox" checked /><span data-i18n="autoKeyframe">自動キー</span></label>
+            </div>
+          </div>
+          <input id="timelineSeek" class="timeline-seek" type="range" min="0" max="5" step="0.001" value="0" />
+          <div class="timeline-ruler"><span>0s</span><span id="timelineEndLabel">5s</span></div>
+        </section>
+
         <div id="log" class="log"></div>
+
+        <section class="timeline-panel card">
+          <div class="timeline-track-head">
+            <h2 data-i18n="timeline">タイムライン</h2>
+          </div>
+          <div class="timeline-filter-wrap">
+            <button id="timelineFilterButton" class="timeline-filter-button" type="button" aria-expanded="false" aria-controls="timelineFilterDialog" data-i18n="timelineFilterAll">表示トラック：すべて</button>
+          </div>
+          <div id="timelineLayerList" class="timeline-layer-list"></div>
+        </section>
       </section>
 
       <aside class="panel right-panel">
+        <section class="right-panel-tabs card">
+          <div class="tab-button-row" role="tablist" aria-label="Right panel tabs">
+            <button id="rightTabButtonMain" class="tab-button active" type="button" role="tab" aria-selected="true" aria-controls="rightTabMain" data-right-tab="main" data-i18n="rightTabMain">現在の設定</button>
+            <button id="rightTabButtonKeyframe" class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="rightTabKeyframe" data-right-tab="keyframe" data-i18n="rightTabKeyframe">キーフレーム設定プロパティ</button>
+          </div>
+        </section>
+        <div id="rightTabMain" class="right-tab-panel active" role="tabpanel" aria-labelledby="rightTabButtonMain">
         <section class="card">
           <h2 data-i18n="live2dFeatures">Live2D操作</h2>
           <div class="toggle-grid">
@@ -190,6 +284,22 @@
           <div id="presetList" class="preset-list"></div>
         </section>
 
+        <section class="card">
+          <h2 data-i18n="imageTransform">画像調整</h2>
+          <div id="imageLayerList" class="image-layer-list"></div>
+          <div class="grid2">
+            <label class="field"><span>X</span><input id="imageX" type="number" step="1" value="540" /></label>
+            <label class="field"><span>Y</span><input id="imageY" type="number" step="1" value="540" /></label>
+          </div>
+          <label class="field stacked"><span data-i18n="scale">拡大率</span><input id="imageScale" type="range" min="0.01" max="5" step="0.01" value="1" /></label>
+          <label class="field stacked"><span data-i18n="rotation">回転</span><input id="imageRotation" type="range" min="-180" max="180" step="0.1" value="0" /></label>
+          <label class="field stacked"><span data-i18n="opacity">不透明度</span><input id="imageAlpha" type="range" min="0" max="1" step="0.01" value="1" /></label>
+          <div class="button-row">
+            <button id="centerImageButton" type="button" data-i18n="center">中央</button>
+            <button id="deleteImageButton" type="button" data-i18n="delete">削除</button>
+          </div>
+        </section>
+
         <section class="card param-card">
           <div class="param-header">
             <h2 data-i18n="parameters">パラメータ</h2>
@@ -201,25 +311,319 @@
           </div>
           <div id="parameterList" class="parameter-list"></div>
         </section>
+        </div>
+        <div id="rightTabKeyframe" class="right-tab-panel" role="tabpanel" aria-labelledby="rightTabButtonKeyframe" hidden>
+          <section class="card keyframe-property-card">
+            <h2 data-i18n="rightTabKeyframe">キーフレーム設定プロパティ</h2>
+            <div id="keyframeEditor" class="keyframe-editor side-keyframe-editor"></div>
+          </section>
+        </div>
       </aside>
     </main>
   </div>
 
-  <dialog id="helpDialog" class="help-dialog">
+  <dialog id="timelineFilterDialog" class="help-dialog timeline-filter-dialog">
+    <form method="dialog">
+      <div class="dialog-head">
+        <h2 data-i18n="timelineFilterTitle">表示するキーフレーム項目</h2>
+        <button value="close" class="ghost" type="submit">×</button>
+      </div>
+      <div class="help-body timeline-filter-body">
+        <p class="hint" data-i18n="timelineFilterHint">チェックが入っていない場合は、入力済みキーフレームのあるパラメーターをすべて表示します。チェックがある場合は、選択した項目だけ表示します。</p>
+        <div id="timelineFilterMenu" class="timeline-filter-menu"></div>
+        <div class="dialog-actions">
+          <button id="clearTimelineFilterButton" type="button" data-i18n="clearTimelineFilter">絞り込み解除</button>
+          <button type="submit" data-i18n="close">閉じる</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="hairSwayDialog" class="help-dialog hair-sway-dialog">
+    <form method="dialog">
+      <div class="dialog-head">
+        <h2 data-i18n="hairSwayTitle">髪揺れ自動入力</h2>
+        <button value="close" class="ghost" type="submit">×</button>
+      </div>
+      <div class="help-body hair-sway-body">
+        <p class="hint" data-i18n="hairSwayHint">現在秒から、選択した髪パラメーターへ揺れのキーフレームをまとめて挿入します。</p>
+        <label class="field stacked">
+          <span data-i18n="hairSwayPreset">プリセット</span>
+          <select id="hairSwayPreset">
+            <option value="normalWind" data-i18n="hairSwayPresetNormalWind">普通の風</option>
+            <option value="breeze" data-i18n="hairSwayPresetBreeze">そよ風</option>
+            <option value="strongWind" data-i18n="hairSwayPresetStrongWind">強風</option>
+            <option value="lightBounce" data-i18n="hairSwayPresetLightBounce">軽く弾む</option>
+            <option value="bigBounce" data-i18n="hairSwayPresetBigBounce">大きく弾む</option>
+          </select>
+        </label>
+        <div class="sway-control-grid">
+          <label class="field stacked">
+            <span data-i18n="hairSwayCount">揺れの回数</span>
+            <input id="hairSwayCountRange" type="range" min="1" max="12" step="1" value="4" />
+            <input id="hairSwayCountNumber" type="number" min="1" max="12" step="1" value="4" />
+          </label>
+          <label class="field stacked">
+            <span data-i18n="hairSwayStrength">強さ</span>
+            <input id="hairSwayStrengthRange" type="range" min="1" max="100" step="1" value="18" />
+            <input id="hairSwayStrengthNumber" type="number" min="1" max="100" step="1" value="18" />
+          </label>
+          <label class="field stacked">
+            <span data-i18n="hairSwaySeconds">揺れアニメーションの秒数</span>
+            <input id="hairSwayDurationRange" type="range" min="0.1" max="8" step="0.1" value="1.5" />
+            <input id="hairSwayDurationNumber" type="number" min="0.1" max="8" step="0.1" value="1.5" />
+          </label>
+        </div>
+        <div class="hair-target-head">
+          <strong data-i18n="hairSwayTargets">対象パラメーター</strong>
+          <button id="hairSwaySelectCandidatesButton" type="button" data-i18n="hairSwaySelectCandidates">髪候補を選択</button>
+          <button id="hairSwaySelectAllButton" type="button" data-i18n="selectAll">全選択</button>
+        </div>
+        <div id="hairSwayParamList" class="hair-param-list"></div>
+        <div class="dialog-actions">
+          <button id="insertHairSwayButton" class="primary" type="button" data-i18n="insertHairSway">挿入</button>
+          <button type="submit" data-i18n="close">閉じる</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+
+  <dialog id="loopKeysDialog" class="help-dialog loop-keys-dialog">
+    <form method="dialog">
+      <div class="dialog-head">
+        <h2 data-i18n="loopDialogTitle">ループ挿入</h2>
+        <button value="close" class="ghost" type="submit">×</button>
+      </div>
+      <div class="help-body loop-keys-body">
+        <p class="hint" data-i18n="loopDialogHint">選択したパラメータートラックのキー列を、指定回数ぶん後ろへ複製して挿入します。</p>
+        <label class="field stacked">
+          <span data-i18n="loopTargetTrack">ループさせたいキーがあるパラメーター</span>
+          <select id="loopTrackSelect"></select>
+        </label>
+        <label class="field stacked">
+          <span data-i18n="loopCount">ループ回数</span>
+          <input id="loopCountInput" type="number" min="1" max="99" step="1" value="1" />
+        </label>
+        <div class="dialog-actions">
+          <button id="insertLoopKeysButton" class="primary" type="button" data-i18n="insertLoopKeys">ループする</button>
+          <button type="submit" data-i18n="close">閉じる</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="helpDialog" class="help-dialog manual-dialog">
     <form method="dialog">
       <div class="dialog-head">
         <h2 data-i18n="helpTitle">取扱説明</h2>
         <button value="close" class="ghost" type="submit">×</button>
       </div>
-      <div class="help-body">
-        <ol>
-          <li data-i18n="help1">Live2D Cubism SDK for Web から live2dcubismcore.min.js を取得し、vendor フォルダへ配置します。</li>
-          <li data-i18n="help2">model3.json を含むモデルフォルダ、またはZIPを読み込みます。</li>
-          <li data-i18n="help3">パラメータスライダー、表情、モーション、待機モーション、自動呼吸、物理演算、自動まばたきを調整します。</li>
-          <li data-i18n="help4">現在状態をプリセット保存できます。複数プリセットを選んでPNG ZIP書き出しできます。</li>
-          <li data-i18n="help5">市松背景は確認用です。PNG出力は透明背景です。</li>
-        </ol>
-        <p class="hint" data-i18n="helpNote">Live2Dモデルの制作・メッシュ編集は行わず、作成済みモデルの表示とパラメータ操作に特化しています。</p>
+      <div class="help-body manual-body">
+        <div class="manual-tab-row" role="tablist" aria-label="Manual tabs">
+          <button class="manual-tab active" type="button" role="tab" aria-selected="true" aria-controls="manualAnimationPanel" data-help-tab="animation">アニメーション</button>
+          <button class="manual-tab" type="button" role="tab" aria-selected="false" aria-controls="manualStillPanel" data-help-tab="still">静止画・ポーズ</button>
+        </div>
+
+        <section id="manualAnimationPanel" class="manual-panel active" role="tabpanel">
+          <div class="manual-section">
+            <h3>このタブでできること</h3>
+            <p>作成済みLive2Dモデルと画像素材を読み込み、タイムライン上でキーフレームを入力して、連番PNG ZIPとして書き出します。モデル制作やメッシュ編集ではなく、完成済みモデルを使ったアニメーション作成用です。</p>
+          </div>
+
+          <div class="manual-section">
+            <h3>1. 初回準備</h3>
+            <ol>
+              <li><strong>Live2D Cubism SDK for Web</strong> から <code>live2dcubismcore.min.js</code> を用意します。</li>
+              <li>アプリの <code>vendor</code> フォルダ内に <code>live2dcubismcore.min.js</code> を配置します。</li>
+              <li><code>index.html</code> をブラウザで開きます。Coreが検出されると、モデル読み込みが可能になります。</li>
+            </ol>
+            <p class="hint">Cubism Coreが見つからない場合は、ファイル名と配置場所が <code>vendor/live2dcubismcore.min.js</code> になっているか確認してください。</p>
+          </div>
+
+          <div class="manual-section">
+            <h3>2. モデルを読み込む</h3>
+            <ol>
+              <li>左パネルの <strong>モデルフォルダを読み込み</strong>、または <strong>モデルZIPを読み込み</strong> を押します。</li>
+              <li><code>model3.json</code> を含むLive2Dモデルを選択します。</li>
+              <li><strong>検出モデル</strong> に表示されたモデルを選び、<strong>選択モデルを追加</strong> を押します。</li>
+              <li>複数キャラを使う場合は同じ手順で追加します。キャラ一覧で上にあるキャラほど前面に表示されます。</li>
+            </ol>
+          </div>
+
+          <div class="manual-section">
+            <h3>3. 音声・画像素材を読み込む</h3>
+            <ul>
+              <li><strong>音声を読み込み</strong>：音声を再生しながら、タイミングに合わせてキーを打てます。</li>
+              <li><strong>画像を読み込み</strong>：背景、小物、エフェクト素材などを追加できます。</li>
+              <li>画像素材は、移動・回転・拡大縮小・不透明度・表示ON/OFFをキーフレーム化できます。</li>
+              <li>画像レイヤーもタイムラインに表示され、上にあるレイヤーほど前面に描画されます。</li>
+            </ul>
+          </div>
+
+          <div class="manual-section">
+            <h3>4. タイムラインの基本</h3>
+            <ul>
+              <li><strong>長さ(秒)</strong>：アニメーション全体の長さです。連番PNG書き出しもこの長さを基準にします。</li>
+              <li><strong>FPS</strong>：1秒あたりのフレーム数です。例：5秒 / 24FPS の場合、約120枚を書き出します。</li>
+              <li><strong>現在秒</strong>：現在のシークバー位置です。直接数値入力もできます。</li>
+              <li><strong>自動キー</strong>：ONの状態でスライダーやドラッグ操作をすると、現在秒にキーフレームが入力されます。</li>
+              <li><strong>前キー / 次キー</strong>：選択中レイヤーまたは選択中トラックの前後のキーへ移動します。</li>
+            </ul>
+          </div>
+
+          <div class="manual-section">
+            <h3>5. キーフレーム入力</h3>
+            <ol>
+              <li>シークバーを、動きを入れたい時刻へ合わせます。</li>
+              <li>モデルのパラメータ、モデル位置、画像位置などを調整します。</li>
+              <li>自動キーONなら、その時刻にキーフレームが保存されます。</li>
+              <li>自動キーOFFの場合は、調整したいトラックを選択して <strong>キーフレーム追加</strong> を押します。</li>
+            </ol>
+            <p>キーフレームはパラメーターごとのトラックで管理されます。たとえば、目だけ途中で変更したい場合は、目のパラメータートラックだけにキーを追加できます。</p>
+          </div>
+
+          <div class="manual-section">
+            <h3>6. キーフレーム編集</h3>
+            <ul>
+              <li>タイムライン上の丸いキーをクリックすると、右パネルの <strong>キーフレーム設定プロパティ</strong> タブが開きます。</li>
+              <li><strong>キー位置(秒)</strong>：キーの時刻を後から数値で変更できます。</li>
+              <li><strong>値</strong>：選択キーの内容を数値で直接調整できます。</li>
+              <li><strong>補間</strong>：<strong>なめらか</strong> は前後のキーを補間し、<strong>次キーまで固定</strong> は次のキーまで同じ値を維持します。</li>
+              <li><strong>現在の状態で上書き</strong>：現在のプレビュー状態を、選択中のキーへ上書きします。</li>
+              <li><strong>キー削除</strong>：選択中のキーを削除します。プレビュー下のボタンからも実行できます。</li>
+              <li><strong>キー複製</strong>：選択中のキーを複製し、次の1フレーム位置へ追加します。プレビュー下のボタンからも実行できます。</li>
+              <li>タイムライン上のキーはドラッグで左右に移動できます。</li>
+            </ul>
+          </div>
+
+          <div class="manual-section">
+            <h3>7. ループ機能</h3>
+            <ul>
+              <li>キーフレーム設定プロパティの <strong>ループ</strong> をONにすると、そのトラックの入力済みキーがタイムライン終了まで繰り返し再生されます。</li>
+              <li>書き出し時も、ループONのトラックは書き出し時間いっぱいループします。</li>
+              <li><strong>ループ挿入</strong> ボタンでは、指定したトラックのキー列を実際のキーフレームとして複製挿入できます。</li>
+              <li>ループ挿入は、ループ回数を入力し、対象トラックを選んで <strong>ループする</strong> を押します。</li>
+              <li>ループ挿入はキーを増やす処理なので、後から個別に調整したい揺れや反復動作に向いています。</li>
+            </ul>
+          </div>
+
+          <div class="manual-section">
+            <h3>8. 髪揺れ自動入力</h3>
+            <ol>
+              <li>シークバーを、髪揺れを開始したい位置へ合わせます。</li>
+              <li><strong>髪揺れ自動入力</strong> を押します。</li>
+              <li>プリセットから <strong>普通の風 / そよ風 / 強風 / 軽く弾む / 大きく弾む</strong> を選びます。</li>
+              <li>揺れの回数、強さ、秒数をスライダーまたは数値入力で調整します。</li>
+              <li>対象パラメーターを選び、<strong>挿入</strong> を押すと、複数のキーフレームが自動入力されます。</li>
+            </ol>
+            <p class="hint">髪候補は <code>Hair</code>、<code>髪</code>、<code>sway</code>、<code>physics</code> などの名前を含むパラメーターから自動検出します。モデルによって名称が違うため、必要に応じて手動で対象を選んでください。</p>
+          </div>
+
+          <div class="manual-section">
+            <h3>9. 連番PNG ZIP書き出し</h3>
+            <ol>
+              <li>左パネルでキャンバスサイズ、背景あり/なし、背景色を設定します。</li>
+              <li>タイムラインの長さとFPSを確認します。</li>
+              <li><strong>連番PNG ZIP書き出し</strong> を押します。</li>
+              <li><code>0001.png</code>、<code>0002.png</code> のような連番PNGがZIPで保存されます。</li>
+            </ol>
+            <p class="hint">市松背景は確認用です。透過PNGで書き出したい場合は、背景ありで書き出すをOFFにしてください。</p>
+          </div>
+        </section>
+
+        <section id="manualStillPanel" class="manual-panel" role="tabpanel" hidden>
+          <div class="manual-section">
+            <h3>このタブでできること</h3>
+            <p>タイムラインを使わず、Live2Dモデルのポーズや表情を調整して、現在の状態をPNGとして保存できます。SNS投稿用の立ち絵、表情差分、サムネ素材、静止画素材の作成に向いています。</p>
+          </div>
+
+          <div class="manual-section">
+            <h3>1. モデルを配置する</h3>
+            <ol>
+              <li>モデルフォルダまたはZIPを読み込み、<strong>選択モデルを追加</strong> します。</li>
+              <li>キャラ一覧から操作したいキャラを選びます。</li>
+              <li>プレビュー上部の <strong>モデル移動</strong>、<strong>モデルサイズ</strong> を使って配置を調整します。</li>
+              <li>左パネルの <strong>X / Y / 拡大率</strong> でも数値調整できます。</li>
+            </ol>
+          </div>
+
+          <div class="manual-section">
+            <h3>2. 表情・ポーズを作る</h3>
+            <ul>
+              <li><strong>顔の向き</strong>：顔の左右・上下の向きを調整します。</li>
+              <li><strong>顔の傾き</strong>：首をかしげるような傾きを調整します。</li>
+              <li><strong>視線移動</strong>：目線の向きを調整します。</li>
+              <li><strong>まばたき</strong>：目の開閉を調整します。</li>
+              <li><strong>笑顔</strong>：笑顔系パラメーターをまとめて調整します。</li>
+              <li><strong>口の開閉</strong>：口の開き具合を調整します。</li>
+              <li><strong>眉毛の表情</strong>：困り眉、怒り眉などの表情調整に使います。</li>
+              <li>右パネルの <strong>パラメータ</strong> から、各パラメーターを個別に調整することもできます。</li>
+            </ul>
+          </div>
+
+          <div class="manual-section">
+            <h3>3. Live2D機能のON/OFF</h3>
+            <ul>
+              <li><strong>待機モーションON</strong>：モデルに設定されている待機モーションを使います。</li>
+              <li><strong>自動呼吸ON</strong>：呼吸のような自然な動きを加えます。</li>
+              <li><strong>物理演算ON</strong>：髪や服など、モデル側で設定済みの物理演算を反映します。</li>
+              <li><strong>自動まばたきON</strong>：自動でまばたきを行います。</li>
+            </ul>
+            <p class="hint">静止画として完全に固定したい場合は、待機モーション・自動呼吸・物理演算・自動まばたきをOFFにしてから保存すると安定します。</p>
+          </div>
+
+          <div class="manual-section">
+            <h3>4. 画像素材を重ねる</h3>
+            <ul>
+              <li><strong>画像を読み込み</strong> からPNG/JPG/WebPなどを追加できます。</li>
+              <li>右パネルの <strong>画像調整</strong> で、X/Y、拡大率、回転、不透明度を調整します。</li>
+              <li>キャラや画像は、一覧の上にあるものほど前面に表示されます。</li>
+              <li>画像素材を背景や装飾として使う場合は、レイヤー順を調整してください。</li>
+            </ul>
+          </div>
+
+          <div class="manual-section">
+            <h3>5. シーンプリセット</h3>
+            <ul>
+              <li>現在のキャラ位置、パラメーター、表情、画像配置などを <strong>シーンプリセット</strong> として保存できます。</li>
+              <li>プリセット名を入力して <strong>保存</strong> を押すと一覧に追加されます。</li>
+              <li>保存したプリセットを適用すると、その状態へ戻せます。</li>
+              <li>複数プリセットを選択して、差分画像をまとめてPNG ZIP保存できます。</li>
+              <li>JSON保存/読込を使うと、プリセット設定を別ファイルとして保管できます。</li>
+            </ul>
+          </div>
+
+          <div class="manual-section">
+            <h3>6. 現在フレームをPNG保存</h3>
+            <ol>
+              <li>左パネルでキャンバスサイズを設定します。</li>
+              <li>必要なら <strong>背景ありで書き出す</strong> をONにし、背景色を選びます。</li>
+              <li>透過PNGにしたい場合は、背景ありで書き出すをOFFにします。</li>
+              <li><strong>現在フレームをPNG保存</strong> を押すと、プレビュー中の状態を1枚のPNGとして保存します。</li>
+            </ol>
+          </div>
+
+          <div class="manual-section">
+            <h3>7. キャンバス設定</h3>
+            <ul>
+              <li><strong>幅 / 高さ</strong>：書き出し画像のサイズを指定します。</li>
+              <li><strong>原寸</strong>：選択中モデルの原寸サイズを取得できる場合、そのサイズをキャンバスに反映します。</li>
+              <li><strong>1000×1000 / 1920×1080 / 1080×1920</strong>：よく使うサイズのプリセットです。</li>
+              <li><strong>キャンバスサイズ反映</strong> を押すと、入力したサイズがプレビューと書き出しに反映されます。</li>
+            </ul>
+          </div>
+
+          <div class="manual-section">
+            <h3>8. 注意点</h3>
+            <ul>
+              <li>このアプリはLive2Dモデルそのものを作るアプリではありません。作成済みの <code>model3.json</code> 対応モデルを使います。</li>
+              <li>モデルごとにパラメーター名が違うため、一部の便利ツールが反応しない場合があります。その場合は右パネルのパラメータ一覧から手動調整してください。</li>
+              <li>ブラウザ上で動作するため、大きなモデルや長い連番PNG書き出しでは処理に時間がかかることがあります。</li>
+              <li>市松背景はプレビュー確認用で、背景あり書き出しをONにしない限りPNGには入りません。</li>
+            </ul>
+          </div>
+        </section>
       </div>
     </form>
   </dialog>
