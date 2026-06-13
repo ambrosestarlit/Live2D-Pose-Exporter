@@ -2261,3 +2261,174 @@ h1 {
 .bounce-loop-field select {
   width: 100%;
 }
+
+
+/* Keyframe reusable preset tab */
+.keyframe-preset-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.keyframe-preset-actions button,
+.keyframe-preset-actions .mini-file-button {
+  min-height: 38px;
+  margin: 0;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.keyframe-preset-import {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keyframe-preset-category-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.keyframe-preset-category-row button {
+  padding: 8px 10px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.keyframe-preset-list {
+  display: grid;
+  gap: 8px;
+}
+
+.keyframe-preset-empty {
+  padding: 12px;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  color: var(--muted);
+  background: #fbfdfc;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.keyframe-preset-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 8px;
+  align-items: center;
+  padding: 9px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fbfdfc;
+}
+
+.keyframe-preset-title {
+  min-width: 0;
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.keyframe-preset-meta {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.keyframe-preset-insert,
+.keyframe-preset-delete {
+  padding: 7px 9px;
+  min-height: 32px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.keyframe-preset-delete {
+  color: var(--danger);
+}
+
+.keyframe-preset-dialog {
+  width: min(720px, calc(100vw - 32px));
+}
+
+.keyframe-preset-dialog-body {
+  display: grid;
+  gap: 12px;
+  padding: 16px 18px 18px;
+}
+
+.keyframe-preset-param-section h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.keyframe-preset-param-list {
+  display: grid;
+  gap: 8px;
+  max-height: min(360px, 45vh);
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.keyframe-preset-param-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  padding: 9px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fbfdfc;
+}
+
+.keyframe-preset-param-title {
+  min-width: 0;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.keyframe-preset-param-meta {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+@media (max-width: 760px) {
+  .keyframe-preset-actions,
+  .keyframe-preset-category-row {
+    grid-template-columns: 1fr;
+  }
+
+  .keyframe-preset-item {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1180px) {
+  .tab-button-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .tab-button-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .tab-button-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Three right-panel tabs */
+.tab-button-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 520px) { .tab-button-row { grid-template-columns: 1fr; } }

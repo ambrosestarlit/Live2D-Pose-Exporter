@@ -239,6 +239,7 @@
           <div class="tab-button-row" role="tablist" aria-label="Right panel tabs">
             <button id="rightTabButtonMain" class="tab-button active" type="button" role="tab" aria-selected="true" aria-controls="rightTabMain" data-right-tab="main" data-i18n="rightTabMain">現在の設定</button>
             <button id="rightTabButtonKeyframe" class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="rightTabKeyframe" data-right-tab="keyframe" data-i18n="rightTabKeyframe">キーフレーム設定プロパティ</button>
+            <button id="rightTabButtonPreset" class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="rightTabPreset" data-right-tab="preset" data-i18n="rightTabPreset">プリセット</button>
           </div>
         </section>
         <div id="rightTabMain" class="right-tab-panel active" role="tabpanel" aria-labelledby="rightTabButtonMain">
@@ -382,6 +383,27 @@
           <section class="card keyframe-property-card">
             <h2 data-i18n="rightTabKeyframe">キーフレーム設定プロパティ</h2>
             <div id="keyframeEditor" class="keyframe-editor side-keyframe-editor"></div>
+          </section>
+        </div>
+
+        <div id="rightTabPreset" class="right-tab-panel" role="tabpanel" aria-labelledby="rightTabButtonPreset" hidden>
+          <section class="card keyframe-preset-card">
+            <h2 data-i18n="rightTabPreset">プリセット</h2>
+            <p class="hint" data-i18n="keyframePresetHint">よく使うキーフレームを保存して、別プロジェクトでも挿入できます。</p>
+            <div class="keyframe-preset-actions">
+              <button id="keyframePresetNewButton" class="primary" type="button" data-i18n="keyframePresetNew">新規保存</button>
+              <button id="keyframePresetExportButton" type="button" data-i18n="keyframePresetExport">JSON書き出し</button>
+              <label class="mini-file-button keyframe-preset-import">
+                <span data-i18n="keyframePresetImport">JSON読み込み</span>
+                <input id="keyframePresetImportInput" type="file" accept=".json,application/json" />
+              </label>
+            </div>
+            <div class="keyframe-preset-category-row">
+              <select id="keyframePresetCategorySelect" aria-label="Keyframe preset category"></select>
+              <button id="keyframePresetCreateCategoryButton" type="button" data-i18n="keyframePresetCreateCategory">カテゴリ作成</button>
+              <button id="keyframePresetDeleteCategoryButton" type="button" data-i18n="keyframePresetDeleteCategory">カテゴリ削除</button>
+            </div>
+            <div id="keyframePresetList" class="keyframe-preset-list"></div>
           </section>
         </div>
       </aside>
@@ -805,10 +827,37 @@
     </form>
   </dialog>
 
+  <dialog id="keyframePresetDialog" class="keyframe-preset-dialog">
+    <div class="dialog-head">
+      <h2 data-i18n="keyframePresetDialogTitle">キーフレームプリセット保存</h2>
+      <button id="keyframePresetDialogCloseButton" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="keyframe-preset-dialog-body">
+      <label class="field stacked">
+        <span data-i18n="keyframePresetName">プリセット名</span>
+        <input id="keyframePresetNameInput" type="text" data-i18n-placeholder="keyframePresetNamePlaceholder" placeholder="例：歩き出しの揺れ" />
+      </label>
+      <label class="field stacked">
+        <span data-i18n="keyframePresetCategory">カテゴリ</span>
+        <select id="keyframePresetCategoryDialogSelect"></select>
+      </label>
+      <section class="keyframe-preset-param-section">
+        <h3 data-i18n="keyframePresetParamSelect">保存するパラメーター</h3>
+        <p class="hint" data-i18n="keyframePresetParamHint">キーフレームが入っているパラメーターだけ表示されます。</p>
+        <div id="keyframePresetParamList" class="keyframe-preset-param-list"></div>
+      </section>
+      <div class="dialog-actions">
+        <button id="keyframePresetSaveButton" class="primary" type="button" data-i18n="keyframePresetSave">保存</button>
+      </div>
+    </div>
+  </dialog>
+
   <script src="./vendor/live2dcubismcore.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.10/dist/browser/pixi.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.4.0/dist/cubism4.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script src="app.js"></script>
+
+
 </body>
 </html>

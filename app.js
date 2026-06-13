@@ -148,6 +148,116 @@
     noImages: '추가된 이미지 없음', imageAdded: '이미지를 추가했습니다.', imageSelected: '이미지를 선택했습니다.', imageDeleted: '이미지를 삭제했습니다.', keyframeSaved: '키프레임을 저장했습니다.', noActiveLayer: '조작할 레이어를 선택하세요.', animationExporting: '연속 PNG 내보내는 중: {current}/{total}', audioLoaded: '오디오를 불러왔습니다.', timelineApplied: '타임라인을 적용했습니다.', modelTrack: 'Live2D', imageTrack: '이미지', keyframes: '키 {count}개', keyframeEditor: '키프레임 편집', noKeyframeSelected: '타임라인의 키를 선택하면 시간과 내용을 나중에 조정할 수 있습니다.', selectedKeyframe: '선택한 키', keyTime: '키 위치(초)', updateKeyFromCurrent: '현재 상태로 덮어쓰기', deleteKeyframe: '키 삭제', interpolation: '보간', linear: '부드럽게', hold: '다음 키까지 고정', imageKeyContent: '이미지 키 내용', modelKeyContent: '모델 키 내용', keyframeUpdated: '키프레임을 수정했습니다.', keyframeDeleted: '키프레임을 삭제했습니다.', keyMoved: '키프레임 위치를 변경했습니다.', noEditableTrack: '키프레임을 추가할 파라미터나 이미지 항목을 먼저 조정하거나 기존 트랙을 선택하세요.', hairSwayButton: '머리 흔들림 자동 입력', hairSwayTitle: '머리 흔들림 자동 입력', hairSwayHint: '현재 시간부터 선택한 머리 파라미터에 흔들림 키프레임을 한 번에 삽입합니다.', hairSwayPreset: '프리셋', hairSwayPresetNormalWind: '보통 바람', hairSwayPresetBreeze: '산들바람', hairSwayPresetStrongWind: '강풍', hairSwayPresetLightBounce: '가볍게 튀기', hairSwayPresetBigBounce: '크게 튀기', hairSwayCount: '흔들림 횟수', hairSwayStrength: '강도', hairSwaySeconds: '흔들림 애니메이션 시간(초)', hairSwayTargets: '대상 파라미터', hairSwaySelectCandidates: '머리 후보 선택', insertHairSway: '삽입', close: '닫기', hairSwayInserted: '머리 흔들림 키프레임을 삽입했습니다.', noHairSwayTargets: '대상 파라미터를 선택하세요.', hairSwayNoCharacter: '머리 흔들림을 삽입할 캐릭터를 선택하세요.', hairSwayNoParams: '이 모델에는 선택 가능한 파라미터가 없습니다.', rightTabMain: '현재 설정', rightTabKeyframe: '키프레임 설정 속성', loop: '루프', loopKeysButton: '루프 삽입', loopDialogTitle: '루프 삽입', loopDialogHint: '선택한 파라미터 트랙의 키 배열을 지정한 횟수만큼 뒤에 복제해 삽입합니다.', loopTargetTrack: '루프할 키가 있는 파라미터', loopCount: '루프 횟수', insertLoopKeys: '루프하기', noLoopTracks: '루프할 수 있는 키프레임 트랙이 없습니다.', loopKeysInserted: '루프 키프레임을 삽입했습니다.', loopNeedsTwoKeys: '루프에는 2개 이상의 키프레임이 필요합니다.', duplicateKeyframe: '키 복제', keyframeDuplicated: '키프레임을 복제했습니다.', timelineFilterAll: '표시 트랙: 전체', timelineFilterSelected: '표시 트랙: {count}개', timelineFilterEmpty: '입력된 키프레임이 있는 파라미터가 아직 없습니다.', timelineFilterTitle: '표시할 키프레임 항목', timelineFilterHint: '체크가 없으면 입력된 키프레임이 있는 모든 파라미터를 표시합니다. 체크가 있으면 선택한 항목만 표시합니다.', clearTimelineFilter: '필터 해제', sceneManagement: '씬 관리 / 프로젝트', sceneSelect: 'Scene 선택', addScene: '씬 추가', deleteScene: '씬 삭제', saveProjectJson: '프로젝트 JSON 저장', loadProjectJson: '프로젝트 JSON 불러오기', projectSaveHint: '씬, 모델 데이터, 이미지, 오디오, 키프레임을 하나의 JSON으로 저장할 수 있습니다.', sceneAdded: '씬을 추가했습니다.', sceneDeleted: '씬을 삭제했습니다.', sceneSwitched: '씬을 전환했습니다.', projectSaved: '프로젝트 JSON을 저장했습니다.', projectLoaded: '프로젝트 JSON을 불러왔습니다.', cannotDeleteLastScene: '마지막 씬은 삭제할 수 없습니다.', mouthLipsyncButton: '립싱크 자동 입력', mouthLipsyncTitle: '립싱크 자동 입력', mouthLipsyncHint: '입 열림 파라미터에 오디오 분석 또는 횟수 지정으로 자연스러운 립싱크 키프레임을 삽입합니다.', mouthLipsyncTarget: '대상 입 파라미터', mouthLipsyncModeAudio: '오디오에 맞춰 자동 입력', mouthLipsyncModeCount: '횟수 지정으로 삽입', mouthLipsyncMax: '최대 열림 값', mouthLipsyncCount: '립싱크 횟수', mouthLipsyncAutoMaxCount: '최대 립싱크 수', mouthLipsyncSeconds: '삽입 시간(초)', mouthLipsyncSensitivity: '볼륨 감도', mouthLipsyncThreshold: '무음 판정', mouthLipsyncPreview: '미리보기', mouthLipsyncPreviewPlay: '재생', mouthLipsyncPreviewStop: '정지', mouthLipsyncPreviewTime: '재생 위치', mouthLipsyncPreviewValue: '입 열림 값', mouthLipsyncPreviewMax: '최대 설정값', insertAudioLipsync: '오디오에서 삽입', insertCountLipsync: '횟수로 삽입', mouthLipsyncInserted: '립싱크 키프레임을 삽입했습니다.', mouthLipsyncNoCharacter: '립싱크를 삽입할 캐릭터를 선택하세요.', mouthLipsyncNoParam: '입 열림 파라미터를 찾을 수 없습니다.', mouthLipsyncNoAudio: '먼저 오디오를 불러오세요.', mouthLipsyncAudioDecodeFailed: '오디오 분석에 실패했습니다. 다른 형식으로 시도해 주세요.', mouthLipsyncAudioHint: '불러온 오디오 전체를 분석하여 볼륨에 따라 입 열림 값을 변화시킵니다.', mouthLipsyncCountHint: '현재 시간부터 닫힘→열림→닫힘을 1회로 하여 지정한 횟수만큼 삽입합니다. 열림 정도는 매번 조금씩 랜덤하게 달라집니다.'
   });
 
+
+  Object.assign(I18N.ja, {
+    rightTabPreset: 'プリセット',
+    keyframePresetHint: 'よく使うキーフレームを保存して、別プロジェクトでも挿入できます。',
+    keyframePresetNew: '新規保存',
+    keyframePresetExport: 'JSON書き出し',
+    keyframePresetImport: 'JSON読み込み',
+    keyframePresetCreateCategory: 'カテゴリ作成',
+    keyframePresetDeleteCategory: 'カテゴリ削除',
+    keyframePresetDialogTitle: 'キーフレームプリセット保存',
+    keyframePresetName: 'プリセット名',
+    keyframePresetNamePlaceholder: '例：歩き出しの揺れ',
+    keyframePresetCategory: 'カテゴリ',
+    keyframePresetParamSelect: '保存するパラメーター',
+    keyframePresetParamHint: 'キーフレームが入っているパラメーターだけ表示されます。',
+    keyframePresetSave: '保存',
+    keyframePresetInsert: '挿入',
+    keyframePresetDelete: '削除',
+    keyframePresetEmpty: 'このカテゴリにはまだプリセットがありません。',
+    keyframePresetNoCharacter: 'プリセットを保存・挿入するキャラを選択してください。',
+    keyframePresetNoTracks: '保存できるキーフレーム付きパラメーターがありません。',
+    keyframePresetNameRequired: 'プリセット名を入力してください。',
+    keyframePresetSelectTracks: '保存するパラメーターを選択してください。',
+    keyframePresetSaved: 'キーフレームプリセットを保存しました。',
+    keyframePresetInserted: 'キーフレームプリセットを挿入しました。',
+    keyframePresetSkipped: '一致するパラメーターが見つからない項目がありました。',
+    keyframePresetDeleted: 'プリセットを削除しました。',
+    keyframePresetCategoryDefault: '未分類',
+    keyframePresetCategoryPrompt: 'カテゴリ名を入力してください。',
+    keyframePresetCategoryCreated: 'カテゴリを作成しました。',
+    keyframePresetCategoryDeleted: 'カテゴリを削除しました。',
+    keyframePresetCannotDeleteDefault: '未分類カテゴリは削除できません。',
+    keyframePresetJsonExported: 'プリセットJSONを書き出しました。',
+    keyframePresetJsonImported: 'プリセットJSONを読み込みました。',
+    keyframePresetTrackCount: '{count}項目',
+    keyframePresetKeyCount: '{count}キー'
+  });
+  Object.assign(I18N.en, {
+    rightTabPreset: 'Presets',
+    keyframePresetHint: 'Save frequently used keyframes and insert them in other projects.',
+    keyframePresetNew: 'New Save',
+    keyframePresetExport: 'Export JSON',
+    keyframePresetImport: 'Import JSON',
+    keyframePresetCreateCategory: 'Create Category',
+    keyframePresetDeleteCategory: 'Delete Category',
+    keyframePresetDialogTitle: 'Save Keyframe Preset',
+    keyframePresetName: 'Preset Name',
+    keyframePresetNamePlaceholder: 'Example: walk start sway',
+    keyframePresetCategory: 'Category',
+    keyframePresetParamSelect: 'Parameters to Save',
+    keyframePresetParamHint: 'Only parameters with keyframes are shown.',
+    keyframePresetSave: 'Save',
+    keyframePresetInsert: 'Insert',
+    keyframePresetDelete: 'Delete',
+    keyframePresetEmpty: 'No presets in this category yet.',
+    keyframePresetNoCharacter: 'Select a character before saving or inserting a preset.',
+    keyframePresetNoTracks: 'No keyed parameter tracks can be saved.',
+    keyframePresetNameRequired: 'Enter a preset name.',
+    keyframePresetSelectTracks: 'Select at least one parameter to save.',
+    keyframePresetSaved: 'Keyframe preset saved.',
+    keyframePresetInserted: 'Keyframe preset inserted.',
+    keyframePresetSkipped: 'Some items were skipped because matching parameters were not found.',
+    keyframePresetDeleted: 'Preset deleted.',
+    keyframePresetCategoryDefault: 'Uncategorized',
+    keyframePresetCategoryPrompt: 'Enter a category name.',
+    keyframePresetCategoryCreated: 'Category created.',
+    keyframePresetCategoryDeleted: 'Category deleted.',
+    keyframePresetCannotDeleteDefault: 'The Uncategorized category cannot be deleted.',
+    keyframePresetJsonExported: 'Preset JSON exported.',
+    keyframePresetJsonImported: 'Preset JSON imported.',
+    keyframePresetTrackCount: '{count} items',
+    keyframePresetKeyCount: '{count} keys'
+  });
+  Object.assign(I18N.ko, {
+    rightTabPreset: '프리셋',
+    keyframePresetHint: '자주 쓰는 키프레임을 저장해 다른 프로젝트에서도 삽입할 수 있습니다.',
+    keyframePresetNew: '새로 저장',
+    keyframePresetExport: 'JSON 내보내기',
+    keyframePresetImport: 'JSON 불러오기',
+    keyframePresetCreateCategory: '카테고리 만들기',
+    keyframePresetDeleteCategory: '카테고리 삭제',
+    keyframePresetDialogTitle: '키프레임 프리셋 저장',
+    keyframePresetName: '프리셋 이름',
+    keyframePresetNamePlaceholder: '예: 걷기 시작 흔들림',
+    keyframePresetCategory: '카테고리',
+    keyframePresetParamSelect: '저장할 파라미터',
+    keyframePresetParamHint: '키프레임이 있는 파라미터만 표시됩니다.',
+    keyframePresetSave: '저장',
+    keyframePresetInsert: '삽입',
+    keyframePresetDelete: '삭제',
+    keyframePresetEmpty: '이 카테고리에는 아직 프리셋이 없습니다.',
+    keyframePresetNoCharacter: '프리셋을 저장하거나 삽입할 캐릭터를 선택하세요.',
+    keyframePresetNoTracks: '저장할 수 있는 키프레임 파라미터가 없습니다.',
+    keyframePresetNameRequired: '프리셋 이름을 입력하세요.',
+    keyframePresetSelectTracks: '저장할 파라미터를 선택하세요.',
+    keyframePresetSaved: '키프레임 프리셋을 저장했습니다.',
+    keyframePresetInserted: '키프레임 프리셋을 삽입했습니다.',
+    keyframePresetSkipped: '일치하는 파라미터가 없어 일부 항목을 건너뛰었습니다.',
+    keyframePresetDeleted: '프리셋을 삭제했습니다.',
+    keyframePresetCategoryDefault: '미분류',
+    keyframePresetCategoryPrompt: '카테고리 이름을 입력하세요.',
+    keyframePresetCategoryCreated: '카테고리를 만들었습니다.',
+    keyframePresetCategoryDeleted: '카테고리를 삭제했습니다.',
+    keyframePresetCannotDeleteDefault: '미분류 카테고리는 삭제할 수 없습니다.',
+    keyframePresetJsonExported: '프리셋 JSON을 내보냈습니다.',
+    keyframePresetJsonImported: '프리셋 JSON을 불러왔습니다.',
+    keyframePresetTrackCount: '{count}개 항목',
+    keyframePresetKeyCount: '{count}키'
+  });
+
   const state = {
     lang: localStorage.getItem('l2dpe.lang') || 'ja',
     app: null,
@@ -188,6 +298,8 @@
     isDraggingKeyframe: false,
     recentTrackEntry: null,
     rightPanelTab: 'main',
+    keyframePresets: { categories: ['__default__'], activeCategory: '__default__', items: [] },
+    keyframePresetSaveEntries: [],
     loopTrackEntries: [],
     timelineFilterTrackKeys: [],
     mouthLipsyncPreviewRaf: 0,
@@ -366,8 +478,23 @@
     keyframeEditor: $('keyframeEditor'),
     rightTabButtonMain: $('rightTabButtonMain'),
     rightTabButtonKeyframe: $('rightTabButtonKeyframe'),
+    rightTabButtonPreset: $('rightTabButtonPreset'),
     rightTabMain: $('rightTabMain'),
     rightTabKeyframe: $('rightTabKeyframe'),
+    rightTabPreset: $('rightTabPreset'),
+    keyframePresetNewButton: $('keyframePresetNewButton'),
+    keyframePresetExportButton: $('keyframePresetExportButton'),
+    keyframePresetImportInput: $('keyframePresetImportInput'),
+    keyframePresetCategorySelect: $('keyframePresetCategorySelect'),
+    keyframePresetCreateCategoryButton: $('keyframePresetCreateCategoryButton'),
+    keyframePresetDeleteCategoryButton: $('keyframePresetDeleteCategoryButton'),
+    keyframePresetList: $('keyframePresetList'),
+    keyframePresetDialog: $('keyframePresetDialog'),
+    keyframePresetDialogCloseButton: $('keyframePresetDialogCloseButton'),
+    keyframePresetNameInput: $('keyframePresetNameInput'),
+    keyframePresetCategoryDialogSelect: $('keyframePresetCategoryDialogSelect'),
+    keyframePresetParamList: $('keyframePresetParamList'),
+    keyframePresetSaveButton: $('keyframePresetSaveButton'),
     paramSearch: $('paramSearch'),
     parameterList: $('parameterList'),
     helpButton: $('helpButton'),
@@ -403,6 +530,8 @@
     renderMouthLipsyncParamOptions();
     drawMouthLipsyncPreview();
     renderLoopTrackOptions();
+    renderKeyframePresetCategories();
+    renderKeyframePresetList();
     updateRightPanelTabs();
     updateTimelineUi();
     updateModelInfo();
@@ -410,20 +539,24 @@
   }
 
   function setRightPanelTab(tab) {
-    state.rightPanelTab = tab === 'keyframe' ? 'keyframe' : 'main';
+    state.rightPanelTab = ['main', 'keyframe', 'preset'].includes(tab) ? tab : 'main';
     updateRightPanelTabs();
   }
 
   function updateRightPanelTabs() {
-    const isKeyframe = state.rightPanelTab === 'keyframe';
-    els.rightTabButtonMain?.classList.toggle('active', !isKeyframe);
-    els.rightTabButtonMain?.setAttribute('aria-selected', String(!isKeyframe));
-    els.rightTabButtonKeyframe?.classList.toggle('active', isKeyframe);
-    els.rightTabButtonKeyframe?.setAttribute('aria-selected', String(isKeyframe));
-    els.rightTabMain?.classList.toggle('active', !isKeyframe);
-    if (els.rightTabMain) els.rightTabMain.hidden = isKeyframe;
-    els.rightTabKeyframe?.classList.toggle('active', isKeyframe);
-    if (els.rightTabKeyframe) els.rightTabKeyframe.hidden = !isKeyframe;
+    const active = ['main', 'keyframe', 'preset'].includes(state.rightPanelTab) ? state.rightPanelTab : 'main';
+    const entries = [
+      { name: 'main', button: els.rightTabButtonMain, panel: els.rightTabMain },
+      { name: 'keyframe', button: els.rightTabButtonKeyframe, panel: els.rightTabKeyframe },
+      { name: 'preset', button: els.rightTabButtonPreset, panel: els.rightTabPreset }
+    ];
+    for (const entry of entries) {
+      const isActive = entry.name === active;
+      entry.button?.classList.toggle('active', isActive);
+      entry.button?.setAttribute('aria-selected', String(isActive));
+      entry.panel?.classList.toggle('active', isActive);
+      if (entry.panel) entry.panel.hidden = !isActive;
+    }
   }
 
   function setStatus(el, message, type = 'warning') {
@@ -2190,6 +2323,364 @@
     if (entry?.type === 'character') return characterTrackLabel(findCharacterTrack(entry.id), entry.trackKey);
     if (entry?.type === 'image') return imageTrackLabel(entry.trackKey);
     return entry?.trackKey || '';
+  }
+
+  function defaultKeyframePresetStore() {
+    return { categories: ['__default__'], activeCategory: '__default__', items: [] };
+  }
+
+  function keyframePresetStorageKey() {
+    return 'l2dpe.keyframePresets.v1';
+  }
+
+  function keyframePresetCategoryLabel(category) {
+    return category === '__default__' ? t('keyframePresetCategoryDefault') : category;
+  }
+
+  function normalizeKeyframePresetStore(store = {}) {
+    const fallback = defaultKeyframePresetStore();
+    const categories = Array.isArray(store.categories) ? store.categories.map((item) => String(item || '').trim()).filter(Boolean) : [];
+    if (!categories.includes('__default__')) categories.unshift('__default__');
+    const uniqueCategories = [...new Set(categories)];
+    const items = Array.isArray(store.items) ? store.items.map((item) => ({
+      id: item.id || (crypto.randomUUID ? crypto.randomUUID() : `preset_${Date.now()}_${Math.random()}`),
+      name: String(item.name || t('keyframePresetName')).trim() || t('keyframePresetName'),
+      category: uniqueCategories.includes(item.category) ? item.category : '__default__',
+      createdAt: item.createdAt || new Date().toISOString(),
+      duration: Math.max(0, Number(item.duration) || 0),
+      tracks: Array.isArray(item.tracks) ? item.tracks.map((track) => ({
+        trackKey: String(track.trackKey || ''),
+        paramId: String(track.paramId || paramIdFromTrackKey(track.trackKey || '') || ''),
+        paramName: String(track.paramName || ''),
+        label: String(track.label || track.paramName || track.paramId || track.trackKey || ''),
+        keyframes: Array.isArray(track.keyframes) ? track.keyframes.map((key) => ({
+          time: Math.max(0, Number(key.time) || 0),
+          value: key.value,
+          interpolation: key.interpolation || 'linear'
+        })).sort((a, b) => a.time - b.time) : []
+      })).filter((track) => isCharacterParamTrack(track.trackKey) && track.keyframes.length) : []
+    })).filter((item) => item.tracks.length) : [];
+    const activeCategory = uniqueCategories.includes(store.activeCategory) ? store.activeCategory : fallback.activeCategory;
+    return { categories: uniqueCategories, activeCategory, items };
+  }
+
+  function loadKeyframePresets() {
+    try {
+      state.keyframePresets = normalizeKeyframePresetStore(JSON.parse(localStorage.getItem(keyframePresetStorageKey()) || 'null'));
+    } catch (_) {
+      state.keyframePresets = defaultKeyframePresetStore();
+    }
+  }
+
+  function persistKeyframePresets() {
+    state.keyframePresets = normalizeKeyframePresetStore(state.keyframePresets);
+    localStorage.setItem(keyframePresetStorageKey(), JSON.stringify(state.keyframePresets));
+  }
+
+  function renderKeyframePresetCategories() {
+    const store = normalizeKeyframePresetStore(state.keyframePresets);
+    state.keyframePresets = store;
+    const fill = (select) => {
+      if (!select) return;
+      const current = store.categories.includes(select.value) ? select.value : store.activeCategory;
+      select.innerHTML = '';
+      for (const category of store.categories) {
+        const opt = document.createElement('option');
+        opt.value = category;
+        opt.textContent = keyframePresetCategoryLabel(category);
+        select.appendChild(opt);
+      }
+      select.value = store.categories.includes(current) ? current : store.activeCategory;
+    };
+    fill(els.keyframePresetCategorySelect);
+    fill(els.keyframePresetCategoryDialogSelect);
+  }
+
+  function renderKeyframePresetList() {
+    if (!els.keyframePresetList) return;
+    const store = normalizeKeyframePresetStore(state.keyframePresets);
+    state.keyframePresets = store;
+    const category = store.categories.includes(store.activeCategory) ? store.activeCategory : '__default__';
+    if (els.keyframePresetCategorySelect) els.keyframePresetCategorySelect.value = category;
+    els.keyframePresetList.innerHTML = '';
+    const items = store.items.filter((item) => item.category === category);
+    if (!items.length) {
+      const empty = document.createElement('div');
+      empty.className = 'keyframe-preset-empty';
+      empty.textContent = t('keyframePresetEmpty');
+      els.keyframePresetList.appendChild(empty);
+      return;
+    }
+    for (const preset of items) {
+      const row = document.createElement('div');
+      row.className = 'keyframe-preset-item';
+      const trackCount = preset.tracks.length;
+      const keyCount = preset.tracks.reduce((sum, track) => sum + (track.keyframes?.length || 0), 0);
+      row.innerHTML = `
+        <div>
+          <div class="keyframe-preset-title" title="${escapeHtml(preset.name)}">${escapeHtml(preset.name)}</div>
+          <div class="keyframe-preset-meta">${escapeHtml(keyframePresetCategoryLabel(preset.category))} / ${escapeHtml(t('keyframePresetTrackCount', { count: trackCount }))} / ${escapeHtml(t('keyframePresetKeyCount', { count: keyCount }))}</div>
+        </div>
+        <button class="keyframe-preset-insert" type="button" data-i18n="keyframePresetInsert">${escapeHtml(t('keyframePresetInsert'))}</button>
+        <button class="keyframe-preset-delete" type="button" aria-label="${escapeHtml(t('keyframePresetDelete'))}">×</button>
+      `;
+      row.querySelector('.keyframe-preset-insert')?.addEventListener('click', () => insertKeyframePreset(preset.id));
+      row.querySelector('.keyframe-preset-delete')?.addEventListener('click', () => deleteKeyframePreset(preset.id));
+      els.keyframePresetList.appendChild(row);
+    }
+  }
+
+  function keyedCharacterParamEntries(character = activeCharacter()) {
+    if (!character) return [];
+    const tracks = ensureAnimationTracks(character, 'character');
+    return Object.values(tracks)
+      .filter((track) => isCharacterParamTrack(track.trackKey) && normalizeKeyframes(track).length)
+      .map((track) => {
+        const paramId = paramIdFromTrackKey(track.trackKey);
+        const param = character.parameters.find((item) => item.id === paramId);
+        return {
+          type: 'character',
+          id: character.id,
+          trackKey: track.trackKey,
+          track,
+          param,
+          label: characterTrackLabel(character, track.trackKey)
+        };
+      })
+      .filter((entry) => entry.param);
+  }
+
+  function openKeyframePresetDialog() {
+    const character = activeCharacter();
+    if (!character) {
+      log(t('keyframePresetNoCharacter'), 'error');
+      return;
+    }
+    const entries = keyedCharacterParamEntries(character);
+    if (!entries.length) {
+      log(t('keyframePresetNoTracks'), 'error');
+      return;
+    }
+    state.keyframePresetSaveEntries = entries;
+    if (els.keyframePresetNameInput) els.keyframePresetNameInput.value = '';
+    renderKeyframePresetCategories();
+    if (els.keyframePresetCategoryDialogSelect) els.keyframePresetCategoryDialogSelect.value = state.keyframePresets.activeCategory || '__default__';
+    renderKeyframePresetParamList();
+    els.keyframePresetDialog?.showModal();
+  }
+
+  function renderKeyframePresetParamList() {
+    if (!els.keyframePresetParamList) return;
+    els.keyframePresetParamList.innerHTML = '';
+    const selectedTrackKey = state.selectedKeyframe?.type === 'character' && state.selectedKeyframe.id === state.activeCharacterId ? state.selectedKeyframe.trackKey : '';
+    const checkedDefault = selectedTrackKey ? new Set([selectedTrackKey]) : new Set(state.keyframePresetSaveEntries.map((entry) => entry.trackKey));
+    for (const entry of state.keyframePresetSaveEntries) {
+      const keyCount = normalizeKeyframes(entry.track).length;
+      const id = `keyframePresetParam_${entry.trackKey.replace(/[^a-z0-9_-]/gi, '_')}`;
+      const item = document.createElement('label');
+      item.className = 'keyframe-preset-param-item';
+      item.innerHTML = `
+        <input type="checkbox" value="${escapeHtml(entry.trackKey)}" ${checkedDefault.has(entry.trackKey) ? 'checked' : ''} />
+        <span>
+          <span class="keyframe-preset-param-title">${escapeHtml(entry.label)}</span>
+          <span class="keyframe-preset-param-meta">${escapeHtml(t('keyframePresetKeyCount', { count: keyCount }))}</span>
+        </span>
+      `;
+      item.querySelector('input')?.setAttribute('id', id);
+      els.keyframePresetParamList.appendChild(item);
+    }
+  }
+
+  function saveKeyframePresetFromDialog() {
+    const character = activeCharacter();
+    if (!character) {
+      log(t('keyframePresetNoCharacter'), 'error');
+      return;
+    }
+    const name = String(els.keyframePresetNameInput?.value || '').trim();
+    if (!name) {
+      log(t('keyframePresetNameRequired'), 'error');
+      els.keyframePresetNameInput?.focus();
+      return;
+    }
+    const selectedKeys = Array.from(els.keyframePresetParamList?.querySelectorAll('input[type="checkbox"]:checked') || []).map((input) => input.value);
+    if (!selectedKeys.length) {
+      log(t('keyframePresetSelectTracks'), 'error');
+      return;
+    }
+    const entries = state.keyframePresetSaveEntries.filter((entry) => selectedKeys.includes(entry.trackKey));
+    const absoluteTimes = [];
+    for (const entry of entries) for (const key of normalizeKeyframes(entry.track)) absoluteTimes.push(Number(key.time) || 0);
+    const baseTime = absoluteTimes.length ? Math.min(...absoluteTimes) : 0;
+    const maxTime = absoluteTimes.length ? Math.max(...absoluteTimes) : baseTime;
+    const tracks = entries.map((entry) => {
+      const paramId = paramIdFromTrackKey(entry.trackKey);
+      const param = entry.param || character.parameters.find((item) => item.id === paramId);
+      return {
+        trackKey: entry.trackKey,
+        paramId,
+        paramName: param?.name || paramId,
+        label: entry.label,
+        keyframes: normalizeKeyframes(entry.track).map((key) => ({
+          time: Math.round(((Number(key.time) || 0) - baseTime) * 1000) / 1000,
+          value: clonePlain(key.value, key.value),
+          interpolation: key.interpolation || 'linear'
+        }))
+      };
+    }).filter((track) => track.keyframes.length);
+    if (!tracks.length) {
+      log(t('keyframePresetSelectTracks'), 'error');
+      return;
+    }
+    const category = els.keyframePresetCategoryDialogSelect?.value || state.keyframePresets.activeCategory || '__default__';
+    const store = normalizeKeyframePresetStore(state.keyframePresets);
+    if (!store.categories.includes(category)) store.categories.push(category);
+    const preset = {
+      id: crypto.randomUUID ? crypto.randomUUID() : `preset_${Date.now()}_${Math.random()}`,
+      name,
+      category,
+      createdAt: new Date().toISOString(),
+      duration: Math.round((maxTime - baseTime) * 1000) / 1000,
+      tracks
+    };
+    store.items.unshift(preset);
+    store.activeCategory = category;
+    state.keyframePresets = normalizeKeyframePresetStore(store);
+    persistKeyframePresets();
+    renderKeyframePresetCategories();
+    renderKeyframePresetList();
+    els.keyframePresetDialog?.close();
+    log(t('keyframePresetSaved'), 'ok');
+  }
+
+  function findPresetTargetParam(character, presetTrack) {
+    if (!character || !presetTrack) return null;
+    const paramId = presetTrack.paramId || paramIdFromTrackKey(presetTrack.trackKey);
+    return character.parameters.find((param) => param.id === paramId)
+      || character.parameters.find((param) => presetTrack.paramName && param.name === presetTrack.paramName)
+      || null;
+  }
+
+  function insertKeyframePreset(presetId) {
+    const character = activeCharacter();
+    if (!character) {
+      log(t('keyframePresetNoCharacter'), 'error');
+      return;
+    }
+    const preset = (state.keyframePresets.items || []).find((item) => item.id === presetId);
+    if (!preset) return;
+    const start = timelineTime();
+    let inserted = 0;
+    let skipped = 0;
+    let firstKey = null;
+    extendTimelineDurationIfNeeded(start + (Number(preset.duration) || 0));
+    for (const presetTrack of preset.tracks || []) {
+      const param = findPresetTargetParam(character, presetTrack);
+      if (!param) {
+        skipped++;
+        continue;
+      }
+      const trackKey = `param:${param.id}`;
+      const track = ensureAnimationTrack(character, 'character', trackKey);
+      for (const key of presetTrack.keyframes || []) {
+        const keyTime = Math.round(Math.max(0, start + (Number(key.time) || 0)) * 1000) / 1000;
+        const next = upsertKeyframe(track, {
+          time: keyTime,
+          kind: 'characterTrack',
+          trackKey,
+          value: clonePlain(key.value, key.value),
+          interpolation: key.interpolation || 'linear'
+        });
+        if (!firstKey) firstKey = next;
+        inserted++;
+      }
+      normalizeKeyframes(track);
+    }
+    if (firstKey) state.selectedKeyframe = { type: 'character', id: character.id, trackKey: firstKey.trackKey || '', keyId: firstKey.id };
+    applyTimelineAt(start, true);
+    renderTimelineTrackFilter();
+    renderTimelineLayerList();
+    renderKeyframeEditor();
+    renderLoopTrackOptions();
+    if (inserted) log(skipped ? `${t('keyframePresetInserted')} ${t('keyframePresetSkipped')}` : t('keyframePresetInserted'), 'ok');
+    else log(t('keyframePresetSkipped'), 'error');
+  }
+
+  function deleteKeyframePreset(presetId) {
+    const store = normalizeKeyframePresetStore(state.keyframePresets);
+    store.items = store.items.filter((item) => item.id !== presetId);
+    state.keyframePresets = store;
+    persistKeyframePresets();
+    renderKeyframePresetList();
+    log(t('keyframePresetDeleted'), 'ok');
+  }
+
+  function createKeyframePresetCategory() {
+    const name = String(prompt(t('keyframePresetCategoryPrompt')) || '').trim();
+    if (!name) return;
+    const store = normalizeKeyframePresetStore(state.keyframePresets);
+    if (!store.categories.includes(name)) store.categories.push(name);
+    store.activeCategory = name;
+    state.keyframePresets = store;
+    persistKeyframePresets();
+    renderKeyframePresetCategories();
+    renderKeyframePresetList();
+    log(t('keyframePresetCategoryCreated'), 'ok');
+  }
+
+  function deleteKeyframePresetCategory() {
+    const store = normalizeKeyframePresetStore(state.keyframePresets);
+    const category = store.activeCategory || '__default__';
+    if (category === '__default__') {
+      log(t('keyframePresetCannotDeleteDefault'), 'error');
+      return;
+    }
+    store.categories = store.categories.filter((item) => item !== category);
+    for (const item of store.items) if (item.category === category) item.category = '__default__';
+    store.activeCategory = '__default__';
+    state.keyframePresets = normalizeKeyframePresetStore(store);
+    persistKeyframePresets();
+    renderKeyframePresetCategories();
+    renderKeyframePresetList();
+    log(t('keyframePresetCategoryDeleted'), 'ok');
+  }
+
+  function exportKeyframePresetJson() {
+    const payload = {
+      version: 1,
+      type: 'live2d-keyframe-presets',
+      exportedAt: new Date().toISOString(),
+      keyframePresets: normalizeKeyframePresetStore(state.keyframePresets)
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    downloadBlob(blob, `live2d_keyframe_presets_${dateStamp()}.json`);
+    log(t('keyframePresetJsonExported'), 'ok');
+  }
+
+  function importKeyframePresetPackage(payload, { replace = false, silent = false } = {}) {
+    const imported = normalizeKeyframePresetStore(payload?.keyframePresets || payload);
+    const current = replace ? defaultKeyframePresetStore() : normalizeKeyframePresetStore(state.keyframePresets);
+    const ids = new Set(current.items.map((item) => item.id));
+    for (const category of imported.categories) if (!current.categories.includes(category)) current.categories.push(category);
+    for (const item of imported.items) {
+      const next = clonePlain(item, null);
+      if (!next) continue;
+      if (ids.has(next.id)) next.id = crypto.randomUUID ? crypto.randomUUID() : `preset_${Date.now()}_${Math.random()}`;
+      ids.add(next.id);
+      current.items.unshift(next);
+    }
+    current.activeCategory = imported.activeCategory && current.categories.includes(imported.activeCategory) ? imported.activeCategory : current.activeCategory;
+    state.keyframePresets = normalizeKeyframePresetStore(current);
+    persistKeyframePresets();
+    renderKeyframePresetCategories();
+    renderKeyframePresetList();
+    if (!silent) log(t('keyframePresetJsonImported'), 'ok');
+  }
+
+  async function importKeyframePresetJson(file) {
+    if (!file) return;
+    const text = await file.text();
+    importKeyframePresetPackage(JSON.parse(text));
   }
 
   function getTrackMeta(entry) {
@@ -5050,6 +5541,7 @@
       activeSceneId: state.activeSceneId,
       scenes: clonePlain(state.scenes, []),
       scenePresets: clonePlain(state.scenePresets, []),
+      keyframePresets: clonePlain(normalizeKeyframePresetStore(state.keyframePresets), {}),
       assets: {
         modelFiles: await serializeFileMap(),
         imageFiles: await serializeImageFiles(),
@@ -5170,12 +5662,15 @@
       state.scenePresets = Array.isArray(project.scenePresets) ? project.scenePresets : state.scenePresets;
       await rebuildProjectAssets(project);
       state.scenePresets = Array.isArray(project.scenePresets) ? project.scenePresets : state.scenePresets;
+      if (project.keyframePresets) importKeyframePresetPackage(project.keyframePresets, { silent: true });
       const active = activeSceneRecord();
       await applySceneRecord(active, true);
       renderSceneManager();
       renderScenePresets();
       renderTimelineTrackFilter();
       renderTimelineLayerList();
+      renderKeyframePresetCategories();
+      renderKeyframePresetList();
       log(t('projectLoaded'), 'ok');
     } finally {
       state.projectLoading = false;
@@ -5445,9 +5940,28 @@
     });
     els.rightTabButtonMain?.addEventListener('click', () => setRightPanelTab('main'));
     els.rightTabButtonKeyframe?.addEventListener('click', () => setRightPanelTab('keyframe'));
+    els.rightTabButtonPreset?.addEventListener('click', () => setRightPanelTab('preset'));
+    els.keyframePresetNewButton?.addEventListener('click', openKeyframePresetDialog);
+    els.keyframePresetExportButton?.addEventListener('click', exportKeyframePresetJson);
+    els.keyframePresetImportInput?.addEventListener('change', async () => {
+      try { await importKeyframePresetJson(els.keyframePresetImportInput.files?.[0]); }
+      catch (err) { console.error(err); log(t('loadFailed', { message: err.message || err }), 'error'); }
+      els.keyframePresetImportInput.value = '';
+    });
+    els.keyframePresetCategorySelect?.addEventListener('change', () => {
+      state.keyframePresets.activeCategory = els.keyframePresetCategorySelect.value || '__default__';
+      persistKeyframePresets();
+      renderKeyframePresetCategories();
+      renderKeyframePresetList();
+    });
+    els.keyframePresetCreateCategoryButton?.addEventListener('click', createKeyframePresetCategory);
+    els.keyframePresetDeleteCategoryButton?.addEventListener('click', deleteKeyframePresetCategory);
+    els.keyframePresetDialogCloseButton?.addEventListener('click', () => els.keyframePresetDialog?.close());
+    els.keyframePresetSaveButton?.addEventListener('click', saveKeyframePresetFromDialog);
   }
 
   function boot() {
+    loadKeyframePresets();
     applyI18n();
     bindEvents();
     setupDragAndZoom();
@@ -5463,6 +5977,8 @@
     renderTimelineTrackFilter();
     renderTimelineLayerList();
     renderLoopTrackOptions();
+    renderKeyframePresetCategories();
+    renderKeyframePresetList();
     updateCanvasPreviewSizeBadge();
     updateControlsFromActiveCharacter();
   }
