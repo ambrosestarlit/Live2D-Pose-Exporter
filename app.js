@@ -61,60 +61,60 @@
       language: 'Language', help: '取扱説明', loadModel: 'モデル読み込み', coreHint: 'Cubism Coreは vendor/live2dcubismcore.min.js に配置してください。',
       loadFolder: 'モデルフォルダを読み込み', loadZip: 'モデルZIPを読み込み', foundModels: '検出モデル', addSelectedModel: '選択モデルを追加', displaySelectedModel: '選択モデルを追加',
       characterList: 'キャラ一覧', characterListHint: '一覧の上にあるキャラほど前面に表示されます。', noCharacters: 'キャラ未追加', visible: '表示', select: '選択', delete: '削除', front: '前面', back: '背面', characterAdded: 'キャラを追加しました。', characterSelected: 'キャラを選択しました。', characterDeleted: 'キャラを削除しました。',
-      canvasExport: 'キャンバス / 書き出し', width: '幅', height: '高さ', showChecker: '市松背景を表示（書き出しは透明）', applyCanvas: 'キャンバスサイズ反映',
-      exportCurrentPng: '現在シーンを透過PNG保存', exportSelectedZip: '選択シーンプリセットをPNG ZIP保存', modelView: '選択キャラの表示調整', scale: '拡大率', fitModel: '全体表示', resetView: '表示リセット',
-      center: '中央', resetParams: 'パラメータ初期化', modelMoveTool: 'モデル移動', modelScaleTool: 'モデルサイズ', faceDirectionTool: '顔の向き', faceTiltTool: '顔の傾き', eyeMoveTool: '視線移動', poseToolMissing: 'この操作に必要なパラメータが見つかりません: {ids}', poseToolChanged: '操作ツール: {name}', noModel: 'キャラ未選択', live2dFeatures: '選択キャラのLive2D操作', idleMotion: '待機モーションON', breath: '自動呼吸ON', physics: '物理演算ON', autoBlink: '自動まばたきON',
+      canvasExport: 'キャンバス / 書き出し', width: '幅', height: '高さ', originalSize: '原寸', showChecker: '市松背景を表示（確認用）', exportBackground: '背景ありで書き出す', backgroundColor: '背景色', applyCanvas: 'キャンバスサイズ反映',
+      exportCurrentPng: '現在シーンをPNG保存', exportSelectedZip: '選択シーンプリセットをPNG ZIP保存', modelView: '選択キャラの表示調整', scale: '拡大率', fitModel: '全体表示', resetView: '表示リセット',
+      center: '中央', resetParams: 'パラメータ初期化', modelMoveTool: 'モデル移動', modelScaleTool: 'モデルサイズ', bulkTransform: '一括変更', faceDirectionTool: '顔の向き', faceTiltTool: '顔の傾き', eyeMoveTool: '視線移動', blinkTool: 'まばたき', smileTool: '笑顔', mouthTool: '口の開閉', browTool: '眉毛の表情', poseToolMissing: 'この操作に必要なパラメータが見つかりません: {ids}', poseToolChanged: '操作ツール: {name}', noModel: 'キャラ未選択', live2dFeatures: '選択キャラのLive2D操作', idleMotion: '待機モーションON', breath: '自動呼吸ON', physics: '物理演算ON', autoBlink: '自動まばたきON',
       expression: '表情', applyExpression: '表情を適用', motion: 'モーション', playMotion: '再生', stopMotion: '停止', presets: 'シーンプリセット', presetNamePlaceholder: 'プリセット名',
       save: '保存', selectAll: '全選択', clearSelection: '選択解除', exportPresetJson: 'JSON保存', importPresetJson: 'JSON読込', parameters: '選択キャラのパラメータ', searchParams: '検索',
       helpTitle: '取扱説明', help1: 'Live2D Cubism SDK for Web から live2dcubismcore.min.js を取得し、vendor フォルダへ配置します。',
       help2: 'model3.json を含むモデルフォルダ、またはZIPを読み込み、「選択モデルを追加」でキャラを複数追加できます。', help3: 'キャラ一覧から操作するキャラを選び、表示位置、パラメータ、表情、モーション、待機モーション、自動呼吸、物理演算、自動まばたきを調整します。',
-      help4: '現在の全キャラ状態をシーンプリセット保存できます。複数プリセットを選んでPNG ZIP書き出しできます。', help5: '市松背景は確認用です。PNG出力は透明背景です。',
+      help4: '現在の全キャラ状態をシーンプリセット保存できます。複数プリセットを選んでPNG ZIP書き出しできます。', help5: '市松背景は確認用です。背景あり書き出しをONにすると、指定した色で背景を塗ってPNG保存できます。',
       helpNote: 'Live2Dモデルの制作・メッシュ編集は行わず、作成済みモデルの表示とパラメータ操作に特化しています。',
       coreOk: 'Cubism Coreを検出しました。', coreMissing: 'Cubism Coreが見つかりません。vendor/live2dcubismcore.min.js を配置してから再読み込みしてください。',
       noModelFiles: 'model3.json が見つかりませんでした。', modelFilesFound: '{count}個のmodel3.jsonを検出しました。', loadingModel: 'モデルを読み込み中です。', modelLoaded: 'モデルを表示しました。',
       loadFailed: '読み込みに失敗しました: {message}', exported: '書き出しました: {name}', presetSaved: 'シーンプリセットを保存しました。', presetApplied: 'シーンプリセットを適用しました。', presetDeleted: 'プリセットを削除しました。',
       noPresetSelected: '書き出すプリセットを選択してください。', noParameters: 'パラメータを取得できませんでした。', none: 'なし', stop: '停止', motionStopped: 'モーションを停止しました。',
-      expressionApplied: '表情を適用しました。', motionStarted: 'モーションを再生しました。', jsonImported: 'プリセットJSONを読み込みました。', resetDone: '初期値に戻しました。'
+      expressionApplied: '表情を適用しました。', motionStarted: 'モーションを再生しました。', jsonImported: 'プリセットJSONを読み込みました。', resetDone: '初期値に戻しました。', originalSizeFailed: '選択中モデルの原寸サイズを取得できませんでした。'
     },
     en: {
       subtitle: 'Load existing Live2D models, edit parameters, and export transparent PNGs.',
       language: 'Language', help: 'Guide', loadModel: 'Load Model', coreHint: 'Place Cubism Core at vendor/live2dcubismcore.min.js.',
       loadFolder: 'Load Model Folder', loadZip: 'Load Model ZIP', foundModels: 'Detected Models', addSelectedModel: 'Add Selected Model', displaySelectedModel: 'Add Selected Model',
       characterList: 'Characters', characterListHint: 'Characters higher in the list are rendered in front.', noCharacters: 'No characters added', visible: 'Visible', select: 'Select', delete: 'Delete', front: 'Front', back: 'Back', characterAdded: 'Character added.', characterSelected: 'Character selected.', characterDeleted: 'Character deleted.',
-      canvasExport: 'Canvas / Export', width: 'Width', height: 'Height', showChecker: 'Show checkerboard background (exports stay transparent)', applyCanvas: 'Apply Canvas Size',
-      exportCurrentPng: 'Save Current Scene as Transparent PNG', exportSelectedZip: 'Save Selected Scene Presets as PNG ZIP', modelView: 'Selected Character View', scale: 'Scale', fitModel: 'Fit Model', resetView: 'Reset View',
-      center: 'Center', resetParams: 'Reset Params', modelMoveTool: 'Move Model', modelScaleTool: 'Scale Model', faceDirectionTool: 'Face Direction', faceTiltTool: 'Face Tilt', eyeMoveTool: 'Eye Direction', poseToolMissing: 'Required parameters were not found: {ids}', poseToolChanged: 'Pose tool: {name}', noModel: 'No character selected', live2dFeatures: 'Selected Character Live2D Controls', idleMotion: 'Idle motion ON', breath: 'Auto breath ON', physics: 'Physics ON', autoBlink: 'Auto blink ON',
+      canvasExport: 'Canvas / Export', width: 'Width', height: 'Height', originalSize: 'Original', showChecker: 'Show checkerboard background (preview only)', exportBackground: 'Export with background', backgroundColor: 'Background color', applyCanvas: 'Apply Canvas Size',
+      exportCurrentPng: 'Save Current Scene as PNG', exportSelectedZip: 'Save Selected Scene Presets as PNG ZIP', modelView: 'Selected Character View', scale: 'Scale', fitModel: 'Fit Model', resetView: 'Reset View',
+      center: 'Center', resetParams: 'Reset Params', modelMoveTool: 'Move Model', modelScaleTool: 'Scale Model', bulkTransform: 'Bulk Edit', faceDirectionTool: 'Face Direction', faceTiltTool: 'Face Tilt', eyeMoveTool: 'Eye Direction', blinkTool: 'Blink', smileTool: 'Smile', mouthTool: 'Mouth', browTool: 'Brow Expression', poseToolMissing: 'Required parameters were not found: {ids}', poseToolChanged: 'Pose tool: {name}', noModel: 'No character selected', live2dFeatures: 'Selected Character Live2D Controls', idleMotion: 'Idle motion ON', breath: 'Auto breath ON', physics: 'Physics ON', autoBlink: 'Auto blink ON',
       expression: 'Expression', applyExpression: 'Apply Expression', motion: 'Motion', playMotion: 'Play', stopMotion: 'Stop', presets: 'Scene Presets', presetNamePlaceholder: 'Preset name',
       save: 'Save', selectAll: 'Select All', clearSelection: 'Clear Selection', exportPresetJson: 'Export JSON', importPresetJson: 'Import JSON', parameters: 'Selected Character Parameters', searchParams: 'Search',
       helpTitle: 'Guide', help1: 'Download live2dcubismcore.min.js from Live2D Cubism SDK for Web and place it in the vendor folder.',
       help2: 'Load a model folder or ZIP that contains model3.json, then add multiple characters with Add Selected Model.', help3: 'Select a character from the list and adjust its view, parameters, expressions, motions, idle motion, auto breath, physics, and auto blink.',
-      help4: 'Save the current state of all characters as a scene preset. Select multiple presets and export them as a PNG ZIP.', help5: 'The checkerboard is only for preview. PNG exports are transparent.',
+      help4: 'Save the current state of all characters as a scene preset. Select multiple presets and export them as a PNG ZIP.', help5: 'The checkerboard is only for preview. Turn on background export to save PNGs with a solid color background.',
       helpNote: 'This app focuses on displaying and parameter-editing existing models. It does not create or edit Live2D meshes.',
       coreOk: 'Cubism Core detected.', coreMissing: 'Cubism Core was not found. Place vendor/live2dcubismcore.min.js and reload.',
       noModelFiles: 'No model3.json files found.', modelFilesFound: 'Detected {count} model3.json file(s).', loadingModel: 'Loading model...', modelLoaded: 'Model displayed.',
       loadFailed: 'Load failed: {message}', exported: 'Exported: {name}', presetSaved: 'Scene preset saved.', presetApplied: 'Scene preset applied.', presetDeleted: 'Preset deleted.',
       noPresetSelected: 'Select presets to export.', noParameters: 'Could not read parameters.', none: 'None', stop: 'Stop', motionStopped: 'Motion stopped.',
-      expressionApplied: 'Expression applied.', motionStarted: 'Motion started.', jsonImported: 'Preset JSON imported.', resetDone: 'Reset to defaults.'
+      expressionApplied: 'Expression applied.', motionStarted: 'Motion started.', jsonImported: 'Preset JSON imported.', resetDone: 'Reset to defaults.', originalSizeFailed: 'Could not detect the original size of the selected model.'
     },
     ko: {
       subtitle: '완성된 Live2D 모델을 조작하고 투명 PNG로 내보내는 브라우저 앱',
       language: 'Language', help: '사용 설명', loadModel: '모델 불러오기', coreHint: 'Cubism Core를 vendor/live2dcubismcore.min.js 에 넣어 주세요.',
       loadFolder: '모델 폴더 불러오기', loadZip: '모델 ZIP 불러오기', foundModels: '감지된 모델', addSelectedModel: '선택한 모델 추가', displaySelectedModel: '선택한 모델 추가',
       characterList: '캐릭터 목록', characterListHint: '목록에서 위에 있는 캐릭터일수록 앞에 표시됩니다.', noCharacters: '추가된 캐릭터 없음', visible: '표시', select: '선택', delete: '삭제', front: '앞', back: '뒤', characterAdded: '캐릭터를 추가했습니다.', characterSelected: '캐릭터를 선택했습니다.', characterDeleted: '캐릭터를 삭제했습니다.',
-      canvasExport: '캔버스 / 내보내기', width: '너비', height: '높이', showChecker: '체커보드 배경 표시(내보내기는 투명)', applyCanvas: '캔버스 크기 적용',
-      exportCurrentPng: '현재 장면을 투명 PNG로 저장', exportSelectedZip: '선택 장면 프리셋을 PNG ZIP으로 저장', modelView: '선택 캐릭터 표시 조정', scale: '확대율', fitModel: '전체 표시', resetView: '표시 초기화',
-      center: '중앙', resetParams: '파라미터 초기화', modelMoveTool: '모델 이동', modelScaleTool: '모델 크기', faceDirectionTool: '얼굴 방향', faceTiltTool: '얼굴 기울기', eyeMoveTool: '시선 이동', poseToolMissing: '필요한 파라미터를 찾을 수 없습니다: {ids}', poseToolChanged: '조작 도구: {name}', noModel: '선택된 캐릭터 없음', live2dFeatures: '선택 캐릭터 Live2D 조작', idleMotion: '대기 모션 ON', breath: '자동 호흡 ON', physics: '물리 연산 ON', autoBlink: '자동 눈깜박임 ON',
+      canvasExport: '캔버스 / 내보내기', width: '너비', height: '높이', originalSize: '원본 크기', showChecker: '체커보드 배경 표시(확인용)', exportBackground: '배경 포함 내보내기', backgroundColor: '배경색', applyCanvas: '캔버스 크기 적용',
+      exportCurrentPng: '현재 장면을 PNG로 저장', exportSelectedZip: '선택 장면 프리셋을 PNG ZIP으로 저장', modelView: '선택 캐릭터 표시 조정', scale: '확대율', fitModel: '전체 표시', resetView: '표시 초기화',
+      center: '중앙', resetParams: '파라미터 초기화', modelMoveTool: '모델 이동', modelScaleTool: '모델 크기', bulkTransform: '일괄 변경', faceDirectionTool: '얼굴 방향', faceTiltTool: '얼굴 기울기', eyeMoveTool: '시선 이동', blinkTool: '눈 깜박임', smileTool: '웃는 얼굴', mouthTool: '입 열기', browTool: '눈썹 표정', poseToolMissing: '필요한 파라미터를 찾을 수 없습니다: {ids}', poseToolChanged: '조작 도구: {name}', noModel: '선택된 캐릭터 없음', live2dFeatures: '선택 캐릭터 Live2D 조작', idleMotion: '대기 모션 ON', breath: '자동 호흡 ON', physics: '물리 연산 ON', autoBlink: '자동 눈깜박임 ON',
       expression: '표정', applyExpression: '표정 적용', motion: '모션', playMotion: '재생', stopMotion: '정지', presets: '장면 프리셋', presetNamePlaceholder: '프리셋 이름',
       save: '저장', selectAll: '전체 선택', clearSelection: '선택 해제', exportPresetJson: 'JSON 저장', importPresetJson: 'JSON 읽기', parameters: '선택 캐릭터 파라미터', searchParams: '검색',
       helpTitle: '사용 설명', help1: 'Live2D Cubism SDK for Web에서 live2dcubismcore.min.js를 받아 vendor 폴더에 넣습니다.',
       help2: 'model3.json이 포함된 모델 폴더 또는 ZIP을 불러온 뒤 선택한 모델 추가로 여러 캐릭터를 추가할 수 있습니다.', help3: '캐릭터 목록에서 조작할 캐릭터를 선택하고 표시 위치, 파라미터, 표정, 모션, 대기 모션, 자동 호흡, 물리 연산, 자동 눈깜박임을 조정합니다.',
-      help4: '현재 모든 캐릭터 상태를 장면 프리셋으로 저장할 수 있습니다. 여러 프리셋을 선택해 PNG ZIP으로 내보낼 수 있습니다.', help5: '체커보드는 확인용입니다. PNG 출력은 투명 배경입니다.',
+      help4: '현재 모든 캐릭터 상태를 장면 프리셋으로 저장할 수 있습니다. 여러 프리셋을 선택해 PNG ZIP으로 내보낼 수 있습니다.', help5: '체커보드는 확인용입니다. 배경 포함 내보내기를 켜면 지정한 색으로 배경을 채워 PNG를 저장할 수 있습니다.',
       helpNote: 'Live2D 모델 제작/메시 편집은 하지 않고, 완성된 모델의 표시와 파라미터 조작에 특화되어 있습니다.',
       coreOk: 'Cubism Core를 감지했습니다.', coreMissing: 'Cubism Core를 찾을 수 없습니다. vendor/live2dcubismcore.min.js 를 배치한 뒤 새로고침하세요.',
       noModelFiles: 'model3.json을 찾을 수 없습니다.', modelFilesFound: 'model3.json {count}개를 감지했습니다.', loadingModel: '모델을 불러오는 중입니다.', modelLoaded: '모델을 표시했습니다.',
       loadFailed: '불러오기에 실패했습니다: {message}', exported: '내보냈습니다: {name}', presetSaved: '장면 프리셋을 저장했습니다.', presetApplied: '장면 프리셋을 적용했습니다.', presetDeleted: '프리셋을 삭제했습니다.',
       noPresetSelected: '내보낼 프리셋을 선택하세요.', noParameters: '파라미터를 가져오지 못했습니다.', none: '없음', stop: '정지', motionStopped: '모션을 정지했습니다.',
-      expressionApplied: '표정을 적용했습니다.', motionStarted: '모션을 재생했습니다.', jsonImported: '프리셋 JSON을 불러왔습니다.', resetDone: '기본값으로 초기화했습니다.'
+      expressionApplied: '표정을 적용했습니다.', motionStarted: '모션을 재생했습니다.', jsonImported: '프리셋 JSON을 불러왔습니다.', resetDone: '기본값으로 초기화했습니다.', originalSizeFailed: '선택한 모델의 원본 크기를 가져오지 못했습니다.'
     }
   };
 
@@ -130,7 +130,8 @@
     scenePresets: [],
     isDragging: false,
     activePoseTool: 'modelMove',
-    dragStart: { x: 0, y: 0, modelX: 0, modelY: 0, modelScale: 1, params: {} }
+    dragStart: { x: 0, y: 0, modelX: 0, modelY: 0, modelScale: 1, params: {}, bulkTransforms: new Map() },
+    firstModelCanvasApplied: false
   };
 
   const $ = (id) => document.getElementById(id);
@@ -145,12 +146,20 @@
     canvasWidth: $('canvasWidth'),
     canvasHeight: $('canvasHeight'),
     checkerToggle: $('checkerToggle'),
+    exportBackgroundToggle: $('exportBackgroundToggle'),
+    exportBackgroundColor: $('exportBackgroundColor'),
+    originalCanvasButton: $('originalCanvasButton'),
+    canvasSizeBadge: $('canvasSizeBadge'),
+    exportFrame: $('exportFrame'),
     applyCanvasButton: $('applyCanvasButton'),
     exportPngButton: $('exportPngButton'),
     exportZipButton: $('exportZipButton'),
     modelX: $('modelX'),
     modelY: $('modelY'),
     modelScale: $('modelScale'),
+    toolbarScaleNumber: $('toolbarScaleNumber'),
+    toolbarScaleRange: $('toolbarScaleRange'),
+    bulkTransformToggle: $('bulkTransformToggle'),
     fitModelButton: $('fitModelButton'),
     resetViewButton: $('resetViewButton'),
     centerModelButton: $('centerModelButton'),
@@ -160,6 +169,10 @@
     faceDirectionTool: $('faceDirectionTool'),
     faceTiltTool: $('faceTiltTool'),
     eyeMoveTool: $('eyeMoveTool'),
+    blinkTool: $('blinkTool'),
+    smileTool: $('smileTool'),
+    mouthTool: $('mouthTool'),
+    browTool: $('browTool'),
     stageWrap: $('stageWrap'),
     canvas: $('live2dCanvas'),
     log: $('log'),
@@ -396,8 +409,8 @@
       transparent: true,
       backgroundAlpha: 0,
       antialias: true,
-      autoDensity: true,
-      resolution: window.devicePixelRatio || 1,
+      autoDensity: false,
+      resolution: 1,
       preserveDrawingBuffer: true
     });
     state.app.ticker.add(() => {
@@ -426,8 +439,70 @@
   }
 
   function updateModelInfo() {
+    if (!els.modelInfo) return;
     const character = activeCharacter();
     els.modelInfo.textContent = character ? `${character.name} / ${character.modelPath}` : t('noModel');
+  }
+
+  function clampModelScale(value) {
+    const numeric = Number(value);
+    if (!Number.isFinite(numeric)) return 1;
+    return Math.max(0.05, Math.min(5, numeric));
+  }
+
+  function formatScale(value) {
+    return clampModelScale(value).toFixed(3).replace(/\.?0+$/, '');
+  }
+
+  function syncScaleControls(value) {
+    const scale = formatScale(value);
+    if (els.modelScale) els.modelScale.value = scale;
+    if (els.toolbarScaleNumber) els.toolbarScaleNumber.value = scale;
+    if (els.toolbarScaleRange) els.toolbarScaleRange.value = scale;
+  }
+
+  function selectedScale() {
+    return activeCharacter()?.model?.scale?.x || 1;
+  }
+
+  function setScaleForCharacter(character, value) {
+    if (!character?.model) return;
+    character.model.scale.set(clampModelScale(value));
+  }
+
+  function setScaleForActiveOrBulk(value, render = true) {
+    const character = activeCharacter();
+    if (!character?.model) return;
+    const scale = clampModelScale(value);
+
+    if (els.bulkTransformToggle?.checked) {
+      const currentScale = character.model.scale?.x || 1;
+      const ratio = currentScale ? scale / currentScale : 1;
+      const centerX = (state.app?.renderer?.width || Number(els.canvasWidth.value) || 0) / 2;
+      const centerY = (state.app?.renderer?.height || Number(els.canvasHeight.value) || 0) / 2;
+
+      for (const item of state.characters) {
+        if (!item?.model) continue;
+        item.model.position.set(
+          centerX + (item.model.x - centerX) * ratio,
+          centerY + (item.model.y - centerY) * ratio
+        );
+        setScaleForCharacter(item, (item.model.scale?.x || 1) * ratio);
+      }
+    } else {
+      setScaleForCharacter(character, scale);
+    }
+
+    syncScaleControls(character.model.scale.x);
+    syncPositionControlsFromActive();
+    if (render) state.app?.renderer?.render(state.app.stage);
+  }
+
+  function syncPositionControlsFromActive() {
+    const character = activeCharacter();
+    if (!character?.model) return;
+    els.modelX.value = Math.round(character.model.x);
+    els.modelY.value = Math.round(character.model.y);
   }
 
   function updateControlsFromActiveCharacter() {
@@ -435,7 +510,7 @@
     if (!character) {
       els.modelX.value = '0';
       els.modelY.value = '0';
-      els.modelScale.value = '1';
+      syncScaleControls(1);
       els.idleMotionToggle.checked = false;
       els.breathToggle.checked = false;
       els.physicsToggle.checked = false;
@@ -448,7 +523,7 @@
     }
     els.modelX.value = Math.round(character.model?.x || 0);
     els.modelY.value = Math.round(character.model?.y || 0);
-    els.modelScale.value = String(character.model?.scale?.x || 1);
+    syncScaleControls(character.model?.scale?.x || 1);
     els.idleMotionToggle.checked = !!character.idleMotionEnabled;
     els.breathToggle.checked = !!character.breathEnabled;
     els.physicsToggle.checked = !!character.physicsEnabled;
@@ -526,8 +601,13 @@
       // 読み込み直後は自動フィットせず、Live2Dモデルの原寸スケール 1.0 で配置する。
       // サイズ調整が必要な場合だけ「全体表示」または「モデルサイズ」で変更する。
       character.model.scale.set(1);
-      centerCharacter(character);
-      offsetNewCharacter(character);
+      if (!state.firstModelCanvasApplied && state.characters.length === 1) {
+        state.firstModelCanvasApplied = true;
+        setCanvasToOriginalSize(character, true);
+      } else {
+        centerCharacter(character);
+        offsetNewCharacter(character);
+      }
       selectCharacter(character.id, true);
       loadScenePresets();
       log(t('characterAdded'), 'ok');
@@ -645,6 +725,28 @@
     eyeMove: {
       x: ['ParamEyeBallX', 'ParamEyeX', 'ParamEyeMoveX', 'ParamEyeDirectionX', 'EyeBallX'],
       y: ['ParamEyeBallY', 'ParamEyeY', 'ParamEyeMoveY', 'EyeBallY']
+    },
+    blink: {
+      leftOpen: ['ParamEyeLOpen', 'ParamEyeOpenL', 'ParamEyeLOpenY', 'EyeLOpen', 'EyeOpenL', 'LeftEyeOpen'],
+      rightOpen: ['ParamEyeROpen', 'ParamEyeOpenR', 'ParamEyeROpenY', 'EyeROpen', 'EyeOpenR', 'RightEyeOpen']
+    },
+    smile: {
+      leftSmile: ['ParamEyeLSmile', 'ParamEyeSmileL', 'ParamEyeLSmile', 'EyeLSmile', 'EyeSmileL', 'LeftEyeSmile'],
+      rightSmile: ['ParamEyeRSmile', 'ParamEyeSmileR', 'ParamEyeRSmile', 'EyeRSmile', 'EyeSmileR', 'RightEyeSmile']
+    },
+    mouth: {
+      open: ['ParamMouthOpenY', 'ParamMouthOpen', 'ParamMouthY', 'MouthOpenY', 'MouthOpen'],
+      form: ['ParamMouthForm', 'ParamMouthShape', 'ParamMouthX', 'MouthForm', 'MouthShape', 'MouthX']
+    },
+    brow: {
+      leftX: ['ParamBrowLX', 'ParamBrowLPositionX', 'BrowLX', 'BrowXLeft', 'LeftBrowX'],
+      rightX: ['ParamBrowRX', 'ParamBrowRPositionX', 'BrowRX', 'BrowXRight', 'RightBrowX'],
+      leftY: ['ParamBrowLY', 'ParamBrowLPositionY', 'BrowLY', 'BrowYLeft', 'LeftBrowY'],
+      rightY: ['ParamBrowRY', 'ParamBrowRPositionY', 'BrowRY', 'BrowYRight', 'RightBrowY'],
+      leftAngle: ['ParamBrowLAngle', 'ParamBrowAngleL', 'BrowLAngle', 'BrowAngleL', 'LeftBrowAngle'],
+      rightAngle: ['ParamBrowRAngle', 'ParamBrowAngleR', 'BrowRAngle', 'BrowAngleR', 'RightBrowAngle'],
+      leftForm: ['ParamBrowLForm', 'ParamBrowFormL', 'BrowLForm', 'BrowFormL', 'LeftBrowForm'],
+      rightForm: ['ParamBrowRForm', 'ParamBrowFormR', 'BrowRForm', 'BrowFormR', 'RightBrowForm']
     }
   };
 
@@ -723,10 +825,19 @@
   }
 
   function getToolLabel(tool) {
-    if (tool === 'modelMove' || tool === 'characterMove') return t('modelMoveTool');
-    if (tool === 'modelScale') return t('modelScaleTool');
-    const key = tool === 'faceTilt' ? 'faceTiltTool' : tool === 'eyeMove' ? 'eyeMoveTool' : 'faceDirectionTool';
-    return t(key);
+    const keyMap = {
+      modelMove: 'modelMoveTool',
+      characterMove: 'modelMoveTool',
+      modelScale: 'modelScaleTool',
+      faceDirection: 'faceDirectionTool',
+      faceTilt: 'faceTiltTool',
+      eyeMove: 'eyeMoveTool',
+      blink: 'blinkTool',
+      smile: 'smileTool',
+      mouth: 'mouthTool',
+      brow: 'browTool'
+    };
+    return t(keyMap[tool] || 'faceDirectionTool');
   }
 
   function setActivePoseTool(tool, silent = false) {
@@ -741,6 +852,16 @@
     return range / Math.min(base, divisor);
   }
 
+  function pushChanged(changed, param) {
+    if (param && !changed.includes(param.id)) changed.push(param.id);
+  }
+
+  function applyParamDelta(character, param, delta, changed) {
+    if (!param || !(param.id in state.dragStart.params)) return;
+    setManualParameterValue(character, param, state.dragStart.params[param.id] + delta, false);
+    pushChanged(changed, param);
+  }
+
   function applyPoseToolDrag(event) {
     const character = activeCharacter();
     if (!character?.model) return;
@@ -749,17 +870,47 @@
     const dy = event.clientY - state.dragStart.y;
 
     if (state.activePoseTool === 'modelMove' || state.activePoseTool === 'characterMove') {
-      character.model.position.set(state.dragStart.modelX + dx, state.dragStart.modelY + dy);
-      els.modelX.value = Math.round(character.model.x);
-      els.modelY.value = Math.round(character.model.y);
+      const scaleX = (state.app?.renderer?.width || rect.width || 1) / Math.max(1, rect.width || 1);
+      const scaleY = (state.app?.renderer?.height || rect.height || 1) / Math.max(1, rect.height || 1);
+      const moveX = dx * scaleX;
+      const moveY = dy * scaleY;
+
+      if (els.bulkTransformToggle?.checked) {
+        for (const item of state.characters) {
+          const start = state.dragStart.bulkTransforms.get(item.id);
+          if (!item?.model || !start) continue;
+          item.model.position.set(start.x + moveX, start.y + moveY);
+        }
+      } else {
+        character.model.position.set(state.dragStart.modelX + moveX, state.dragStart.modelY + moveY);
+      }
+
+      syncPositionControlsFromActive();
       state.app?.renderer?.render(state.app.stage);
       return;
     }
 
     if (state.activePoseTool === 'modelScale') {
-      const nextScale = Math.max(0.05, Math.min(5, state.dragStart.modelScale * Math.exp(dx / 240)));
-      character.model.scale.set(nextScale);
-      els.modelScale.value = nextScale.toFixed(3).replace(/\.?0+$/, '');
+      const ratio = Math.exp(dx / 240);
+      if (els.bulkTransformToggle?.checked) {
+        const centerX = (state.app?.renderer?.width || Number(els.canvasWidth.value) || 0) / 2;
+        const centerY = (state.app?.renderer?.height || Number(els.canvasHeight.value) || 0) / 2;
+
+        for (const item of state.characters) {
+          const start = state.dragStart.bulkTransforms.get(item.id);
+          if (!item?.model || !start) continue;
+
+          setScaleForCharacter(item, start.scale * ratio);
+          item.model.position.set(
+            centerX + (start.x - centerX) * ratio,
+            centerY + (start.y - centerY) * ratio
+          );
+        }
+      } else {
+        setScaleForCharacter(character, state.dragStart.modelScale * ratio);
+      }
+      syncScaleControls(character.model.scale.x);
+      syncPositionControlsFromActive();
       state.app?.renderer?.render(state.app.stage);
       return;
     }
@@ -768,32 +919,54 @@
     const changed = [];
 
     if (state.activePoseTool === 'faceDirection') {
-      if (targets.x) {
-        const sx = getToolSensitivity(targets.x, rect.width);
-        setManualParameterValue(character, targets.x, state.dragStart.params[targets.x.id] + dx * sx, false);
-        changed.push(targets.x.id);
-      }
-      if (targets.y) {
-        const sy = getToolSensitivity(targets.y, rect.height);
-        setManualParameterValue(character, targets.y, state.dragStart.params[targets.y.id] - dy * sy, false);
-        changed.push(targets.y.id);
-      }
+      if (targets.x) applyParamDelta(character, targets.x, dx * getToolSensitivity(targets.x, rect.width), changed);
+      if (targets.y) applyParamDelta(character, targets.y, -dy * getToolSensitivity(targets.y, rect.height), changed);
     } else if (state.activePoseTool === 'faceTilt') {
-      if (targets.z) {
-        const sx = getToolSensitivity(targets.z, rect.width, 340);
-        setManualParameterValue(character, targets.z, state.dragStart.params[targets.z.id] + dx * sx, false);
-        changed.push(targets.z.id);
-      }
+      if (targets.z) applyParamDelta(character, targets.z, dx * getToolSensitivity(targets.z, rect.width, 340), changed);
     } else if (state.activePoseTool === 'eyeMove') {
-      if (targets.x) {
-        const sx = getToolSensitivity(targets.x, rect.width, 260);
-        setManualParameterValue(character, targets.x, state.dragStart.params[targets.x.id] + dx * sx, false);
-        changed.push(targets.x.id);
+      if (targets.x) applyParamDelta(character, targets.x, dx * getToolSensitivity(targets.x, rect.width, 260), changed);
+      if (targets.y) applyParamDelta(character, targets.y, -dy * getToolSensitivity(targets.y, rect.height, 260), changed);
+    } else if (state.activePoseTool === 'blink') {
+      const sample = targets.leftOpen || targets.rightOpen;
+      if (sample) {
+        const delta = -dy * getToolSensitivity(sample, rect.height, 240);
+        applyParamDelta(character, targets.leftOpen, delta, changed);
+        applyParamDelta(character, targets.rightOpen, delta, changed);
       }
-      if (targets.y) {
-        const sy = getToolSensitivity(targets.y, rect.height, 260);
-        setManualParameterValue(character, targets.y, state.dragStart.params[targets.y.id] - dy * sy, false);
-        changed.push(targets.y.id);
+    } else if (state.activePoseTool === 'smile') {
+      const sample = targets.leftSmile || targets.rightSmile;
+      if (sample) {
+        const delta = dx * getToolSensitivity(sample, rect.width, 240);
+        applyParamDelta(character, targets.leftSmile, delta, changed);
+        applyParamDelta(character, targets.rightSmile, delta, changed);
+      }
+    } else if (state.activePoseTool === 'mouth') {
+      if (targets.open) applyParamDelta(character, targets.open, -dy * getToolSensitivity(targets.open, rect.height, 240), changed);
+      if (targets.form) applyParamDelta(character, targets.form, dx * getToolSensitivity(targets.form, rect.width, 240), changed);
+    } else if (state.activePoseTool === 'brow') {
+      const ySample = targets.leftY || targets.rightY;
+      const xSample = targets.leftX || targets.rightX;
+      const angleSample = targets.leftAngle || targets.rightAngle;
+      const formSample = targets.leftForm || targets.rightForm;
+      if (ySample) {
+        const deltaY = -dy * getToolSensitivity(ySample, rect.height, 250);
+        applyParamDelta(character, targets.leftY, deltaY, changed);
+        applyParamDelta(character, targets.rightY, deltaY, changed);
+      }
+      if (xSample) {
+        const deltaX = dx * getToolSensitivity(xSample, rect.width, 260);
+        applyParamDelta(character, targets.leftX, deltaX, changed);
+        applyParamDelta(character, targets.rightX, deltaX, changed);
+      }
+      if (angleSample) {
+        const deltaAngle = dx * getToolSensitivity(angleSample, rect.width, 300);
+        applyParamDelta(character, targets.leftAngle, deltaAngle, changed);
+        applyParamDelta(character, targets.rightAngle, deltaAngle, changed);
+      }
+      if (formSample) {
+        const deltaForm = dx * getToolSensitivity(formSample, rect.width, 260);
+        applyParamDelta(character, targets.leftForm, deltaForm, changed);
+        applyParamDelta(character, targets.rightForm, deltaForm, changed);
       }
     }
 
@@ -808,12 +981,10 @@
     if (!character || tool === 'modelMove' || tool === 'characterMove' || tool === 'modelScale') return {};
     const targets = getPoseToolTargets(tool, character);
     const params = {};
-    const missing = [];
-    for (const [axis, param] of Object.entries(targets)) {
+    for (const param of Object.values(targets)) {
       if (param) params[param.id] = getCurrentParamValue(character, param);
-      else missing.push(axis.toUpperCase());
     }
-    if (missing.length) {
+    if (!Object.keys(params).length) {
       const labels = Object.keys(POSE_TOOL_PARAM_CANDIDATES[tool] || {}).join('/').toUpperCase();
       log(t('poseToolMissing', { ids: labels }), 'error');
     }
@@ -881,6 +1052,63 @@
     return String(Math.round(n * 1000) / 1000);
   }
 
+  function getCharacterOriginalSize(character = activeCharacter()) {
+    if (!character?.model) return null;
+    const model = character.model;
+    const sx = model.scale?.x || 1;
+    const sy = model.scale?.y || sx;
+    try {
+      model.scale.set(1);
+      const bounds = model.getLocalBounds ? model.getLocalBounds() : model.getBounds();
+      const width = Math.ceil(Math.max(16, bounds?.width || 0));
+      const height = Math.ceil(Math.max(16, bounds?.height || 0));
+      model.scale.set(sx, sy);
+      if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 16 || height <= 16) return null;
+      return { width, height };
+    } catch (err) {
+      try { model.scale.set(sx, sy); } catch (_) {}
+      console.warn('Could not detect original model size:', err);
+      return null;
+    }
+  }
+
+  function updateCanvasPreviewFrame() {
+    if (!els.exportFrame || !els.stageWrap) return;
+    const canvasW = Math.max(1, Number(els.canvasWidth.value) || state.app?.renderer?.width || 1080);
+    const canvasH = Math.max(1, Number(els.canvasHeight.value) || state.app?.renderer?.height || 1080);
+    const wrapRect = els.stageWrap.getBoundingClientRect();
+    const availableW = Math.max(80, wrapRect.width - 28);
+    const availableH = Math.max(80, wrapRect.height - 28);
+    const scale = Math.min(availableW / canvasW, availableH / canvasH, 1);
+    const previewW = Math.max(1, Math.round(canvasW * scale));
+    const previewH = Math.max(1, Math.round(canvasH * scale));
+    els.exportFrame.style.width = `${previewW}px`;
+    els.exportFrame.style.height = `${previewH}px`;
+    const previewBg = els.exportBackgroundToggle?.checked ? (els.exportBackgroundColor?.value || '#ffffff') : 'transparent';
+    els.exportFrame.style.backgroundColor = previewBg;
+  }
+
+  function updateCanvasPreviewSizeBadge() {
+    if (!els.canvasSizeBadge) return;
+    const width = Number(els.canvasWidth.value) || state.app?.renderer?.width || 0;
+    const height = Number(els.canvasHeight.value) || state.app?.renderer?.height || 0;
+    els.canvasSizeBadge.textContent = `${Math.round(width)}×${Math.round(height)}`;
+    updateCanvasPreviewFrame();
+  }
+
+  function setCanvasToOriginalSize(character = activeCharacter(), centerAfter = true) {
+    const size = getCharacterOriginalSize(character);
+    if (!size) {
+      log(t('originalSizeFailed'), 'error');
+      return false;
+    }
+    els.canvasWidth.value = String(size.width);
+    els.canvasHeight.value = String(size.height);
+    resizeCanvas();
+    if (centerAfter) centerCharacter(character);
+    return true;
+  }
+
   function centerCharacter(character = activeCharacter()) {
     if (!character?.model) return;
     const w = Number(els.canvasWidth.value) || state.app.renderer.width;
@@ -894,6 +1122,7 @@
     if (!character?.model) return;
     character.model.scale.set(1);
     centerCharacter(character);
+    updateControlsFromActiveCharacter();
   }
 
   function fitCharacter(character = activeCharacter()) {
@@ -905,23 +1134,65 @@
     const scale = Math.max(0.05, Math.min(5, Math.min(cw / Math.max(1, bounds.width), ch / Math.max(1, bounds.height)) * 0.72));
     character.model.scale.set(scale);
     centerCharacter(character);
+    updateControlsFromActiveCharacter();
+  }
+
+  function applyPositionInputs() {
+    const character = activeCharacter();
+    if (!character?.model) return;
+    const nextX = Number(els.modelX.value) || 0;
+    const nextY = Number(els.modelY.value) || 0;
+    const dx = nextX - character.model.x;
+    const dy = nextY - character.model.y;
+
+    if (els.bulkTransformToggle?.checked) {
+      for (const item of state.characters) {
+        if (!item?.model) continue;
+        item.model.position.set(item.model.x + dx, item.model.y + dy);
+      }
+    } else {
+      character.model.position.set(nextX, nextY);
+    }
+
+    syncPositionControlsFromActive();
+    state.app?.renderer?.render(state.app.stage);
+  }
+
+  function applyScaleInputs(source) {
+    const value = source?.value ?? selectedScale();
+    setScaleForActiveOrBulk(value, true);
   }
 
   function applyViewInputs() {
-    const character = activeCharacter();
-    if (!character?.model) return;
-    character.model.position.set(Number(els.modelX.value) || 0, Number(els.modelY.value) || 0);
-    const scale = Number(els.modelScale.value) || 1;
-    character.model.scale.set(scale);
+    applyPositionInputs();
+    applyScaleInputs(els.modelScale);
   }
 
   function resizeCanvas() {
     initPixi();
+
+    const oldWidth = state.app.renderer.width || Number(els.canvasWidth.value) || 1080;
+    const oldHeight = state.app.renderer.height || Number(els.canvasHeight.value) || 1080;
     const width = Math.max(16, Math.min(8192, Number(els.canvasWidth.value) || 1080));
     const height = Math.max(16, Math.min(8192, Number(els.canvasHeight.value) || 1080));
+
     els.canvasWidth.value = width;
     els.canvasHeight.value = height;
+
+    const moveX = (width - oldWidth) / 2;
+    const moveY = (height - oldHeight) / 2;
+
     state.app.renderer.resize(width, height);
+
+    // キャンバスサイズ変更時は、新旧キャンバス中心の差分だけ全モデルを移動する。
+    // これにより、途中でサイズを変えてもモデル配置が中央基準で維持される。
+    for (const character of state.characters) {
+      if (!character?.model) continue;
+      character.model.position.set(character.model.x + moveX, character.model.y + moveY);
+    }
+
+    updateCanvasPreviewSizeBadge();
+    updateControlsFromActiveCharacter();
     state.app.renderer.render(state.app.stage);
   }
 
@@ -1285,8 +1556,28 @@
   function canvasToBlob() {
     for (const character of state.characters) applyManualValuesToModel(character);
     state.app.renderer.render(state.app.stage);
+
+    const sourceCanvas = els.canvas;
+    const exportWidth = Math.max(1, Math.round(Number(els.canvasWidth.value) || state.app.renderer.width || sourceCanvas.width));
+    const exportHeight = Math.max(1, Math.round(Number(els.canvasHeight.value) || state.app.renderer.height || sourceCanvas.height));
+    const output = document.createElement('canvas');
+    output.width = exportWidth;
+    output.height = exportHeight;
+
+    const ctx = output.getContext('2d');
+    if (els.exportBackgroundToggle?.checked) {
+      ctx.fillStyle = els.exportBackgroundColor?.value || '#ffffff';
+      ctx.fillRect(0, 0, exportWidth, exportHeight);
+    } else {
+      ctx.clearRect(0, 0, exportWidth, exportHeight);
+    }
+
+    // Preview and export must use the same logical canvas rectangle.
+    // Even if a browser changes the backing-store size internally, normalize it here.
+    ctx.drawImage(sourceCanvas, 0, 0, sourceCanvas.width, sourceCanvas.height, 0, 0, exportWidth, exportHeight);
+
     return new Promise((resolve, reject) => {
-      els.canvas.toBlob((blob) => {
+      output.toBlob((blob) => {
         if (blob) resolve(blob);
         else reject(new Error('canvas.toBlob failed'));
       }, 'image/png');
@@ -1449,7 +1740,12 @@
         modelX: character.model.x,
         modelY: character.model.y,
         modelScale: character.model.scale?.x || 1,
-        params: capturePoseToolStartParams()
+        params: capturePoseToolStartParams(),
+        bulkTransforms: new Map(state.characters.map((item) => [item.id, {
+          x: item.model?.x || 0,
+          y: item.model?.y || 0,
+          scale: item.model?.scale?.x || 1
+        }]))
       };
     });
     els.canvas.addEventListener('pointermove', (event) => {
@@ -1465,10 +1761,9 @@
       const character = activeCharacter();
       if (!character?.model) return;
       event.preventDefault();
-      const current = Number(els.modelScale.value) || 1;
+      const current = Number(els.toolbarScaleNumber?.value || els.modelScale.value) || 1;
       const next = Math.max(0.05, Math.min(5, current + (event.deltaY < 0 ? 0.05 : -0.05)));
-      els.modelScale.value = String(next);
-      character.model.scale.set(next);
+      setScaleForActiveOrBulk(next, true);
     }, { passive: false });
   }
 
@@ -1505,9 +1800,25 @@
       });
     });
     els.checkerToggle.addEventListener('change', () => els.stageWrap.classList.toggle('checker', els.checkerToggle.checked));
-    els.modelX.addEventListener('input', applyViewInputs);
-    els.modelY.addEventListener('input', applyViewInputs);
-    els.modelScale.addEventListener('input', applyViewInputs);
+    els.originalCanvasButton.addEventListener('click', () => setCanvasToOriginalSize(activeCharacter(), true));
+    els.exportBackgroundToggle.addEventListener('change', () => {
+      updateCanvasPreviewFrame();
+      state.app?.renderer?.render(state.app.stage);
+    });
+    els.exportBackgroundColor.addEventListener('input', () => {
+      updateCanvasPreviewFrame();
+      state.app?.renderer?.render(state.app.stage);
+    });
+    window.addEventListener('resize', updateCanvasPreviewFrame);
+    els.modelX.addEventListener('input', applyPositionInputs);
+    els.modelY.addEventListener('input', applyPositionInputs);
+    els.modelScale.addEventListener('input', () => applyScaleInputs(els.modelScale));
+    els.toolbarScaleNumber.addEventListener('input', () => applyScaleInputs(els.toolbarScaleNumber));
+    els.toolbarScaleRange.addEventListener('input', () => applyScaleInputs(els.toolbarScaleRange));
+    els.bulkTransformToggle.addEventListener('change', () => {
+      syncPositionControlsFromActive();
+      syncScaleControls(selectedScale());
+    });
     els.fitModelButton.addEventListener('click', () => fitCharacter(activeCharacter()));
     els.resetViewButton.addEventListener('click', resetView);
     els.centerModelButton.addEventListener('click', () => centerCharacter(activeCharacter()));
@@ -1569,6 +1880,7 @@
     els.stageWrap.classList.toggle('checker', els.checkerToggle.checked);
     checkCoreStatus();
     loadScenePresets();
+    updateCanvasPreviewSizeBadge();
     updateControlsFromActiveCharacter();
   }
 

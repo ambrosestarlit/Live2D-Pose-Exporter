@@ -80,3 +80,52 @@ live2d-pose-exporter/
 - 読み込み直後のモデルスケールは `1.0` です。
 - 画面に収めたい場合は「全体表示」を押してください。
 - ドラッグで拡大縮小したい場合は「モデルサイズ」を選択してください。
+
+
+## Canvas / export range update
+
+- The first loaded model automatically sets the canvas to the model's original size.
+- The "Original" button sets the canvas to the selected model's original size.
+- The preview canvas now shows the actual export area with a mint border and size badge.
+- Turn on background export to save PNGs with a solid color background.
+- The checkerboard background is only for preview.
+
+
+## Preview frame fix
+
+- The Live2D model keeps its original Scale 1.0 when loaded.
+- The export-range frame is scaled down only for preview so it always fits in the preview area.
+- The canvas is no longer stretched directly to the preview panel, so the model will not be horizontally compressed.
+- Use the export-range frame as the visible boundary for PNG output.
+
+- When background export is enabled, the preview frame now shows the chosen background color as well.
+
+- Preview/export matching fix: renderer resolution is fixed to 1 and PNG export is normalized to the canvas width/height fields, so the frame preview and saved PNG use the same rectangle.
+
+
+## Expression drag tools update
+
+Added preview toolbar tools:
+- Blink: drag vertically to adjust both eye open parameters together.
+- Smile: drag horizontally to adjust left/right eye smile parameters together.
+- Mouth: drag vertically for mouth open and horizontally for mouth form.
+- Brow Expression: drag to adjust brow position, angle, and form parameters together.
+- The model name display in the preview toolbar is hidden.
+
+- Canvas resize center fix: when the canvas size changes, all loaded models are shifted by the difference between the old and new canvas centers, keeping the scene centered.
+
+
+## Scale controls and bulk edit update
+
+- Added a numeric scale box and scale slider next to the Model Size tool button.
+- The toolbar scale box, toolbar slider, and left-panel scale slider stay synchronized in real time.
+- Manual scale input updates the selected model immediately.
+- Added a Bulk Edit checkbox.
+- When Bulk Edit is ON, model move drag moves all loaded models together.
+- When Bulk Edit is ON, model scale drag / scale inputs resize all loaded models together.
+
+- Moved Center and Reset Parameters from the preview toolbar to the top of the parameter list card.
+
+- Moved the Bulk Edit checkbox to the left of the Move Model button.
+
+- Bulk scale center-origin fix: when Bulk Edit is ON, scaling now uses the canvas center as the origin, so characters keep their relative layout instead of drifting apart.
