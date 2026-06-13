@@ -63,7 +63,7 @@
       characterList: 'キャラ一覧', characterListHint: '一覧の上にあるキャラほど前面に表示されます。', noCharacters: 'キャラ未追加', visible: '表示', select: '選択', delete: '削除', front: '前面', back: '背面', characterAdded: 'キャラを追加しました。', characterSelected: 'キャラを選択しました。', characterDeleted: 'キャラを削除しました。',
       canvasExport: 'キャンバス / 書き出し', width: '幅', height: '高さ', originalSize: '原寸', canvasPreset: 'キャンバスサイズ選択', canvasPresetPlaceholder: '選択してください', showChecker: '市松背景を表示（確認用）', exportBackground: '背景ありで書き出す', backgroundColor: '背景色', applyCanvas: 'キャンバスサイズ反映',
       exportCurrentPng: '現在シーンをPNG保存', exportSelectedZip: '選択シーンプリセットをPNG ZIP保存', modelView: '選択キャラの表示調整', scale: '拡大率', fitModel: '全体表示', resetView: '表示リセット',
-      center: '中央', resetParams: 'パラメータ初期化', modelMoveTool: 'モデル移動', modelScaleTool: 'モデルサイズ', bulkTransform: '一括変更', faceDirectionTool: '顔の向き', faceTiltTool: '顔の傾き', eyeMoveTool: '視線移動', blinkTool: 'まばたき', smileTool: '笑顔', mouthTool: '口の開閉', browTool: '眉毛の表情', poseToolMissing: 'この操作に必要なパラメータが見つかりません: {ids}', poseToolChanged: '操作ツール: {name}', noModel: 'キャラ未選択', live2dFeatures: '選択キャラのLive2D操作', idleMotion: '待機モーションON', breath: '自動呼吸ON', breathSpeed: '呼吸速度', breathAutoHint: 'チェックを入れると、呼吸パラメーターを自動でゆっくり動かします。連番PNG書き出しにも反映されます。', windSway: '自動風揺れON', windSwayMax: '揺れ最大値', windSwaySpeed: '揺れ速度', windSwayRandomness: 'ランダム性', windSwayAutoHint: '髪や揺れ系パラメーターを自動で動かします。0秒と終了秒の値が揃うため、ループアニメとして使えます。', physics: '物理演算ON', autoBlink: '自動まばたきON',
+      center: '中央', resetParams: 'パラメータ初期化', modelMoveTool: 'モデル移動', modelScaleTool: 'モデルサイズ', bulkTransform: '一括変更', faceDirectionTool: '顔の向き', faceTiltTool: '顔の傾き', eyeMoveTool: '視線移動', blinkTool: 'まばたき', smileTool: '笑顔', mouthTool: '口の開閉', browTool: '眉毛の表情', poseToolMissing: 'この操作に必要なパラメータが見つかりません: {ids}', poseToolChanged: '操作ツール: {name}', noModel: 'キャラ未選択', live2dFeatures: '選択キャラのLive2D操作', idleMotion: '待機モーションON', breath: '自動呼吸ON', breathSpeed: '呼吸速度', breathAutoHint: 'チェックを入れると、呼吸パラメーターを自動でゆっくり動かします。連番PNG書き出しにも反映されます。', windSway: '自動風揺れON', windSwayMax: '揺れ最大値', windSwaySpeed: '揺れ速度', windSwayRandomness: 'ランダム性', windSwayAutoHint: '髪や揺れ系パラメーターを自動で動かします。0秒と終了秒の値が揃うため、ループアニメとして使えます。', bounceLoop: '弾みループON', bounceLoopMode: '弾みタイプ', bounceLoopModeUp: '上に弾む', bounceLoopModeSide: '横跳び（右→左→右）', bounceLoopModeCenterSide: '中央→左→中央→右→中央', bounceLoopHeight: 'バウンドの高さ', bounceLoopWidth: 'バウンドの幅', bounceLoopSpeed: '弾み速度', bounceLoopHint: 'モデル全体の位置だけを動かします。変形は行わず、0秒と終了秒で必ず元の位置に戻ります。', physics: '物理演算ON', autoBlink: '自動まばたきON',
       expression: '表情', applyExpression: '表情を適用', motion: 'モーション', playMotion: '再生', stopMotion: '停止', presets: 'シーンプリセット', presetNamePlaceholder: 'プリセット名',
       save: '保存', selectAll: '全選択', clearSelection: '選択解除', exportPresetJson: 'JSON保存', importPresetJson: 'JSON読込', parameters: '選択キャラのパラメータ', searchParams: '検索',
       helpTitle: '取扱説明', help1: 'Live2D Cubism SDK for Web から live2dcubismcore.min.js を取得し、vendor フォルダへ配置します。',
@@ -83,7 +83,7 @@
       characterList: 'Characters', characterListHint: 'Characters higher in the list are rendered in front.', noCharacters: 'No characters added', visible: 'Visible', select: 'Select', delete: 'Delete', front: 'Front', back: 'Back', characterAdded: 'Character added.', characterSelected: 'Character selected.', characterDeleted: 'Character deleted.',
       canvasExport: 'Canvas / Export', width: 'Width', height: 'Height', originalSize: 'Original', canvasPreset: 'Canvas Size Preset', canvasPresetPlaceholder: 'Select size', showChecker: 'Show checkerboard background (preview only)', exportBackground: 'Export with background', backgroundColor: 'Background color', applyCanvas: 'Apply Canvas Size',
       exportCurrentPng: 'Save Current Scene as PNG', exportSelectedZip: 'Save Selected Scene Presets as PNG ZIP', modelView: 'Selected Character View', scale: 'Scale', fitModel: 'Fit Model', resetView: 'Reset View',
-      center: 'Center', resetParams: 'Reset Params', modelMoveTool: 'Move Model', modelScaleTool: 'Scale Model', bulkTransform: 'Bulk Edit', faceDirectionTool: 'Face Direction', faceTiltTool: 'Face Tilt', eyeMoveTool: 'Eye Direction', blinkTool: 'Blink', smileTool: 'Smile', mouthTool: 'Mouth', browTool: 'Brow Expression', poseToolMissing: 'Required parameters were not found: {ids}', poseToolChanged: 'Pose tool: {name}', noModel: 'No character selected', live2dFeatures: 'Selected Character Live2D Controls', idleMotion: 'Idle motion ON', breath: 'Auto breath ON', breathSpeed: 'Breath Speed', breathAutoHint: 'Turn this on to gently animate the breath parameter automatically. It is also applied to PNG sequence export.', windSway: 'Auto Wind Sway ON', windSwayMax: 'Max Sway Value', windSwaySpeed: 'Sway Speed', windSwayRandomness: 'Randomness', windSwayAutoHint: 'Automatically animates hair and sway-related parameters. The first and final values match, so it can be used as a looping animation.', physics: 'Physics ON', autoBlink: 'Auto blink ON',
+      center: 'Center', resetParams: 'Reset Params', modelMoveTool: 'Move Model', modelScaleTool: 'Scale Model', bulkTransform: 'Bulk Edit', faceDirectionTool: 'Face Direction', faceTiltTool: 'Face Tilt', eyeMoveTool: 'Eye Direction', blinkTool: 'Blink', smileTool: 'Smile', mouthTool: 'Mouth', browTool: 'Brow Expression', poseToolMissing: 'Required parameters were not found: {ids}', poseToolChanged: 'Pose tool: {name}', noModel: 'No character selected', live2dFeatures: 'Selected Character Live2D Controls', idleMotion: 'Idle motion ON', breath: 'Auto breath ON', breathSpeed: 'Breath Speed', breathAutoHint: 'Turn this on to gently animate the breath parameter automatically. It is also applied to PNG sequence export.', windSway: 'Auto Wind Sway ON', windSwayMax: 'Max Sway Value', windSwaySpeed: 'Sway Speed', windSwayRandomness: 'Randomness', windSwayAutoHint: 'Automatically animates hair and sway-related parameters. The first and final values match, so it can be used as a looping animation.', bounceLoop: 'Bounce Loop ON', bounceLoopMode: 'Bounce Type', bounceLoopModeUp: 'Bounce upward', bounceLoopModeSide: 'Side-to-side bounce', bounceLoopModeCenterSide: 'Center → Left → Center → Right → Center', bounceLoopHeight: 'Bounce Height', bounceLoopWidth: 'Bounce Width', bounceLoopSpeed: 'Bounce Speed', bounceLoopHint: 'Only the whole model position is moved. No deformation is applied, and the model always returns to its original position at 0 sec and the final frame.', physics: 'Physics ON', autoBlink: 'Auto blink ON',
       expression: 'Expression', applyExpression: 'Apply Expression', motion: 'Motion', playMotion: 'Play', stopMotion: 'Stop', presets: 'Scene Presets', presetNamePlaceholder: 'Preset name',
       save: 'Save', selectAll: 'Select All', clearSelection: 'Clear Selection', exportPresetJson: 'Export JSON', importPresetJson: 'Import JSON', parameters: 'Selected Character Parameters', searchParams: 'Search',
       helpTitle: 'Guide', help1: 'Download live2dcubismcore.min.js from Live2D Cubism SDK for Web and place it in the vendor folder.',
@@ -103,7 +103,7 @@
       characterList: '캐릭터 목록', characterListHint: '목록에서 위에 있는 캐릭터일수록 앞에 표시됩니다.', noCharacters: '추가된 캐릭터 없음', visible: '표시', select: '선택', delete: '삭제', front: '앞', back: '뒤', characterAdded: '캐릭터를 추가했습니다.', characterSelected: '캐릭터를 선택했습니다.', characterDeleted: '캐릭터를 삭제했습니다.',
       canvasExport: '캔버스 / 내보내기', width: '너비', height: '높이', originalSize: '원본 크기', canvasPreset: '캔버스 크기 선택', canvasPresetPlaceholder: '선택하세요', showChecker: '체커보드 배경 표시(확인용)', exportBackground: '배경 포함 내보내기', backgroundColor: '배경색', applyCanvas: '캔버스 크기 적용',
       exportCurrentPng: '현재 장면을 PNG로 저장', exportSelectedZip: '선택 장면 프리셋을 PNG ZIP으로 저장', modelView: '선택 캐릭터 표시 조정', scale: '확대율', fitModel: '전체 표시', resetView: '표시 초기화',
-      center: '중앙', resetParams: '파라미터 초기화', modelMoveTool: '모델 이동', modelScaleTool: '모델 크기', bulkTransform: '일괄 변경', faceDirectionTool: '얼굴 방향', faceTiltTool: '얼굴 기울기', eyeMoveTool: '시선 이동', blinkTool: '눈 깜박임', smileTool: '웃는 얼굴', mouthTool: '입 열기', browTool: '눈썹 표정', poseToolMissing: '필요한 파라미터를 찾을 수 없습니다: {ids}', poseToolChanged: '조작 도구: {name}', noModel: '선택된 캐릭터 없음', live2dFeatures: '선택 캐릭터 Live2D 조작', idleMotion: '대기 모션 ON', breath: '자동 호흡 ON', breathSpeed: '호흡 속도', breathAutoHint: '체크하면 호흡 파라미터를 자동으로 천천히 움직입니다. 연속 PNG 내보내기에도 반영됩니다.', windSway: '자동 바람 흔들림 ON', windSwayMax: '흔들림 최대값', windSwaySpeed: '흔들림 속도', windSwayRandomness: '랜덤성', windSwayAutoHint: '머리카락과 흔들림 계열 파라미터를 자동으로 움직입니다. 0초와 종료 초의 값이 맞아 루프 애니메이션으로 사용할 수 있습니다.', physics: '물리 연산 ON', autoBlink: '자동 눈깜박임 ON',
+      center: '중앙', resetParams: '파라미터 초기화', modelMoveTool: '모델 이동', modelScaleTool: '모델 크기', bulkTransform: '일괄 변경', faceDirectionTool: '얼굴 방향', faceTiltTool: '얼굴 기울기', eyeMoveTool: '시선 이동', blinkTool: '눈 깜박임', smileTool: '웃는 얼굴', mouthTool: '입 열기', browTool: '눈썹 표정', poseToolMissing: '필요한 파라미터를 찾을 수 없습니다: {ids}', poseToolChanged: '조작 도구: {name}', noModel: '선택된 캐릭터 없음', live2dFeatures: '선택 캐릭터 Live2D 조작', idleMotion: '대기 모션 ON', breath: '자동 호흡 ON', breathSpeed: '호흡 속도', breathAutoHint: '체크하면 호흡 파라미터를 자동으로 천천히 움직입니다. 연속 PNG 내보내기에도 반영됩니다.', windSway: '자동 바람 흔들림 ON', windSwayMax: '흔들림 최대값', windSwaySpeed: '흔들림 속도', windSwayRandomness: '랜덤성', windSwayAutoHint: '머리카락과 흔들림 계열 파라미터를 자동으로 움직입니다. 0초와 종료 초의 값이 맞아 루프 애니메이션으로 사용할 수 있습니다.', bounceLoop: '튀기 루프 ON', bounceLoopMode: '튀기 타입', bounceLoopModeUp: '위로 튀기', bounceLoopModeSide: '옆으로 뛰기(오른쪽→왼쪽→오른쪽)', bounceLoopModeCenterSide: '중앙→왼쪽→중앙→오른쪽→중앙', bounceLoopHeight: '바운스 높이', bounceLoopWidth: '바운스 폭', bounceLoopSpeed: '튀기 속도', bounceLoopHint: '모델 전체 위치만 움직입니다. 변형은 하지 않으며 0초와 종료 초에 반드시 원래 위치로 돌아옵니다.', physics: '물리 연산 ON', autoBlink: '자동 눈깜박임 ON',
       expression: '표정', applyExpression: '표정 적용', motion: '모션', playMotion: '재생', stopMotion: '정지', presets: '장면 프리셋', presetNamePlaceholder: '프리셋 이름',
       save: '저장', selectAll: '전체 선택', clearSelection: '선택 해제', exportPresetJson: 'JSON 저장', importPresetJson: 'JSON 읽기', parameters: '선택 캐릭터 파라미터', searchParams: '검색',
       helpTitle: '사용 설명', help1: 'Live2D Cubism SDK for Web에서 live2dcubismcore.min.js를 받아 vendor 폴더에 넣습니다.',
@@ -182,6 +182,7 @@
     isExportingAnimation: false,
     breathPreviewStartedAt: performance.now(),
     windSwayPreviewStartedAt: performance.now(),
+    bounceLoopPreviewStartedAt: performance.now(),
     autoKeyframe: true,
     selectedKeyframe: null,
     isDraggingKeyframe: false,
@@ -267,6 +268,14 @@
     windSwaySpeedNumber: $('windSwaySpeedNumber'),
     windSwayRandomRange: $('windSwayRandomRange'),
     windSwayRandomNumber: $('windSwayRandomNumber'),
+    bounceLoopToggle: $('bounceLoopToggle'),
+    bounceLoopModeSelect: $('bounceLoopModeSelect'),
+    bounceLoopHeightRange: $('bounceLoopHeightRange'),
+    bounceLoopHeightNumber: $('bounceLoopHeightNumber'),
+    bounceLoopWidthRange: $('bounceLoopWidthRange'),
+    bounceLoopWidthNumber: $('bounceLoopWidthNumber'),
+    bounceLoopSpeedRange: $('bounceLoopSpeedRange'),
+    bounceLoopSpeedNumber: $('bounceLoopSpeedNumber'),
     physicsToggle: $('physicsToggle'),
     blinkToggle: $('blinkToggle'),
     expressionSelect: $('expressionSelect'),
@@ -744,9 +753,10 @@
 
       for (const item of state.characters) {
         if (!item?.model) continue;
-        item.model.position.set(
-          centerX + (item.model.x - centerX) * ratio,
-          centerY + (item.model.y - centerY) * ratio
+        const base = modelBasePosition(item);
+        setModelBasePosition(item,
+          centerX + (base.x - centerX) * ratio,
+          centerY + (base.y - centerY) * ratio
         );
         setScaleForCharacter(item, (item.model.scale?.x || 1) * ratio);
       }
@@ -770,8 +780,9 @@
   function syncPositionControlsFromActive() {
     const character = activeCharacter();
     if (!character?.model) return;
-    els.modelX.value = Math.round(character.model.x);
-    els.modelY.value = Math.round(character.model.y);
+    const basePos = modelBasePosition(character);
+    els.modelX.value = Math.round(basePos.x);
+    els.modelY.value = Math.round(basePos.y);
   }
 
   function updateControlsFromActiveCharacter() {
@@ -785,6 +796,8 @@
       syncBreathSpeedControls(1);
       els.windSwayToggle.checked = false;
       syncWindSwayControls({ max: 0.2, speed: 1, random: 45 });
+      els.bounceLoopToggle.checked = false;
+      syncBounceLoopControls({ mode: 'up', height: 40, width: 40, speed: 1 });
       els.physicsToggle.checked = false;
       els.blinkToggle.checked = false;
       renderExpressionOptions();
@@ -794,14 +807,17 @@
       updateModelInfo();
       return;
     }
-    els.modelX.value = Math.round(character.model?.x || 0);
-    els.modelY.value = Math.round(character.model?.y || 0);
+    const basePos = modelBasePosition(character);
+    els.modelX.value = Math.round(basePos.x || 0);
+    els.modelY.value = Math.round(basePos.y || 0);
     syncScaleControls(character.model?.scale?.x || 1);
     els.idleMotionToggle.checked = !!character.idleMotionEnabled;
     els.breathToggle.checked = !!character.breathEnabled;
     syncBreathSpeedControls(character.breathSpeed || 1);
     els.windSwayToggle.checked = !!character.windSwayEnabled;
     syncWindSwayControls({ max: character.windSwayMax ?? 0.2, speed: character.windSwaySpeed || 1, random: character.windSwayRandomness ?? 45 });
+    els.bounceLoopToggle.checked = !!character.bounceLoopEnabled;
+    syncBounceLoopControls({ mode: character.bounceLoopMode || 'up', height: character.bounceLoopHeight ?? 40, width: character.bounceLoopWidth ?? 40, speed: character.bounceLoopSpeed || 1 });
     els.physicsToggle.checked = !!character.physicsEnabled;
     els.blinkToggle.checked = !!character.blinkEnabled;
     renderExpressionOptions();
@@ -860,6 +876,12 @@
         windSwayMax: 0.2,
         windSwaySpeed: 1,
         windSwayRandomness: 45,
+        bounceLoopEnabled: false,
+        bounceLoopMode: 'up',
+        bounceLoopHeight: 40,
+        bounceLoopWidth: 40,
+        bounceLoopSpeed: 1,
+        bounceLoopOffset: { x: 0, y: 0 },
         physicsEnabled: false,
         blinkEnabled: false,
         allowManualMotion: false,
@@ -916,7 +938,7 @@
     const count = state.characters.length;
     const offset = Math.min(240, Math.max(-240, (count - 1) * 80));
     const w = Number(els.canvasWidth.value) || state.app.renderer.width;
-    character.model.position.set(w / 2 + offset, character.model.y);
+    setModelBasePosition(character, w / 2 + offset, modelBasePosition(character).y);
     if (activeCharacter()?.id === character.id) updateControlsFromActiveCharacter();
   }
 
@@ -1207,10 +1229,10 @@
         for (const item of state.characters) {
           const start = state.dragStart.bulkTransforms.get(item.id);
           if (!item?.model || !start) continue;
-          item.model.position.set(start.x + moveX, start.y + moveY);
+          setModelBasePosition(item, start.x + moveX, start.y + moveY);
         }
       } else {
-        character.model.position.set(state.dragStart.modelX + moveX, state.dragStart.modelY + moveY);
+        setModelBasePosition(character, state.dragStart.modelX + moveX, state.dragStart.modelY + moveY);
       }
 
       syncPositionControlsFromActive();
@@ -1229,7 +1251,7 @@
           if (!item?.model || !start) continue;
 
           setScaleForCharacter(item, start.scale * ratio);
-          item.model.position.set(
+          setModelBasePosition(item,
             centerX + (start.x - centerX) * ratio,
             centerY + (start.y - centerY) * ratio
           );
@@ -1513,6 +1535,128 @@
     for (const character of state.characters) applyAutoWindSwayToCharacter(character, time);
   }
 
+  function bounceLoopPair(rangeEl, numberEl, value, min, max, fallback) {
+    const next = Math.max(min, Math.min(max, Number(value) || fallback));
+    if (rangeEl) rangeEl.value = String(next);
+    if (numberEl) numberEl.value = String(next);
+    return next;
+  }
+
+  function syncBounceLoopControls(values = {}) {
+    const mode = ['up', 'side', 'centerSide'].includes(values.mode) ? values.mode : 'up';
+    if (els.bounceLoopModeSelect) els.bounceLoopModeSelect.value = mode;
+    bounceLoopPair(els.bounceLoopHeightRange, els.bounceLoopHeightNumber, values.height ?? 40, 0, 500, 40);
+    bounceLoopPair(els.bounceLoopWidthRange, els.bounceLoopWidthNumber, values.width ?? 40, 0, 500, 40);
+    bounceLoopPair(els.bounceLoopSpeedRange, els.bounceLoopSpeedNumber, values.speed ?? 1, 0.1, 5, 1);
+  }
+
+  function modelBounceOffset(character) {
+    const offset = character?.bounceLoopOffset || { x: 0, y: 0 };
+    return { x: Number(offset.x) || 0, y: Number(offset.y) || 0 };
+  }
+
+  function modelBasePosition(character) {
+    if (!character?.model) return { x: 0, y: 0 };
+    const offset = modelBounceOffset(character);
+    return { x: (Number(character.model.x) || 0) - offset.x, y: (Number(character.model.y) || 0) - offset.y };
+  }
+
+  function setModelBasePosition(character, x, y) {
+    if (!character?.model) return;
+    const offset = modelBounceOffset(character);
+    character.model.position.set((Number(x) || 0) + offset.x, (Number(y) || 0) + offset.y);
+  }
+
+  function clearBounceLoopOffset(character) {
+    if (!character?.model) return;
+    const offset = modelBounceOffset(character);
+    if (Math.abs(offset.x) > 0.0001 || Math.abs(offset.y) > 0.0001) {
+      character.model.position.set((Number(character.model.x) || 0) - offset.x, (Number(character.model.y) || 0) - offset.y);
+    }
+    character.bounceLoopOffset = { x: 0, y: 0 };
+  }
+
+  function setBounceLoopValueForActive(kind, rawValue) {
+    const character = activeCharacter();
+    if (kind === 'mode') {
+      const mode = ['up', 'side', 'centerSide'].includes(String(rawValue)) ? String(rawValue) : 'up';
+      if (els.bounceLoopModeSelect) els.bounceLoopModeSelect.value = mode;
+      if (character) character.bounceLoopMode = mode;
+    } else {
+      const limits = {
+        height: { min: 0, max: 500, fallback: 40, range: els.bounceLoopHeightRange, number: els.bounceLoopHeightNumber, prop: 'bounceLoopHeight' },
+        width: { min: 0, max: 500, fallback: 40, range: els.bounceLoopWidthRange, number: els.bounceLoopWidthNumber, prop: 'bounceLoopWidth' },
+        speed: { min: 0.1, max: 5, fallback: 1, range: els.bounceLoopSpeedRange, number: els.bounceLoopSpeedNumber, prop: 'bounceLoopSpeed' }
+      }[kind];
+      if (!limits) return;
+      const next = bounceLoopPair(limits.range, limits.number, rawValue, limits.min, limits.max, limits.fallback);
+      if (character) character[limits.prop] = next;
+    }
+    if (!character) return;
+    applyBounceLoopToCharacter(character, autoBounceLoopTime());
+    syncPositionControlsFromActive();
+    state.app?.renderer?.render(state.app.stage);
+  }
+
+  function autoBounceLoopDuration() {
+    return Math.max(0.1, Number(els.timelineDuration?.value) || state.duration || 5);
+  }
+
+  function autoBounceLoopTime() {
+    if (state.isPlayingTimeline || state.isExportingAnimation) return Number(state.currentTime) || 0;
+    return Math.max(0, (performance.now() - (state.bounceLoopPreviewStartedAt || performance.now())) / 1000);
+  }
+
+  function bounceLoopOffsetValue(character, time) {
+    const duration = autoBounceLoopDuration();
+    const phase = ((Number(time) || 0) % duration) / duration;
+    const speed = Math.max(0.1, Math.min(5, Number(character?.bounceLoopSpeed) || 1));
+    const cycles = Math.max(1, Math.min(24, Math.round(duration * speed * 0.45)));
+    const motion = Math.PI * 2 * cycles * phase;
+    const cyclePhase = (phase * cycles) % 1;
+    const height = Math.max(0, Math.min(500, Number(character?.bounceLoopHeight) || 0));
+    const width = Math.max(0, Math.min(500, Number(character?.bounceLoopWidth) || 0));
+    const mode = ['up', 'side', 'centerSide'].includes(character?.bounceLoopMode) ? character.bounceLoopMode : 'up';
+    let x = 0;
+    let y = 0;
+
+    if (mode === 'side') {
+      // 横跳び：右地点(元位置) → 左地点 → 右地点(元位置)。
+      // Yは必ず上方向のみ。下方向には一切動かさない。
+      const sideArc = Math.sin(motion);
+      x = (width * 0.5) * (Math.cos(motion) - 1);
+      y = -height * sideArc * sideArc;
+    } else if (mode === 'centerSide') {
+      // 中央 → 左 → 中央 → 右 → 中央。
+      // 各移動区間だけ上方向に弾ませ、左右端や中央では元の高さに戻す。
+      const hopArc = Math.sin(motion * 2);
+      x = -width * Math.sin(motion);
+      y = -height * hopArc * hopArc;
+    } else {
+      // 上方向のみの弾み。0秒と終了秒では必ず元位置に戻る。
+      const lobe = 0.5 - 0.5 * Math.cos(Math.PI * 2 * cyclePhase);
+      y = -height * lobe;
+    }
+
+    return { x, y };
+  }
+
+  function applyBounceLoopToCharacter(character, time = autoBounceLoopTime()) {
+    if (!character?.model) return;
+    if (!character.bounceLoopEnabled) {
+      clearBounceLoopOffset(character);
+      return;
+    }
+    const base = modelBasePosition(character);
+    const offset = bounceLoopOffsetValue(character, time);
+    character.bounceLoopOffset = offset;
+    character.model.position.set(base.x + offset.x, base.y + offset.y);
+  }
+
+  function applyBounceLoopToAll(time = autoBounceLoopTime()) {
+    for (const character of state.characters) applyBounceLoopToCharacter(character, time);
+  }
+
   function applyManualValuesToModel(character = activeCharacter()) {
     if (!character?.model) return;
     for (const param of character.parameters) {
@@ -1521,6 +1665,7 @@
     }
     applyAutoBreathToCharacter(character, autoBreathTime());
     applyAutoWindSwayToCharacter(character, autoWindSwayTime());
+    applyBounceLoopToCharacter(character, autoBounceLoopTime());
   }
 
   function renderParameterList() {
@@ -3426,11 +3571,13 @@
     }
     if (!character.model && !isCharacterParamTrack(trackKey)) return;
     if (trackKey === 'view:x') {
-      character.model.position.set(Number(value) || 0, character.model.y);
+      const base = modelBasePosition(character);
+      setModelBasePosition(character, Number(value) || 0, base.y);
       return;
     }
     if (trackKey === 'view:y') {
-      character.model.position.set(character.model.x, Number(value) || 0);
+      const base = modelBasePosition(character);
+      setModelBasePosition(character, base.x, Number(value) || 0);
       return;
     }
     if (trackKey === 'view:scale') {
@@ -3487,6 +3634,7 @@
     for (const layer of state.imageLayers) applyImageTimeline(layer, state.currentTime);
     applyAutoBreathToAll(state.currentTime);
     applyAutoWindSwayToAll(state.currentTime);
+    applyBounceLoopToAll(state.currentTime);
     state.isApplyingTimeline = false;
     updateControlsFromActiveCharacter();
     syncImageControlsFromActive();
@@ -3817,9 +3965,11 @@
         applyTimelineAt(time, true);
         applyAutoBreathToAll(time);
         applyAutoWindSwayToAll(time);
+        applyBounceLoopToAll(time);
         await waitFrames(2);
         applyAutoBreathToAll(time);
         applyAutoWindSwayToAll(time);
+        applyBounceLoopToAll(time);
         state.app?.renderer?.render(state.app.stage);
         const blob = await canvasToBlob();
         zip.file(`${String(frame + 1).padStart(4, '0')}.png`, blob);
@@ -3906,7 +4056,7 @@
     if (!character?.model) return;
     const w = Number(els.canvasWidth.value) || state.app.renderer.width;
     const h = Number(els.canvasHeight.value) || state.app.renderer.height;
-    character.model.position.set(w / 2, h / 2);
+    setModelBasePosition(character, w / 2, h / 2);
     if (character.id === state.activeCharacterId) updateControlsFromActiveCharacter();
     maybeAutoKeyframes([
       { type: 'character', id: character.id, trackKey: 'view:x' },
@@ -3949,16 +4099,18 @@
     if (!character?.model) return;
     const nextX = Number(els.modelX.value) || 0;
     const nextY = Number(els.modelY.value) || 0;
-    const dx = nextX - character.model.x;
-    const dy = nextY - character.model.y;
+    const activeBase = modelBasePosition(character);
+    const dx = nextX - activeBase.x;
+    const dy = nextY - activeBase.y;
 
     if (els.bulkTransformToggle?.checked) {
       for (const item of state.characters) {
         if (!item?.model) continue;
-        item.model.position.set(item.model.x + dx, item.model.y + dy);
+        const base = modelBasePosition(item);
+        setModelBasePosition(item, base.x + dx, base.y + dy);
       }
     } else {
-      character.model.position.set(nextX, nextY);
+      setModelBasePosition(character, nextX, nextY);
     }
 
     syncPositionControlsFromActive();
@@ -4005,7 +4157,8 @@
     // これにより、途中でサイズを変えてもモデル配置が中央基準で維持される。
     for (const character of state.characters) {
       if (!character?.model) continue;
-      character.model.position.set(character.model.x + moveX, character.model.y + moveY);
+      const base = modelBasePosition(character);
+      setModelBasePosition(character, base.x + moveX, base.y + moveY);
     }
     for (const layer of state.imageLayers) {
       if (!layer?.sprite) continue;
@@ -4205,8 +4358,8 @@
       params,
       expression: character.currentExpression || '',
       view: {
-        x: character.model?.x || 0,
-        y: character.model?.y || 0,
+        x: modelBasePosition(character).x || 0,
+        y: modelBasePosition(character).y || 0,
         scale: character.model?.scale?.x || 1
       },
       toggles: {
@@ -4217,6 +4370,11 @@
         windSwayMax: Number(character.windSwayMax) || 0.2,
         windSwaySpeed: Number(character.windSwaySpeed) || 1,
         windSwayRandomness: Number(character.windSwayRandomness) || 45,
+        bounceLoopEnabled: !!character.bounceLoopEnabled,
+        bounceLoopMode: character.bounceLoopMode || 'up',
+        bounceLoopHeight: Number(character.bounceLoopHeight) || 40,
+        bounceLoopWidth: Number(character.bounceLoopWidth) || 40,
+        bounceLoopSpeed: Number(character.bounceLoopSpeed) || 1,
         physicsEnabled: !!character.physicsEnabled,
         blinkEnabled: !!character.blinkEnabled
       }
@@ -4316,6 +4474,7 @@
       character.visible = presetCharacter.visible !== false;
       if (character.model) character.model.visible = character.visible;
       if (presetCharacter.view && character.model) {
+        clearBounceLoopOffset(character);
         character.model.position.set(Number(presetCharacter.view.x) || 0, Number(presetCharacter.view.y) || 0);
         const scale = Number(presetCharacter.view.scale) || 1;
         character.model.scale.set(scale);
@@ -4328,6 +4487,11 @@
         character.windSwayMax = Math.max(0, Math.min(1, Number(presetCharacter.toggles.windSwayMax) || 0.2));
         character.windSwaySpeed = Math.max(0.1, Math.min(5, Number(presetCharacter.toggles.windSwaySpeed) || 1));
         character.windSwayRandomness = Math.max(0, Math.min(100, Number(presetCharacter.toggles.windSwayRandomness) || 45));
+        character.bounceLoopEnabled = !!presetCharacter.toggles.bounceLoopEnabled;
+        character.bounceLoopMode = ['up', 'side', 'centerSide'].includes(presetCharacter.toggles.bounceLoopMode) ? presetCharacter.toggles.bounceLoopMode : 'up';
+        character.bounceLoopHeight = Math.max(0, Math.min(500, Number(presetCharacter.toggles.bounceLoopHeight) || 40));
+        character.bounceLoopWidth = Math.max(0, Math.min(500, Number(presetCharacter.toggles.bounceLoopWidth) || 40));
+        character.bounceLoopSpeed = Math.max(0.1, Math.min(5, Number(presetCharacter.toggles.bounceLoopSpeed) || 1));
         character.physicsEnabled = !!presetCharacter.toggles.physicsEnabled;
         character.blinkEnabled = !!presetCharacter.toggles.blinkEnabled;
         applyFeatureToggles(character, true);
@@ -4621,14 +4785,14 @@
       state.dragStart = {
         x: event.clientX,
         y: event.clientY,
-        modelX: character?.model?.x || 0,
-        modelY: character?.model?.y || 0,
+        modelX: character ? modelBasePosition(character).x : 0,
+        modelY: character ? modelBasePosition(character).y : 0,
         modelScale: character?.model?.scale?.x || 1,
         params: isImageTool() ? {} : capturePoseToolStartParams(),
         image: imageLayer ? captureImageTransform(imageLayer) : null,
         bulkTransforms: new Map(state.characters.map((item) => [item.id, {
-          x: item.model?.x || 0,
-          y: item.model?.y || 0,
+          x: modelBasePosition(item).x || 0,
+          y: modelBasePosition(item).y || 0,
           scale: item.model?.scale?.x || 1
         }]))
       };
@@ -5196,6 +5360,23 @@
     els.windSwaySpeedNumber?.addEventListener('input', () => setWindSwayValueForActive('speed', els.windSwaySpeedNumber.value));
     els.windSwayRandomRange?.addEventListener('input', () => setWindSwayValueForActive('random', els.windSwayRandomRange.value));
     els.windSwayRandomNumber?.addEventListener('input', () => setWindSwayValueForActive('random', els.windSwayRandomNumber.value));
+    els.bounceLoopToggle?.addEventListener('change', () => {
+      const character = activeCharacter();
+      if (!character) return;
+      character.bounceLoopEnabled = !!els.bounceLoopToggle.checked;
+      state.bounceLoopPreviewStartedAt = performance.now();
+      if (character.bounceLoopEnabled) applyBounceLoopToCharacter(character, autoBounceLoopTime());
+      else clearBounceLoopOffset(character);
+      syncPositionControlsFromActive();
+      state.app?.renderer?.render(state.app.stage);
+    });
+    els.bounceLoopModeSelect?.addEventListener('change', () => setBounceLoopValueForActive('mode', els.bounceLoopModeSelect.value));
+    els.bounceLoopHeightRange?.addEventListener('input', () => setBounceLoopValueForActive('height', els.bounceLoopHeightRange.value));
+    els.bounceLoopHeightNumber?.addEventListener('input', () => setBounceLoopValueForActive('height', els.bounceLoopHeightNumber.value));
+    els.bounceLoopWidthRange?.addEventListener('input', () => setBounceLoopValueForActive('width', els.bounceLoopWidthRange.value));
+    els.bounceLoopWidthNumber?.addEventListener('input', () => setBounceLoopValueForActive('width', els.bounceLoopWidthNumber.value));
+    els.bounceLoopSpeedRange?.addEventListener('input', () => setBounceLoopValueForActive('speed', els.bounceLoopSpeedRange.value));
+    els.bounceLoopSpeedNumber?.addEventListener('input', () => setBounceLoopValueForActive('speed', els.bounceLoopSpeedNumber.value));
     els.physicsToggle.addEventListener('change', () => {
       const character = activeCharacter();
       if (!character) return;

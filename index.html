@@ -340,6 +340,37 @@
             </label>
             <p class="hint" data-i18n="windSwayAutoHint">髪や揺れ系パラメーターを自動で動かします。0秒と終了秒の値が揃うため、ループアニメとして使えます。</p>
           </div>
+
+          <div class="bounce-loop-panel auto-motion-panel">
+            <label class="check-row bounce-loop-check">
+              <input id="bounceLoopToggle" type="checkbox" />
+              <span data-i18n="bounceLoop">弾みループON</span>
+            </label>
+            <label class="field stacked bounce-loop-field">
+              <span data-i18n="bounceLoopMode">弾みタイプ</span>
+              <select id="bounceLoopModeSelect">
+                <option value="up" data-i18n="bounceLoopModeUp">上に弾む</option>
+                <option value="side" data-i18n="bounceLoopModeSide">横跳び（右→左→右）</option>
+                <option value="centerSide" data-i18n="bounceLoopModeCenterSide">中央→左→中央→右→中央</option>
+              </select>
+            </label>
+            <label class="field stacked bounce-loop-field">
+              <span data-i18n="bounceLoopHeight">バウンドの高さ</span>
+              <input id="bounceLoopHeightRange" type="range" min="0" max="500" step="1" value="40" />
+              <input id="bounceLoopHeightNumber" type="number" min="0" max="500" step="1" value="40" />
+            </label>
+            <label class="field stacked bounce-loop-field">
+              <span data-i18n="bounceLoopWidth">バウンドの幅</span>
+              <input id="bounceLoopWidthRange" type="range" min="0" max="500" step="1" value="40" />
+              <input id="bounceLoopWidthNumber" type="number" min="0" max="500" step="1" value="40" />
+            </label>
+            <label class="field stacked bounce-loop-field">
+              <span data-i18n="bounceLoopSpeed">弾み速度</span>
+              <input id="bounceLoopSpeedRange" type="range" min="0.1" max="5" step="0.01" value="1" />
+              <input id="bounceLoopSpeedNumber" type="number" min="0.1" max="5" step="0.01" value="1" />
+            </label>
+            <p class="hint" data-i18n="bounceLoopHint">モデル全体の位置だけを動かします。変形は行わず、0秒と終了秒で必ず元の位置に戻ります。</p>
+          </div>
           <div class="param-action-row">
             <button id="centerModelButton" type="button" data-i18n="center">中央</button>
             <button id="resetParamsButton" type="button" data-i18n="resetParams">パラメータ初期化</button>

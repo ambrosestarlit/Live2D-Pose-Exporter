@@ -2243,3 +2243,21 @@ h1 {
     margin-bottom: 8px;
   }
 }
+
+/* Bounce loop controls */
+.bounce-loop-panel {
+  background: #ffffff;
+}
+
+.bounce-loop-check {
+  font-weight: 700;
+}
+
+.bounce-loop-field {
+  gap: 6px;
+}
+
+.bounce-loop-field input[type="range"],
+.bounce-loop-field select {
+  width: 100%;
+}
