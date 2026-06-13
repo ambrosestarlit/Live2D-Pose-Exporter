@@ -400,18 +400,68 @@
     log(t('modelFilesFound', { count: state.modelPaths.length }), 'ok');
   }
 
+  function applyPixiTextureQualitySettings() {
+    if (!window.PIXI) return;
+    try {
+      // Live2Dのメッシュ境界に黒い線が出る主因になりやすい設定を抑制する。
+      // ミップマップやWebGLのアンチエイリアス補間で、透明部分の黒が境界ににじむことがある。
+      PIXI.settings.MIPMAP_TEXTURES = PIXI.MIPMAP_MODES?.OFF ?? PIXI.settings.MIPMAP_TEXTURES;
+      PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES?.LINEAR ?? PIXI.settings.SCALE_MODE;
+      PIXI.settings.ROUND_PIXELS = false;
+    } catch (err) {
+      console.warn('PIXI texture quality setting failed:', err);
+    }
+  }
+
+  function fixTextureSeamsForModel(model) {
+    if (!model || !window.PIXI) return;
+    const visited = new Set();
+
+    const fixTexture = (texture) => {
+      const baseTexture = texture?.baseTexture;
+      if (!baseTexture || visited.has(baseTexture)) return;
+      visited.add(baseTexture);
+
+      try {
+        baseTexture.mipmap = PIXI.MIPMAP_MODES?.OFF ?? baseTexture.mipmap;
+        baseTexture.scaleMode = PIXI.SCALE_MODES?.LINEAR ?? baseTexture.scaleMode;
+        baseTexture.alphaMode = PIXI.ALPHA_MODES?.UNPACK ?? baseTexture.alphaMode;
+        baseTexture.update?.();
+      } catch (err) {
+        console.warn('Texture seam fix failed:', err);
+      }
+    };
+
+    const walk = (node) => {
+      if (!node) return;
+      if (node.texture) fixTexture(node.texture);
+      if (Array.isArray(node.textures)) node.textures.forEach(fixTexture);
+      if (node._texture) fixTexture(node._texture);
+      if (node.children) node.children.forEach(walk);
+    };
+
+    walk(model);
+    try {
+      const textures = model.internalModel?.textures || model.internalModel?.texture || [];
+      (Array.isArray(textures) ? textures : [textures]).forEach(fixTexture);
+    } catch (_) {}
+  }
+
   function initPixi() {
     if (state.app) return;
+    applyPixiTextureQualitySettings();
     state.app = new PIXI.Application({
       view: els.canvas,
       width: Number(els.canvasWidth.value) || 1080,
       height: Number(els.canvasHeight.value) || 1080,
       transparent: true,
       backgroundAlpha: 0,
-      antialias: true,
+      antialias: false,
       autoDensity: false,
       resolution: 1,
-      preserveDrawingBuffer: true
+      preserveDrawingBuffer: true,
+      premultipliedAlpha: false,
+      clearBeforeRender: true
     });
     state.app.ticker.add(() => {
       for (const character of state.characters) {
@@ -589,6 +639,7 @@
       const Live2DModel = PIXI.live2d.Live2DModel;
       const model = await Live2DModel.from(modelUrl, { autoInteract: false, autoHitTest: false, autoFocus: false });
       character.model = model;
+      fixTextureSeamsForModel(model);
       model.anchor?.set?.(0.5, 0.5);
       state.characters.unshift(character);
       state.app.stage.addChild(model);

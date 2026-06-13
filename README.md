@@ -129,3 +129,5 @@ Added preview toolbar tools:
 - Moved the Bulk Edit checkbox to the left of the Move Model button.
 
 - Bulk scale center-origin fix: when Bulk Edit is ON, scaling now uses the canvas center as the origin, so characters keep their relative layout instead of drifting apart.
+
+- Texture seam fix: disabled WebGL antialiasing/mipmaps for Live2D rendering and applied texture settings after model load to reduce black seam lines along mesh boundaries.
