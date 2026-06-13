@@ -246,7 +246,6 @@
           <h2 data-i18n="live2dFeatures">Live2D操作</h2>
           <div class="toggle-grid">
             <label class="check-row"><input id="idleMotionToggle" type="checkbox" /><span data-i18n="idleMotion">待機モーションON</span></label>
-            <label class="check-row"><input id="breathToggle" type="checkbox" /><span data-i18n="breath">自動呼吸ON</span></label>
             <label class="check-row"><input id="physicsToggle" type="checkbox" /><span data-i18n="physics">物理演算ON</span></label>
             <label class="check-row"><input id="blinkToggle" type="checkbox" /><span data-i18n="autoBlink">自動まばたきON</span></label>
           </div>
@@ -305,6 +304,41 @@
           <div class="param-header">
             <h2 data-i18n="parameters">パラメータ</h2>
             <input id="paramSearch" type="search" data-i18n-placeholder="searchParams" placeholder="検索" />
+          </div>
+          <div class="breath-auto-panel auto-motion-panel">
+            <label class="check-row breath-auto-check">
+              <input id="breathToggle" type="checkbox" />
+              <span data-i18n="breath">自動呼吸ON</span>
+            </label>
+            <label class="field stacked breath-speed-field">
+              <span data-i18n="breathSpeed">呼吸速度</span>
+              <input id="breathSpeedRange" type="range" min="0.1" max="3" step="0.01" value="1" />
+              <input id="breathSpeedNumber" type="number" min="0.1" max="3" step="0.01" value="1" />
+            </label>
+            <p class="hint" data-i18n="breathAutoHint">チェックを入れると、呼吸パラメーターを自動でゆっくり動かします。連番PNG書き出しにも反映されます。</p>
+          </div>
+
+          <div class="wind-auto-panel auto-motion-panel">
+            <label class="check-row wind-auto-check">
+              <input id="windSwayToggle" type="checkbox" />
+              <span data-i18n="windSway">自動風揺れON</span>
+            </label>
+            <label class="field stacked wind-sway-field">
+              <span data-i18n="windSwayMax">揺れ最大値</span>
+              <input id="windSwayMaxRange" type="range" min="0" max="1" step="0.001" value="0.2" />
+              <input id="windSwayMaxNumber" type="number" min="0" max="1" step="0.001" value="0.2" />
+            </label>
+            <label class="field stacked wind-sway-field">
+              <span data-i18n="windSwaySpeed">揺れ速度</span>
+              <input id="windSwaySpeedRange" type="range" min="0.1" max="5" step="0.01" value="1" />
+              <input id="windSwaySpeedNumber" type="number" min="0.1" max="5" step="0.01" value="1" />
+            </label>
+            <label class="field stacked wind-sway-field">
+              <span data-i18n="windSwayRandomness">ランダム性</span>
+              <input id="windSwayRandomRange" type="range" min="0" max="100" step="1" value="45" />
+              <input id="windSwayRandomNumber" type="number" min="0" max="100" step="1" value="45" />
+            </label>
+            <p class="hint" data-i18n="windSwayAutoHint">髪や揺れ系パラメーターを自動で動かします。0秒と終了秒の値が揃うため、ループアニメとして使えます。</p>
           </div>
           <div class="param-action-row">
             <button id="centerModelButton" type="button" data-i18n="center">中央</button>

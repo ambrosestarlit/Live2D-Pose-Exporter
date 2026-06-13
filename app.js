@@ -63,7 +63,7 @@
       characterList: 'キャラ一覧', characterListHint: '一覧の上にあるキャラほど前面に表示されます。', noCharacters: 'キャラ未追加', visible: '表示', select: '選択', delete: '削除', front: '前面', back: '背面', characterAdded: 'キャラを追加しました。', characterSelected: 'キャラを選択しました。', characterDeleted: 'キャラを削除しました。',
       canvasExport: 'キャンバス / 書き出し', width: '幅', height: '高さ', originalSize: '原寸', canvasPreset: 'キャンバスサイズ選択', canvasPresetPlaceholder: '選択してください', showChecker: '市松背景を表示（確認用）', exportBackground: '背景ありで書き出す', backgroundColor: '背景色', applyCanvas: 'キャンバスサイズ反映',
       exportCurrentPng: '現在シーンをPNG保存', exportSelectedZip: '選択シーンプリセットをPNG ZIP保存', modelView: '選択キャラの表示調整', scale: '拡大率', fitModel: '全体表示', resetView: '表示リセット',
-      center: '中央', resetParams: 'パラメータ初期化', modelMoveTool: 'モデル移動', modelScaleTool: 'モデルサイズ', bulkTransform: '一括変更', faceDirectionTool: '顔の向き', faceTiltTool: '顔の傾き', eyeMoveTool: '視線移動', blinkTool: 'まばたき', smileTool: '笑顔', mouthTool: '口の開閉', browTool: '眉毛の表情', poseToolMissing: 'この操作に必要なパラメータが見つかりません: {ids}', poseToolChanged: '操作ツール: {name}', noModel: 'キャラ未選択', live2dFeatures: '選択キャラのLive2D操作', idleMotion: '待機モーションON', breath: '自動呼吸ON', physics: '物理演算ON', autoBlink: '自動まばたきON',
+      center: '中央', resetParams: 'パラメータ初期化', modelMoveTool: 'モデル移動', modelScaleTool: 'モデルサイズ', bulkTransform: '一括変更', faceDirectionTool: '顔の向き', faceTiltTool: '顔の傾き', eyeMoveTool: '視線移動', blinkTool: 'まばたき', smileTool: '笑顔', mouthTool: '口の開閉', browTool: '眉毛の表情', poseToolMissing: 'この操作に必要なパラメータが見つかりません: {ids}', poseToolChanged: '操作ツール: {name}', noModel: 'キャラ未選択', live2dFeatures: '選択キャラのLive2D操作', idleMotion: '待機モーションON', breath: '自動呼吸ON', breathSpeed: '呼吸速度', breathAutoHint: 'チェックを入れると、呼吸パラメーターを自動でゆっくり動かします。連番PNG書き出しにも反映されます。', windSway: '自動風揺れON', windSwayMax: '揺れ最大値', windSwaySpeed: '揺れ速度', windSwayRandomness: 'ランダム性', windSwayAutoHint: '髪や揺れ系パラメーターを自動で動かします。0秒と終了秒の値が揃うため、ループアニメとして使えます。', physics: '物理演算ON', autoBlink: '自動まばたきON',
       expression: '表情', applyExpression: '表情を適用', motion: 'モーション', playMotion: '再生', stopMotion: '停止', presets: 'シーンプリセット', presetNamePlaceholder: 'プリセット名',
       save: '保存', selectAll: '全選択', clearSelection: '選択解除', exportPresetJson: 'JSON保存', importPresetJson: 'JSON読込', parameters: '選択キャラのパラメータ', searchParams: '検索',
       helpTitle: '取扱説明', help1: 'Live2D Cubism SDK for Web から live2dcubismcore.min.js を取得し、vendor フォルダへ配置します。',
@@ -83,7 +83,7 @@
       characterList: 'Characters', characterListHint: 'Characters higher in the list are rendered in front.', noCharacters: 'No characters added', visible: 'Visible', select: 'Select', delete: 'Delete', front: 'Front', back: 'Back', characterAdded: 'Character added.', characterSelected: 'Character selected.', characterDeleted: 'Character deleted.',
       canvasExport: 'Canvas / Export', width: 'Width', height: 'Height', originalSize: 'Original', canvasPreset: 'Canvas Size Preset', canvasPresetPlaceholder: 'Select size', showChecker: 'Show checkerboard background (preview only)', exportBackground: 'Export with background', backgroundColor: 'Background color', applyCanvas: 'Apply Canvas Size',
       exportCurrentPng: 'Save Current Scene as PNG', exportSelectedZip: 'Save Selected Scene Presets as PNG ZIP', modelView: 'Selected Character View', scale: 'Scale', fitModel: 'Fit Model', resetView: 'Reset View',
-      center: 'Center', resetParams: 'Reset Params', modelMoveTool: 'Move Model', modelScaleTool: 'Scale Model', bulkTransform: 'Bulk Edit', faceDirectionTool: 'Face Direction', faceTiltTool: 'Face Tilt', eyeMoveTool: 'Eye Direction', blinkTool: 'Blink', smileTool: 'Smile', mouthTool: 'Mouth', browTool: 'Brow Expression', poseToolMissing: 'Required parameters were not found: {ids}', poseToolChanged: 'Pose tool: {name}', noModel: 'No character selected', live2dFeatures: 'Selected Character Live2D Controls', idleMotion: 'Idle motion ON', breath: 'Auto breath ON', physics: 'Physics ON', autoBlink: 'Auto blink ON',
+      center: 'Center', resetParams: 'Reset Params', modelMoveTool: 'Move Model', modelScaleTool: 'Scale Model', bulkTransform: 'Bulk Edit', faceDirectionTool: 'Face Direction', faceTiltTool: 'Face Tilt', eyeMoveTool: 'Eye Direction', blinkTool: 'Blink', smileTool: 'Smile', mouthTool: 'Mouth', browTool: 'Brow Expression', poseToolMissing: 'Required parameters were not found: {ids}', poseToolChanged: 'Pose tool: {name}', noModel: 'No character selected', live2dFeatures: 'Selected Character Live2D Controls', idleMotion: 'Idle motion ON', breath: 'Auto breath ON', breathSpeed: 'Breath Speed', breathAutoHint: 'Turn this on to gently animate the breath parameter automatically. It is also applied to PNG sequence export.', windSway: 'Auto Wind Sway ON', windSwayMax: 'Max Sway Value', windSwaySpeed: 'Sway Speed', windSwayRandomness: 'Randomness', windSwayAutoHint: 'Automatically animates hair and sway-related parameters. The first and final values match, so it can be used as a looping animation.', physics: 'Physics ON', autoBlink: 'Auto blink ON',
       expression: 'Expression', applyExpression: 'Apply Expression', motion: 'Motion', playMotion: 'Play', stopMotion: 'Stop', presets: 'Scene Presets', presetNamePlaceholder: 'Preset name',
       save: 'Save', selectAll: 'Select All', clearSelection: 'Clear Selection', exportPresetJson: 'Export JSON', importPresetJson: 'Import JSON', parameters: 'Selected Character Parameters', searchParams: 'Search',
       helpTitle: 'Guide', help1: 'Download live2dcubismcore.min.js from Live2D Cubism SDK for Web and place it in the vendor folder.',
@@ -103,7 +103,7 @@
       characterList: '캐릭터 목록', characterListHint: '목록에서 위에 있는 캐릭터일수록 앞에 표시됩니다.', noCharacters: '추가된 캐릭터 없음', visible: '표시', select: '선택', delete: '삭제', front: '앞', back: '뒤', characterAdded: '캐릭터를 추가했습니다.', characterSelected: '캐릭터를 선택했습니다.', characterDeleted: '캐릭터를 삭제했습니다.',
       canvasExport: '캔버스 / 내보내기', width: '너비', height: '높이', originalSize: '원본 크기', canvasPreset: '캔버스 크기 선택', canvasPresetPlaceholder: '선택하세요', showChecker: '체커보드 배경 표시(확인용)', exportBackground: '배경 포함 내보내기', backgroundColor: '배경색', applyCanvas: '캔버스 크기 적용',
       exportCurrentPng: '현재 장면을 PNG로 저장', exportSelectedZip: '선택 장면 프리셋을 PNG ZIP으로 저장', modelView: '선택 캐릭터 표시 조정', scale: '확대율', fitModel: '전체 표시', resetView: '표시 초기화',
-      center: '중앙', resetParams: '파라미터 초기화', modelMoveTool: '모델 이동', modelScaleTool: '모델 크기', bulkTransform: '일괄 변경', faceDirectionTool: '얼굴 방향', faceTiltTool: '얼굴 기울기', eyeMoveTool: '시선 이동', blinkTool: '눈 깜박임', smileTool: '웃는 얼굴', mouthTool: '입 열기', browTool: '눈썹 표정', poseToolMissing: '필요한 파라미터를 찾을 수 없습니다: {ids}', poseToolChanged: '조작 도구: {name}', noModel: '선택된 캐릭터 없음', live2dFeatures: '선택 캐릭터 Live2D 조작', idleMotion: '대기 모션 ON', breath: '자동 호흡 ON', physics: '물리 연산 ON', autoBlink: '자동 눈깜박임 ON',
+      center: '중앙', resetParams: '파라미터 초기화', modelMoveTool: '모델 이동', modelScaleTool: '모델 크기', bulkTransform: '일괄 변경', faceDirectionTool: '얼굴 방향', faceTiltTool: '얼굴 기울기', eyeMoveTool: '시선 이동', blinkTool: '눈 깜박임', smileTool: '웃는 얼굴', mouthTool: '입 열기', browTool: '눈썹 표정', poseToolMissing: '필요한 파라미터를 찾을 수 없습니다: {ids}', poseToolChanged: '조작 도구: {name}', noModel: '선택된 캐릭터 없음', live2dFeatures: '선택 캐릭터 Live2D 조작', idleMotion: '대기 모션 ON', breath: '자동 호흡 ON', breathSpeed: '호흡 속도', breathAutoHint: '체크하면 호흡 파라미터를 자동으로 천천히 움직입니다. 연속 PNG 내보내기에도 반영됩니다.', windSway: '자동 바람 흔들림 ON', windSwayMax: '흔들림 최대값', windSwaySpeed: '흔들림 속도', windSwayRandomness: '랜덤성', windSwayAutoHint: '머리카락과 흔들림 계열 파라미터를 자동으로 움직입니다. 0초와 종료 초의 값이 맞아 루프 애니메이션으로 사용할 수 있습니다.', physics: '물리 연산 ON', autoBlink: '자동 눈깜박임 ON',
       expression: '표정', applyExpression: '표정 적용', motion: '모션', playMotion: '재생', stopMotion: '정지', presets: '장면 프리셋', presetNamePlaceholder: '프리셋 이름',
       save: '저장', selectAll: '전체 선택', clearSelection: '선택 해제', exportPresetJson: 'JSON 저장', importPresetJson: 'JSON 읽기', parameters: '선택 캐릭터 파라미터', searchParams: '검색',
       helpTitle: '사용 설명', help1: 'Live2D Cubism SDK for Web에서 live2dcubismcore.min.js를 받아 vendor 폴더에 넣습니다.',
@@ -179,6 +179,9 @@
     playStartTime: 0,
     audioUrl: '',
     isApplyingTimeline: false,
+    isExportingAnimation: false,
+    breathPreviewStartedAt: performance.now(),
+    windSwayPreviewStartedAt: performance.now(),
     autoKeyframe: true,
     selectedKeyframe: null,
     isDraggingKeyframe: false,
@@ -255,6 +258,15 @@
     coreStatus: $('coreStatus'),
     idleMotionToggle: $('idleMotionToggle'),
     breathToggle: $('breathToggle'),
+    breathSpeedRange: $('breathSpeedRange'),
+    breathSpeedNumber: $('breathSpeedNumber'),
+    windSwayToggle: $('windSwayToggle'),
+    windSwayMaxRange: $('windSwayMaxRange'),
+    windSwayMaxNumber: $('windSwayMaxNumber'),
+    windSwaySpeedRange: $('windSwaySpeedRange'),
+    windSwaySpeedNumber: $('windSwaySpeedNumber'),
+    windSwayRandomRange: $('windSwayRandomRange'),
+    windSwayRandomNumber: $('windSwayRandomNumber'),
     physicsToggle: $('physicsToggle'),
     blinkToggle: $('blinkToggle'),
     expressionSelect: $('expressionSelect'),
@@ -770,6 +782,9 @@
       syncScaleControls(1);
       els.idleMotionToggle.checked = false;
       els.breathToggle.checked = false;
+      syncBreathSpeedControls(1);
+      els.windSwayToggle.checked = false;
+      syncWindSwayControls({ max: 0.2, speed: 1, random: 45 });
       els.physicsToggle.checked = false;
       els.blinkToggle.checked = false;
       renderExpressionOptions();
@@ -784,6 +799,9 @@
     syncScaleControls(character.model?.scale?.x || 1);
     els.idleMotionToggle.checked = !!character.idleMotionEnabled;
     els.breathToggle.checked = !!character.breathEnabled;
+    syncBreathSpeedControls(character.breathSpeed || 1);
+    els.windSwayToggle.checked = !!character.windSwayEnabled;
+    syncWindSwayControls({ max: character.windSwayMax ?? 0.2, speed: character.windSwaySpeed || 1, random: character.windSwayRandomness ?? 45 });
     els.physicsToggle.checked = !!character.physicsEnabled;
     els.blinkToggle.checked = !!character.blinkEnabled;
     renderExpressionOptions();
@@ -837,6 +855,11 @@
         currentExpression: '',
         idleMotionEnabled: false,
         breathEnabled: false,
+        breathSpeed: 1,
+        windSwayEnabled: false,
+        windSwayMax: 0.2,
+        windSwaySpeed: 1,
+        windSwayRandomness: 45,
         physicsEnabled: false,
         blinkEnabled: false,
         allowManualMotion: false,
@@ -1296,12 +1319,208 @@
     return params;
   }
 
+  function syncBreathSpeedControls(value) {
+    const next = Math.max(0.1, Math.min(3, Number(value) || 1));
+    if (els.breathSpeedRange) els.breathSpeedRange.value = String(next);
+    if (els.breathSpeedNumber) els.breathSpeedNumber.value = String(next);
+  }
+
+  function setBreathSpeedForActive(rawValue) {
+    const character = activeCharacter();
+    const next = Math.max(0.1, Math.min(3, Number(rawValue) || 1));
+    syncBreathSpeedControls(next);
+    if (!character) return;
+    character.breathSpeed = next;
+    applyAutoBreathToCharacter(character, autoBreathTime());
+    state.app?.renderer?.render(state.app.stage);
+  }
+
+  function isBreathParameter(param) {
+    const text = `${param?.id || ''} ${param?.name || ''}`.toLowerCase();
+    return /breath|呼吸|息|숨|호흡/.test(text);
+  }
+
+  function breathParameters(character) {
+    return (character?.parameters || []).filter(isBreathParameter);
+  }
+
+  function autoBreathLoopDuration() {
+    return Math.max(0.1, Number(els.timelineDuration?.value) || state.duration || 5);
+  }
+
+  function autoBreathTime() {
+    if (state.isPlayingTimeline || state.isExportingAnimation) return Number(state.currentTime) || 0;
+    return Math.max(0, (performance.now() - (state.breathPreviewStartedAt || performance.now())) / 1000);
+  }
+
+  function baseBreathValue(character, param) {
+    if (!character || !param) return 0;
+    if (character.manualValues.has(param.id)) return Number(character.manualValues.get(param.id)) || 0;
+    return Number(character.defaultValues.get(param.id) ?? param.defaultValue ?? param.value ?? 0) || 0;
+  }
+
+  function autoBreathValue(character, param, time) {
+    const min = Number(param.min);
+    const max = Number(param.max);
+    const safeMin = Number.isFinite(min) ? min : -1;
+    const safeMax = Number.isFinite(max) ? max : 1;
+    const range = Math.max(0.001, safeMax - safeMin);
+    const base = Math.max(safeMin, Math.min(safeMax, baseBreathValue(character, param)));
+    const speed = Math.max(0.1, Math.min(3, Number(character?.breathSpeed) || 1));
+    const duration = autoBreathLoopDuration();
+    const phase = ((Number(time) || 0) % duration) / duration;
+    const cycles = Math.max(1, Math.round(duration * speed * 0.32));
+    // 0始まりの呼吸パラメーターでマイナス側がクランプされると、半周期ぶん止まって見える。
+    // そのため上下に振るのではなく、初期値→最大→初期値の正方向ローブを周期化する。
+    const headroom = Math.max(0.001, safeMax - base);
+    const amplitude = Math.min(range * 0.42, Math.max(range * 0.12, headroom * 0.78));
+    const raw = 0.5 - 0.5 * Math.cos(Math.PI * 2 * cycles * phase);
+    const eased = raw * raw * (3 - 2 * raw);
+    return clampParameterValue(param, base + amplitude * eased);
+  }
+
+  function applyAutoBreathToCharacter(character, time = autoBreathTime()) {
+    if (!character?.model || !character.breathEnabled) return;
+    const params = breathParameters(character);
+    if (!params.length) return;
+    for (const param of params) {
+      const value = autoBreathValue(character, param, time);
+      param.value = value;
+      setCoreParameter(character, param, value);
+    }
+    if (character.id === state.activeCharacterId) refreshParameterControls(params.map((param) => param.id));
+  }
+
+  function applyAutoBreathToAll(time = autoBreathTime()) {
+    for (const character of state.characters) applyAutoBreathToCharacter(character, time);
+  }
+
+  function syncWindSwayPair(rangeEl, numberEl, value, min, max, fallback) {
+    const next = Math.max(min, Math.min(max, Number(value) || fallback));
+    if (rangeEl) rangeEl.value = String(next);
+    if (numberEl) numberEl.value = String(next);
+    return next;
+  }
+
+  function syncWindSwayControls(values = {}) {
+    const max = values.max ?? 0.2;
+    const speed = values.speed ?? 1;
+    const random = values.random ?? 45;
+    syncWindSwayPair(els.windSwayMaxRange, els.windSwayMaxNumber, max, 0, 1, 0.2);
+    syncWindSwayPair(els.windSwaySpeedRange, els.windSwaySpeedNumber, speed, 0.1, 5, 1);
+    syncWindSwayPair(els.windSwayRandomRange, els.windSwayRandomNumber, random, 0, 100, 45);
+  }
+
+  function setWindSwayValueForActive(kind, rawValue) {
+    const character = activeCharacter();
+    const limits = {
+      max: { min: 0, max: 1, fallback: 0.2, range: els.windSwayMaxRange, number: els.windSwayMaxNumber, prop: 'windSwayMax' },
+      speed: { min: 0.1, max: 5, fallback: 1, range: els.windSwaySpeedRange, number: els.windSwaySpeedNumber, prop: 'windSwaySpeed' },
+      random: { min: 0, max: 100, fallback: 45, range: els.windSwayRandomRange, number: els.windSwayRandomNumber, prop: 'windSwayRandomness' }
+    }[kind];
+    if (!limits) return;
+    const next = syncWindSwayPair(limits.range, limits.number, rawValue, limits.min, limits.max, limits.fallback);
+    if (!character) return;
+    character[limits.prop] = next;
+    applyAutoWindSwayToCharacter(character, autoWindSwayTime());
+    state.app?.renderer?.render(state.app.stage);
+  }
+
+  function isWindSwayParameter(param) {
+    const text = normalizeTextForSearch(`${param?.id || ''} ${param?.name || ''}`);
+    if (isBreathParameter(param)) return false;
+    return /hair|kami|kaminoke|sway|yure|physics|cloth|skirt|ribbon|tail|accessory|揺|髪|毛|服|スカート|リボン|尻尾/.test(text);
+  }
+
+  function windSwayParameters(character) {
+    return (character?.parameters || []).filter(isWindSwayParameter);
+  }
+
+  function autoWindLoopDuration() {
+    return Math.max(0.1, Number(els.timelineDuration?.value) || state.duration || 5);
+  }
+
+  function autoWindSwayTime() {
+    if (state.isPlayingTimeline || state.isExportingAnimation) return Number(state.currentTime) || 0;
+    return Math.max(0, (performance.now() - (state.windSwayPreviewStartedAt || performance.now())) / 1000);
+  }
+
+  function windSeedFromId(id, salt = 0) {
+    let hash = 2166136261 + salt;
+    const text = String(id || 'wind');
+    for (let i = 0; i < text.length; i++) {
+      hash ^= text.charCodeAt(i);
+      hash = Math.imul(hash, 16777619);
+    }
+    return Math.abs(hash >>> 0) || 1;
+  }
+
+  function seededUnit(seed) {
+    const x = Math.sin(seed * 12.9898 + 78.233) * 43758.5453123;
+    return x - Math.floor(x);
+  }
+
+  function baseWindSwayValue(character, param) {
+    if (!character || !param) return 0;
+    if (character.manualValues.has(param.id)) return Number(character.manualValues.get(param.id)) || 0;
+    return Number(character.defaultValues.get(param.id) ?? param.defaultValue ?? param.value ?? 0) || 0;
+  }
+
+  function autoWindSwayValue(character, param, time) {
+    const min = Number(param.min);
+    const max = Number(param.max);
+    const safeMin = Number.isFinite(min) ? min : -1;
+    const safeMax = Number.isFinite(max) ? max : 1;
+    const range = Math.max(0.001, safeMax - safeMin);
+    const center = Math.max(safeMin, Math.min(safeMax, baseWindSwayValue(character, param)));
+    const maxValue = Math.max(0, Math.min(1, Number(character?.windSwayMax) || 0));
+    const amplitude = Math.min(range * 0.48, maxValue);
+    if (amplitude <= 0.00001) return center;
+    const duration = autoWindLoopDuration();
+    const phase = ((Number(time) || 0) % duration) / duration;
+    const speed = Math.max(0.1, Math.min(5, Number(character?.windSwaySpeed) || 1));
+    const random = Math.max(0, Math.min(100, Number(character?.windSwayRandomness) || 0)) / 100;
+    // 高周波を入れすぎると細かくカクついて見えるため、整数周期の低〜中周波を混ぜてループ性を維持する。
+    const baseCycles = Math.max(1, Math.min(14, Math.round(duration * speed * 0.28)));
+    const seed = windSeedFromId(param.id);
+    const phaseA = seededUnit(seed + 11) * Math.PI * 2;
+    const phaseB = seededUnit(seed + 23) * Math.PI * 2;
+    const phaseC = seededUnit(seed + 37) * Math.PI * 2;
+    const extraB = 1 + Math.floor(seededUnit(seed + 5) * 2);
+    const extraC = 2 + Math.floor(seededUnit(seed + 7) * 3);
+    const waveMain = Math.sin(Math.PI * 2 * baseCycles * phase + phaseA);
+    const waveSub = Math.sin(Math.PI * 2 * (baseCycles + extraB) * phase + phaseB);
+    const waveTiny = Math.sin(Math.PI * 2 * (baseCycles + extraC) * phase + phaseC);
+    const mixed = waveMain * (1 - random * 0.36) + waveSub * (random * 0.24) + waveTiny * (random * 0.12);
+    const normalized = Math.max(-1, Math.min(1, mixed / (1 + random * 0.03)));
+    const softened = Math.sign(normalized) * Math.pow(Math.abs(normalized), 1.08);
+    return clampParameterValue(param, center + amplitude * softened);
+  }
+
+  function applyAutoWindSwayToCharacter(character, time = autoWindSwayTime()) {
+    if (!character?.model || !character.windSwayEnabled) return;
+    const params = windSwayParameters(character);
+    if (!params.length) return;
+    for (const param of params) {
+      const value = autoWindSwayValue(character, param, time);
+      param.value = value;
+      setCoreParameter(character, param, value);
+    }
+    if (character.id === state.activeCharacterId) refreshParameterControls(params.map((param) => param.id));
+  }
+
+  function applyAutoWindSwayToAll(time = autoWindSwayTime()) {
+    for (const character of state.characters) applyAutoWindSwayToCharacter(character, time);
+  }
+
   function applyManualValuesToModel(character = activeCharacter()) {
     if (!character?.model) return;
     for (const param of character.parameters) {
       const value = character.manualValues.has(param.id) ? character.manualValues.get(param.id) : param.value;
       setCoreParameter(character, param, value);
     }
+    applyAutoBreathToCharacter(character, autoBreathTime());
+    applyAutoWindSwayToCharacter(character, autoWindSwayTime());
   }
 
   function renderParameterList() {
@@ -3266,6 +3485,8 @@
     updateTimelineUi();
     for (const character of state.characters) applyCharacterTimeline(character, state.currentTime);
     for (const layer of state.imageLayers) applyImageTimeline(layer, state.currentTime);
+    applyAutoBreathToAll(state.currentTime);
+    applyAutoWindSwayToAll(state.currentTime);
     state.isApplyingTimeline = false;
     updateControlsFromActiveCharacter();
     syncImageControlsFromActive();
@@ -3584,16 +3805,28 @@
     updateTimelineUi();
     const fps = Math.max(1, Math.min(60, Number(els.timelineFps?.value) || 24));
     const duration = Math.max(0.1, Number(els.timelineDuration?.value) || state.duration || 5);
-    const totalFrames = Math.max(1, Math.floor(duration * fps) + 1);
+    // 0秒と終了秒の両方を書き出すと、ループ時に同じ姿勢が2フレーム続いて止まって見える。
+    // 値の計算自体は終了秒で初期値に戻るが、PNG連番は終端の重複フレームを省く。
+    const totalFrames = Math.max(1, Math.ceil(duration * fps));
     const originalTime = timelineTime();
     const zip = new JSZip();
-    for (let frame = 0; frame < totalFrames; frame++) {
-      const time = Math.min(duration, frame / fps);
-      applyTimelineAt(time, true);
-      await waitFrames(2);
-      const blob = await canvasToBlob();
-      zip.file(`${String(frame + 1).padStart(4, '0')}.png`, blob);
-      if (frame % 5 === 0 || frame === totalFrames - 1) log(t('animationExporting', { current: frame + 1, total: totalFrames }));
+    state.isExportingAnimation = true;
+    try {
+      for (let frame = 0; frame < totalFrames; frame++) {
+        const time = Math.min(duration, frame / fps);
+        applyTimelineAt(time, true);
+        applyAutoBreathToAll(time);
+        applyAutoWindSwayToAll(time);
+        await waitFrames(2);
+        applyAutoBreathToAll(time);
+        applyAutoWindSwayToAll(time);
+        state.app?.renderer?.render(state.app.stage);
+        const blob = await canvasToBlob();
+        zip.file(`${String(frame + 1).padStart(4, '0')}.png`, blob);
+        if (frame % 5 === 0 || frame === totalFrames - 1) log(t('animationExporting', { current: frame + 1, total: totalFrames }));
+      }
+    } finally {
+      state.isExportingAnimation = false;
     }
     applyTimelineAt(originalTime, true);
     const zipBlob = await zip.generateAsync({ type: 'blob' });
@@ -3928,7 +4161,7 @@
     installMotionGuards(character);
     if (!character.idleMotionEnabled) stopMotion(character, true);
 
-    setInternalAutoObject(internal, 'breath', character.breathEnabled);
+    setInternalAutoObject(internal, 'breath', false);
     setInternalAutoObject(internal, 'eyeBlink', character.blinkEnabled);
 
     patchFeature(character, internal?.physics, ['evaluate', 'update', 'updateParameters'], character.physicsEnabled);
@@ -3979,6 +4212,11 @@
       toggles: {
         idleMotionEnabled: !!character.idleMotionEnabled,
         breathEnabled: !!character.breathEnabled,
+        breathSpeed: Number(character.breathSpeed) || 1,
+        windSwayEnabled: !!character.windSwayEnabled,
+        windSwayMax: Number(character.windSwayMax) || 0.2,
+        windSwaySpeed: Number(character.windSwaySpeed) || 1,
+        windSwayRandomness: Number(character.windSwayRandomness) || 45,
         physicsEnabled: !!character.physicsEnabled,
         blinkEnabled: !!character.blinkEnabled
       }
@@ -4085,6 +4323,11 @@
       if (presetCharacter.toggles) {
         character.idleMotionEnabled = !!presetCharacter.toggles.idleMotionEnabled;
         character.breathEnabled = !!presetCharacter.toggles.breathEnabled;
+        character.breathSpeed = Math.max(0.1, Math.min(3, Number(presetCharacter.toggles.breathSpeed) || 1));
+        character.windSwayEnabled = !!presetCharacter.toggles.windSwayEnabled;
+        character.windSwayMax = Math.max(0, Math.min(1, Number(presetCharacter.toggles.windSwayMax) || 0.2));
+        character.windSwaySpeed = Math.max(0.1, Math.min(5, Number(presetCharacter.toggles.windSwaySpeed) || 1));
+        character.windSwayRandomness = Math.max(0, Math.min(100, Number(presetCharacter.toggles.windSwayRandomness) || 45));
         character.physicsEnabled = !!presetCharacter.toggles.physicsEnabled;
         character.blinkEnabled = !!presetCharacter.toggles.blinkEnabled;
         applyFeatureToggles(character, true);
@@ -4932,8 +5175,27 @@
       const character = activeCharacter();
       if (!character) return;
       character.breathEnabled = !!els.breathToggle.checked;
+      state.breathPreviewStartedAt = performance.now();
       applyFeatureToggles(character);
+      applyAutoBreathToCharacter(character, autoBreathTime());
     });
+    els.breathSpeedRange?.addEventListener('input', () => setBreathSpeedForActive(els.breathSpeedRange.value));
+    els.breathSpeedNumber?.addEventListener('input', () => setBreathSpeedForActive(els.breathSpeedNumber.value));
+    els.windSwayToggle?.addEventListener('change', () => {
+      const character = activeCharacter();
+      if (!character) return;
+      character.windSwayEnabled = !!els.windSwayToggle.checked;
+      state.windSwayPreviewStartedAt = performance.now();
+      if (character.windSwayEnabled) applyAutoWindSwayToCharacter(character, autoWindSwayTime());
+      else applyManualValuesToModel(character);
+      state.app?.renderer?.render(state.app.stage);
+    });
+    els.windSwayMaxRange?.addEventListener('input', () => setWindSwayValueForActive('max', els.windSwayMaxRange.value));
+    els.windSwayMaxNumber?.addEventListener('input', () => setWindSwayValueForActive('max', els.windSwayMaxNumber.value));
+    els.windSwaySpeedRange?.addEventListener('input', () => setWindSwayValueForActive('speed', els.windSwaySpeedRange.value));
+    els.windSwaySpeedNumber?.addEventListener('input', () => setWindSwayValueForActive('speed', els.windSwaySpeedNumber.value));
+    els.windSwayRandomRange?.addEventListener('input', () => setWindSwayValueForActive('random', els.windSwayRandomRange.value));
+    els.windSwayRandomNumber?.addEventListener('input', () => setWindSwayValueForActive('random', els.windSwayRandomNumber.value));
     els.physicsToggle.addEventListener('change', () => {
       const character = activeCharacter();
       if (!character) return;
