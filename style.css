@@ -1860,3 +1860,137 @@ h1 {
 .project-load-button {
   width: 100%;
 }
+
+
+/* Mouth lip-sync auto key insertion */
+.mouth-lipsync-dialog {
+  width: min(900px, calc(100vw - 32px));
+}
+
+.mouth-lipsync-body {
+  display: grid;
+  gap: 12px;
+}
+
+.mouth-mode-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mouth-mode-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mouth-mode-card input {
+  accent-color: var(--mint-dark);
+}
+
+.mouth-mode-card:has(input:checked) {
+  border-color: var(--mint-dark);
+  background: var(--mint-soft);
+}
+
+.mouth-preview-card {
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fbfdfc;
+}
+
+.mouth-preview-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+#mouthLipsyncPreviewCanvas {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  display: block;
+}
+
+.mouth-preview-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-top: 10px;
+}
+
+.mouth-preview-toolbar button {
+  min-width: 88px;
+}
+
+.mouth-preview-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--mint-soft);
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.mouth-preview-meta strong {
+  font-variant-numeric: tabular-nums;
+}
+
+.mouth-control-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mouth-common-panel {
+  grid-template-columns: minmax(220px, 1fr);
+}
+
+.mouth-mode-panel.is-hidden {
+  display: none;
+}
+
+.mouth-insert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mouth-insert-card {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.mouth-insert-card h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.mouth-insert-card button {
+  justify-self: start;
+}
+
+@media (max-width: 880px) {
+  .mouth-control-grid,
+  .mouth-insert-grid,
+  .mouth-mode-row {
+    grid-template-columns: 1fr;
+  }
+}

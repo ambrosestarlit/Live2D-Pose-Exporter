@@ -127,7 +127,7 @@
     timeline: 'タイムライン', playTimeline: '再生', stopTimeline: '停止', addKeyframe: 'キーフレーム追加', prevKeyframe: '前キー', nextKeyframe: '次キー',
     duration: '長さ(秒)', fps: 'FPS', currentTime: '現在秒', autoKeyframe: '自動キー', previewZoom: '表示倍率', zoomFit: '全体表示',
     imageMoveTool: '画像移動', imageRotateTool: '画像回転', imageScaleTool: '画像サイズ', imageTransform: '画像調整', rotation: '回転', opacity: '不透明度',
-    noImages: '画像未追加', imageAdded: '画像を追加しました。', imageSelected: '画像を選択しました。', imageDeleted: '画像を削除しました。', keyframeSaved: 'キーフレームを保存しました。', noActiveLayer: '操作するレイヤーを選択してください。', animationExporting: '連番PNGを書き出し中: {current}/{total}', audioLoaded: '音声を読み込みました。', timelineApplied: 'タイムラインを適用しました。', modelTrack: 'Live2D', imageTrack: '画像', keyframes: 'キー {count}', keyframeEditor: 'キーフレーム編集', noKeyframeSelected: 'タイムライン上のキーを選択すると、時間や内容を後から調整できます。', selectedKeyframe: '選択キー', keyTime: 'キー位置(秒)', updateKeyFromCurrent: '現在の状態で上書き', deleteKeyframe: 'キー削除', interpolation: '補間', linear: 'なめらか', hold: '次キーまで固定', imageKeyContent: '画像キー内容', modelKeyContent: 'モデルキー内容', keyframeUpdated: 'キーフレームを更新しました。', keyframeDeleted: 'キーフレームを削除しました。', keyMoved: 'キーフレーム位置を変更しました。', noEditableTrack: 'キーフレームを追加するパラメーターや画像項目を先に調整するか、既存トラックを選択してください。', hairSwayButton: '髪揺れ自動入力', hairSwayTitle: '髪揺れ自動入力', hairSwayHint: '現在秒から、選択した髪パラメーターへ揺れのキーフレームをまとめて挿入します。', hairSwayPreset: 'プリセット', hairSwayPresetNormalWind: '普通の風', hairSwayPresetBreeze: 'そよ風', hairSwayPresetStrongWind: '強風', hairSwayPresetLightBounce: '軽く弾む', hairSwayPresetBigBounce: '大きく弾む', hairSwayCount: '揺れの回数', hairSwayStrength: '強さ', hairSwaySeconds: '揺れアニメーションの秒数', hairSwayTargets: '対象パラメーター', hairSwaySelectCandidates: '髪候補を選択', insertHairSway: '挿入', close: '閉じる', hairSwayInserted: '髪揺れキーフレームを挿入しました。', noHairSwayTargets: '対象パラメーターを選択してください。', hairSwayNoCharacter: '髪揺れを挿入するキャラを選択してください。', hairSwayNoParams: 'このモデルには選択できるパラメーターがありません。', rightTabMain: '現在の設定', rightTabKeyframe: 'キーフレーム設定プロパティ', loop: 'ループ', loopKeysButton: 'ループ挿入', loopDialogTitle: 'ループ挿入', loopDialogHint: '選択したパラメータートラックのキー列を、指定回数ぶん後ろへ複製して挿入します。', loopTargetTrack: 'ループさせたいキーがあるパラメーター', loopCount: 'ループ回数', insertLoopKeys: 'ループする', noLoopTracks: 'ループできるキーフレーム付きトラックがありません。', loopKeysInserted: 'ループ用キーフレームを挿入しました。', loopNeedsTwoKeys: 'ループには2つ以上のキーフレームが必要です。', duplicateKeyframe: 'キー複製', keyframeDuplicated: 'キーフレームを複製しました。', timelineFilterAll: '表示トラック：すべて', timelineFilterSelected: '表示トラック：{count}件', timelineFilterEmpty: '入力済みキーフレームのあるパラメーターはまだありません。', timelineFilterTitle: '表示するキーフレーム項目', timelineFilterHint: 'チェックが入っていない場合は、入力済みキーフレームのあるパラメーターをすべて表示します。チェックがある場合は、選択した項目だけ表示します。', clearTimelineFilter: '絞り込み解除', sceneManagement: 'シーン管理 / プロジェクト', sceneSelect: 'Scene選択', addScene: 'シーン追加', deleteScene: 'シーン削除', saveProjectJson: 'プロジェクトJSON保存', loadProjectJson: 'プロジェクトJSON読込', projectSaveHint: 'シーン、モデルデータ、画像、音声、キーフレームをまとめてJSON保存できます。', sceneAdded: 'シーンを追加しました。', sceneDeleted: 'シーンを削除しました。', sceneSwitched: 'シーンを切り替えました。', projectSaved: 'プロジェクトJSONを保存しました。', projectLoaded: 'プロジェクトJSONを読み込みました。', cannotDeleteLastScene: '最後のシーンは削除できません。'
+    noImages: '画像未追加', imageAdded: '画像を追加しました。', imageSelected: '画像を選択しました。', imageDeleted: '画像を削除しました。', keyframeSaved: 'キーフレームを保存しました。', noActiveLayer: '操作するレイヤーを選択してください。', animationExporting: '連番PNGを書き出し中: {current}/{total}', audioLoaded: '音声を読み込みました。', timelineApplied: 'タイムラインを適用しました。', modelTrack: 'Live2D', imageTrack: '画像', keyframes: 'キー {count}', keyframeEditor: 'キーフレーム編集', noKeyframeSelected: 'タイムライン上のキーを選択すると、時間や内容を後から調整できます。', selectedKeyframe: '選択キー', keyTime: 'キー位置(秒)', updateKeyFromCurrent: '現在の状態で上書き', deleteKeyframe: 'キー削除', interpolation: '補間', linear: 'なめらか', hold: '次キーまで固定', imageKeyContent: '画像キー内容', modelKeyContent: 'モデルキー内容', keyframeUpdated: 'キーフレームを更新しました。', keyframeDeleted: 'キーフレームを削除しました。', keyMoved: 'キーフレーム位置を変更しました。', noEditableTrack: 'キーフレームを追加するパラメーターや画像項目を先に調整するか、既存トラックを選択してください。', hairSwayButton: '髪揺れ自動入力', hairSwayTitle: '髪揺れ自動入力', hairSwayHint: '現在秒から、選択した髪パラメーターへ揺れのキーフレームをまとめて挿入します。', hairSwayPreset: 'プリセット', hairSwayPresetNormalWind: '普通の風', hairSwayPresetBreeze: 'そよ風', hairSwayPresetStrongWind: '強風', hairSwayPresetLightBounce: '軽く弾む', hairSwayPresetBigBounce: '大きく弾む', hairSwayCount: '揺れの回数', hairSwayStrength: '強さ', hairSwaySeconds: '揺れアニメーションの秒数', hairSwayTargets: '対象パラメーター', hairSwaySelectCandidates: '髪候補を選択', insertHairSway: '挿入', close: '閉じる', hairSwayInserted: '髪揺れキーフレームを挿入しました。', noHairSwayTargets: '対象パラメーターを選択してください。', hairSwayNoCharacter: '髪揺れを挿入するキャラを選択してください。', hairSwayNoParams: 'このモデルには選択できるパラメーターがありません。', rightTabMain: '現在の設定', rightTabKeyframe: 'キーフレーム設定プロパティ', loop: 'ループ', loopKeysButton: 'ループ挿入', loopDialogTitle: 'ループ挿入', loopDialogHint: '選択したパラメータートラックのキー列を、指定回数ぶん後ろへ複製して挿入します。', loopTargetTrack: 'ループさせたいキーがあるパラメーター', loopCount: 'ループ回数', insertLoopKeys: 'ループする', noLoopTracks: 'ループできるキーフレーム付きトラックがありません。', loopKeysInserted: 'ループ用キーフレームを挿入しました。', loopNeedsTwoKeys: 'ループには2つ以上のキーフレームが必要です。', duplicateKeyframe: 'キー複製', keyframeDuplicated: 'キーフレームを複製しました。', timelineFilterAll: '表示トラック：すべて', timelineFilterSelected: '表示トラック：{count}件', timelineFilterEmpty: '入力済みキーフレームのあるパラメーターはまだありません。', timelineFilterTitle: '表示するキーフレーム項目', timelineFilterHint: 'チェックが入っていない場合は、入力済みキーフレームのあるパラメーターをすべて表示します。チェックがある場合は、選択した項目だけ表示します。', clearTimelineFilter: '絞り込み解除', sceneManagement: 'シーン管理 / プロジェクト', sceneSelect: 'Scene選択', addScene: 'シーン追加', deleteScene: 'シーン削除', saveProjectJson: 'プロジェクトJSON保存', loadProjectJson: 'プロジェクトJSON読込', projectSaveHint: 'シーン、モデルデータ、画像、音声、キーフレームをまとめてJSON保存できます。', sceneAdded: 'シーンを追加しました。', sceneDeleted: 'シーンを削除しました。', sceneSwitched: 'シーンを切り替えました。', projectSaved: 'プロジェクトJSONを保存しました。', projectLoaded: 'プロジェクトJSONを読み込みました。', cannotDeleteLastScene: '最後のシーンは削除できません。', mouthLipsyncButton: '口パク自動入力', mouthLipsyncTitle: '口パク自動入力', mouthLipsyncHint: '口の開閉パラメーターに、音声解析または回数指定で自然な口パクキーフレームを挿入します。', mouthLipsyncTarget: '対象の口パラメーター', mouthLipsyncModeAudio: '音声に合わせて自動入力', mouthLipsyncModeCount: '回数指定で挿入', mouthLipsyncMax: '最大の開き値', mouthLipsyncCount: '口パク回数', mouthLipsyncAutoMaxCount: '最大口パク数', mouthLipsyncSeconds: '挿入秒数', mouthLipsyncSensitivity: '音量感度', mouthLipsyncThreshold: '無音判定', mouthLipsyncPreview: 'プレビュー', mouthLipsyncPreviewPlay: '再生', mouthLipsyncPreviewStop: '停止', mouthLipsyncPreviewTime: '再生位置', mouthLipsyncPreviewValue: '口の開き値', mouthLipsyncPreviewMax: '最大設定値', insertAudioLipsync: '音声から挿入', insertCountLipsync: '回数指定で挿入', mouthLipsyncInserted: '口パクキーフレームを挿入しました。', mouthLipsyncNoCharacter: '口パクを挿入するキャラを選択してください。', mouthLipsyncNoParam: '口の開閉パラメーターが見つかりません。', mouthLipsyncNoAudio: '先に音声を読み込んでください。', mouthLipsyncAudioDecodeFailed: '音声解析に失敗しました。別の音声形式でお試しください。', mouthLipsyncAudioHint: '読み込んだ音声全体を解析し、音量に合わせて口の開き値を変化させます。', mouthLipsyncCountHint: '現在秒から、閉じ口→開ける→閉じるを1回として指定回数ぶん挿入します。開き量は毎回少しランダムに変化します。'
   });
   Object.assign(I18N.en, {
     subtitle: 'Create keyframe animations with existing Live2D models and image assets, then export PNG sequences.',
@@ -136,7 +136,7 @@
     timeline: 'Timeline', playTimeline: 'Play', stopTimeline: 'Stop', addKeyframe: 'Add Keyframe', prevKeyframe: 'Prev Key', nextKeyframe: 'Next Key',
     duration: 'Duration (sec)', fps: 'FPS', currentTime: 'Current Time', autoKeyframe: 'Auto Key', previewZoom: 'Preview Zoom', zoomFit: 'Fit',
     imageMoveTool: 'Move Image', imageRotateTool: 'Rotate Image', imageScaleTool: 'Scale Image', imageTransform: 'Image Transform', rotation: 'Rotation', opacity: 'Opacity',
-    noImages: 'No images added', imageAdded: 'Image added.', imageSelected: 'Image selected.', imageDeleted: 'Image deleted.', keyframeSaved: 'Keyframe saved.', noActiveLayer: 'Select a layer to edit.', animationExporting: 'Exporting PNG sequence: {current}/{total}', audioLoaded: 'Audio loaded.', timelineApplied: 'Timeline applied.', modelTrack: 'Live2D', imageTrack: 'Image', keyframes: '{count} keys', keyframeEditor: 'Keyframe Editor', noKeyframeSelected: 'Select a key on the timeline to adjust its time and contents later.', selectedKeyframe: 'Selected Key', keyTime: 'Key Time (sec)', updateKeyFromCurrent: 'Overwrite with Current State', deleteKeyframe: 'Delete Key', interpolation: 'Interpolation', linear: 'Smooth', hold: 'Hold Until Next Key', imageKeyContent: 'Image Key Contents', modelKeyContent: 'Model Key Contents', keyframeUpdated: 'Keyframe updated.', keyframeDeleted: 'Keyframe deleted.', keyMoved: 'Keyframe moved.', noEditableTrack: 'Adjust a parameter or image property first, or select an existing track before adding a keyframe.', hairSwayButton: 'Auto Hair Sway', hairSwayTitle: 'Auto Hair Sway', hairSwayHint: 'Insert sway keyframes into selected hair parameters from the current timeline time.', hairSwayPreset: 'Preset', hairSwayPresetNormalWind: 'Normal Wind', hairSwayPresetBreeze: 'Breeze', hairSwayPresetStrongWind: 'Strong Wind', hairSwayPresetLightBounce: 'Light Bounce', hairSwayPresetBigBounce: 'Big Bounce', hairSwayCount: 'Sway Count', hairSwayStrength: 'Strength', hairSwaySeconds: 'Sway Duration (sec)', hairSwayTargets: 'Target Parameters', hairSwaySelectCandidates: 'Select Hair Candidates', insertHairSway: 'Insert', close: 'Close', hairSwayInserted: 'Hair sway keyframes inserted.', noHairSwayTargets: 'Select target parameters.', hairSwayNoCharacter: 'Select a character for hair sway.', hairSwayNoParams: 'This model has no selectable parameters.', rightTabMain: 'Current Settings', rightTabKeyframe: 'Keyframe Properties', loop: 'Loop', loopKeysButton: 'Insert Loop', loopDialogTitle: 'Insert Loop', loopDialogHint: 'Duplicate the selected parameter track key sequence after the current keys for the specified number of loops.', loopTargetTrack: 'Parameter track to loop', loopCount: 'Loop Count', insertLoopKeys: 'Loop', noLoopTracks: 'No keyed tracks can be looped.', loopKeysInserted: 'Loop keyframes inserted.', loopNeedsTwoKeys: 'Looping needs at least two keyframes.', duplicateKeyframe: 'Duplicate Key', keyframeDuplicated: 'Keyframe duplicated.', timelineFilterAll: 'Visible Tracks: All', timelineFilterSelected: 'Visible Tracks: {count}', timelineFilterEmpty: 'No keyed parameters have been added yet.', timelineFilterTitle: 'Visible Keyframe Items', timelineFilterHint: 'When nothing is checked, every keyed parameter is shown. When one or more items are checked, only those tracks are shown.', clearTimelineFilter: 'Clear Filter', sceneManagement: 'Scene / Project', sceneSelect: 'Scene Select', addScene: 'Add Scene', deleteScene: 'Delete Scene', saveProjectJson: 'Save Project JSON', loadProjectJson: 'Load Project JSON', projectSaveHint: 'Save scenes, model data, images, audio, and keyframes together as one JSON file.', sceneAdded: 'Scene added.', sceneDeleted: 'Scene deleted.', sceneSwitched: 'Scene switched.', projectSaved: 'Project JSON saved.', projectLoaded: 'Project JSON loaded.', cannotDeleteLastScene: 'The last scene cannot be deleted.'
+    noImages: 'No images added', imageAdded: 'Image added.', imageSelected: 'Image selected.', imageDeleted: 'Image deleted.', keyframeSaved: 'Keyframe saved.', noActiveLayer: 'Select a layer to edit.', animationExporting: 'Exporting PNG sequence: {current}/{total}', audioLoaded: 'Audio loaded.', timelineApplied: 'Timeline applied.', modelTrack: 'Live2D', imageTrack: 'Image', keyframes: '{count} keys', keyframeEditor: 'Keyframe Editor', noKeyframeSelected: 'Select a key on the timeline to adjust its time and contents later.', selectedKeyframe: 'Selected Key', keyTime: 'Key Time (sec)', updateKeyFromCurrent: 'Overwrite with Current State', deleteKeyframe: 'Delete Key', interpolation: 'Interpolation', linear: 'Smooth', hold: 'Hold Until Next Key', imageKeyContent: 'Image Key Contents', modelKeyContent: 'Model Key Contents', keyframeUpdated: 'Keyframe updated.', keyframeDeleted: 'Keyframe deleted.', keyMoved: 'Keyframe moved.', noEditableTrack: 'Adjust a parameter or image property first, or select an existing track before adding a keyframe.', hairSwayButton: 'Auto Hair Sway', hairSwayTitle: 'Auto Hair Sway', hairSwayHint: 'Insert sway keyframes into selected hair parameters from the current timeline time.', hairSwayPreset: 'Preset', hairSwayPresetNormalWind: 'Normal Wind', hairSwayPresetBreeze: 'Breeze', hairSwayPresetStrongWind: 'Strong Wind', hairSwayPresetLightBounce: 'Light Bounce', hairSwayPresetBigBounce: 'Big Bounce', hairSwayCount: 'Sway Count', hairSwayStrength: 'Strength', hairSwaySeconds: 'Sway Duration (sec)', hairSwayTargets: 'Target Parameters', hairSwaySelectCandidates: 'Select Hair Candidates', insertHairSway: 'Insert', close: 'Close', hairSwayInserted: 'Hair sway keyframes inserted.', noHairSwayTargets: 'Select target parameters.', hairSwayNoCharacter: 'Select a character for hair sway.', hairSwayNoParams: 'This model has no selectable parameters.', rightTabMain: 'Current Settings', rightTabKeyframe: 'Keyframe Properties', loop: 'Loop', loopKeysButton: 'Insert Loop', loopDialogTitle: 'Insert Loop', loopDialogHint: 'Duplicate the selected parameter track key sequence after the current keys for the specified number of loops.', loopTargetTrack: 'Parameter track to loop', loopCount: 'Loop Count', insertLoopKeys: 'Loop', noLoopTracks: 'No keyed tracks can be looped.', loopKeysInserted: 'Loop keyframes inserted.', loopNeedsTwoKeys: 'Looping needs at least two keyframes.', duplicateKeyframe: 'Duplicate Key', keyframeDuplicated: 'Keyframe duplicated.', timelineFilterAll: 'Visible Tracks: All', timelineFilterSelected: 'Visible Tracks: {count}', timelineFilterEmpty: 'No keyed parameters have been added yet.', timelineFilterTitle: 'Visible Keyframe Items', timelineFilterHint: 'When nothing is checked, every keyed parameter is shown. When one or more items are checked, only those tracks are shown.', clearTimelineFilter: 'Clear Filter', sceneManagement: 'Scene / Project', sceneSelect: 'Scene Select', addScene: 'Add Scene', deleteScene: 'Delete Scene', saveProjectJson: 'Save Project JSON', loadProjectJson: 'Load Project JSON', projectSaveHint: 'Save scenes, model data, images, audio, and keyframes together as one JSON file.', sceneAdded: 'Scene added.', sceneDeleted: 'Scene deleted.', sceneSwitched: 'Scene switched.', projectSaved: 'Project JSON saved.', projectLoaded: 'Project JSON loaded.', cannotDeleteLastScene: 'The last scene cannot be deleted.', mouthLipsyncButton: 'Auto Lip Sync', mouthLipsyncTitle: 'Auto Lip Sync', mouthLipsyncHint: 'Insert natural mouth-open keyframes into the mouth parameter from audio analysis or a specified number of lip-sync cycles.', mouthLipsyncTarget: 'Target mouth parameter', mouthLipsyncModeAudio: 'Auto from audio', mouthLipsyncModeCount: 'Insert by count', mouthLipsyncMax: 'Maximum open value', mouthLipsyncCount: 'Lip-sync count', mouthLipsyncAutoMaxCount: 'Max lip-sync count', mouthLipsyncSeconds: 'Duration (sec)', mouthLipsyncSensitivity: 'Volume sensitivity', mouthLipsyncThreshold: 'Silence threshold', mouthLipsyncPreview: 'Preview', mouthLipsyncPreviewPlay: 'Play', mouthLipsyncPreviewStop: 'Stop', mouthLipsyncPreviewTime: 'Playback', mouthLipsyncPreviewValue: 'Mouth value', mouthLipsyncPreviewMax: 'Max setting', insertAudioLipsync: 'Insert from Audio', insertCountLipsync: 'Insert by Count', mouthLipsyncInserted: 'Mouth lip-sync keyframes inserted.', mouthLipsyncNoCharacter: 'Select a character for lip-sync.', mouthLipsyncNoParam: 'No mouth-open parameter was found.', mouthLipsyncNoAudio: 'Load an audio file first.', mouthLipsyncAudioDecodeFailed: 'Audio analysis failed. Try another audio format.', mouthLipsyncAudioHint: 'Analyze the loaded audio and change the mouth-open value according to volume.', mouthLipsyncCountHint: 'Starting at the current time, inserts closed → open → closed as one cycle. The open amount varies slightly each time.'
   });
   Object.assign(I18N.ko, {
     subtitle: '완성된 Live2D 모델과 이미지 소재로 키프레임 애니메이션을 만들고 연속 PNG로 내보내는 브라우저 앱',
@@ -145,7 +145,7 @@
     timeline: '타임라인', playTimeline: '재생', stopTimeline: '정지', addKeyframe: '키프레임 추가', prevKeyframe: '이전 키', nextKeyframe: '다음 키',
     duration: '길이(초)', fps: 'FPS', currentTime: '현재 초', autoKeyframe: '자동 키', previewZoom: '표시 배율', zoomFit: '전체 표시',
     imageMoveTool: '이미지 이동', imageRotateTool: '이미지 회전', imageScaleTool: '이미지 크기', imageTransform: '이미지 조정', rotation: '회전', opacity: '불투명도',
-    noImages: '추가된 이미지 없음', imageAdded: '이미지를 추가했습니다.', imageSelected: '이미지를 선택했습니다.', imageDeleted: '이미지를 삭제했습니다.', keyframeSaved: '키프레임을 저장했습니다.', noActiveLayer: '조작할 레이어를 선택하세요.', animationExporting: '연속 PNG 내보내는 중: {current}/{total}', audioLoaded: '오디오를 불러왔습니다.', timelineApplied: '타임라인을 적용했습니다.', modelTrack: 'Live2D', imageTrack: '이미지', keyframes: '키 {count}개', keyframeEditor: '키프레임 편집', noKeyframeSelected: '타임라인의 키를 선택하면 시간과 내용을 나중에 조정할 수 있습니다.', selectedKeyframe: '선택한 키', keyTime: '키 위치(초)', updateKeyFromCurrent: '현재 상태로 덮어쓰기', deleteKeyframe: '키 삭제', interpolation: '보간', linear: '부드럽게', hold: '다음 키까지 고정', imageKeyContent: '이미지 키 내용', modelKeyContent: '모델 키 내용', keyframeUpdated: '키프레임을 수정했습니다.', keyframeDeleted: '키프레임을 삭제했습니다.', keyMoved: '키프레임 위치를 변경했습니다.', noEditableTrack: '키프레임을 추가할 파라미터나 이미지 항목을 먼저 조정하거나 기존 트랙을 선택하세요.', hairSwayButton: '머리 흔들림 자동 입력', hairSwayTitle: '머리 흔들림 자동 입력', hairSwayHint: '현재 시간부터 선택한 머리 파라미터에 흔들림 키프레임을 한 번에 삽입합니다.', hairSwayPreset: '프리셋', hairSwayPresetNormalWind: '보통 바람', hairSwayPresetBreeze: '산들바람', hairSwayPresetStrongWind: '강풍', hairSwayPresetLightBounce: '가볍게 튀기', hairSwayPresetBigBounce: '크게 튀기', hairSwayCount: '흔들림 횟수', hairSwayStrength: '강도', hairSwaySeconds: '흔들림 애니메이션 시간(초)', hairSwayTargets: '대상 파라미터', hairSwaySelectCandidates: '머리 후보 선택', insertHairSway: '삽입', close: '닫기', hairSwayInserted: '머리 흔들림 키프레임을 삽입했습니다.', noHairSwayTargets: '대상 파라미터를 선택하세요.', hairSwayNoCharacter: '머리 흔들림을 삽입할 캐릭터를 선택하세요.', hairSwayNoParams: '이 모델에는 선택 가능한 파라미터가 없습니다.', rightTabMain: '현재 설정', rightTabKeyframe: '키프레임 설정 속성', loop: '루프', loopKeysButton: '루프 삽입', loopDialogTitle: '루프 삽입', loopDialogHint: '선택한 파라미터 트랙의 키 배열을 지정한 횟수만큼 뒤에 복제해 삽입합니다.', loopTargetTrack: '루프할 키가 있는 파라미터', loopCount: '루프 횟수', insertLoopKeys: '루프하기', noLoopTracks: '루프할 수 있는 키프레임 트랙이 없습니다.', loopKeysInserted: '루프 키프레임을 삽입했습니다.', loopNeedsTwoKeys: '루프에는 2개 이상의 키프레임이 필요합니다.', duplicateKeyframe: '키 복제', keyframeDuplicated: '키프레임을 복제했습니다.', timelineFilterAll: '표시 트랙: 전체', timelineFilterSelected: '표시 트랙: {count}개', timelineFilterEmpty: '입력된 키프레임이 있는 파라미터가 아직 없습니다.', timelineFilterTitle: '표시할 키프레임 항목', timelineFilterHint: '체크가 없으면 입력된 키프레임이 있는 모든 파라미터를 표시합니다. 체크가 있으면 선택한 항목만 표시합니다.', clearTimelineFilter: '필터 해제', sceneManagement: '씬 관리 / 프로젝트', sceneSelect: 'Scene 선택', addScene: '씬 추가', deleteScene: '씬 삭제', saveProjectJson: '프로젝트 JSON 저장', loadProjectJson: '프로젝트 JSON 불러오기', projectSaveHint: '씬, 모델 데이터, 이미지, 오디오, 키프레임을 하나의 JSON으로 저장할 수 있습니다.', sceneAdded: '씬을 추가했습니다.', sceneDeleted: '씬을 삭제했습니다.', sceneSwitched: '씬을 전환했습니다.', projectSaved: '프로젝트 JSON을 저장했습니다.', projectLoaded: '프로젝트 JSON을 불러왔습니다.', cannotDeleteLastScene: '마지막 씬은 삭제할 수 없습니다.'
+    noImages: '추가된 이미지 없음', imageAdded: '이미지를 추가했습니다.', imageSelected: '이미지를 선택했습니다.', imageDeleted: '이미지를 삭제했습니다.', keyframeSaved: '키프레임을 저장했습니다.', noActiveLayer: '조작할 레이어를 선택하세요.', animationExporting: '연속 PNG 내보내는 중: {current}/{total}', audioLoaded: '오디오를 불러왔습니다.', timelineApplied: '타임라인을 적용했습니다.', modelTrack: 'Live2D', imageTrack: '이미지', keyframes: '키 {count}개', keyframeEditor: '키프레임 편집', noKeyframeSelected: '타임라인의 키를 선택하면 시간과 내용을 나중에 조정할 수 있습니다.', selectedKeyframe: '선택한 키', keyTime: '키 위치(초)', updateKeyFromCurrent: '현재 상태로 덮어쓰기', deleteKeyframe: '키 삭제', interpolation: '보간', linear: '부드럽게', hold: '다음 키까지 고정', imageKeyContent: '이미지 키 내용', modelKeyContent: '모델 키 내용', keyframeUpdated: '키프레임을 수정했습니다.', keyframeDeleted: '키프레임을 삭제했습니다.', keyMoved: '키프레임 위치를 변경했습니다.', noEditableTrack: '키프레임을 추가할 파라미터나 이미지 항목을 먼저 조정하거나 기존 트랙을 선택하세요.', hairSwayButton: '머리 흔들림 자동 입력', hairSwayTitle: '머리 흔들림 자동 입력', hairSwayHint: '현재 시간부터 선택한 머리 파라미터에 흔들림 키프레임을 한 번에 삽입합니다.', hairSwayPreset: '프리셋', hairSwayPresetNormalWind: '보통 바람', hairSwayPresetBreeze: '산들바람', hairSwayPresetStrongWind: '강풍', hairSwayPresetLightBounce: '가볍게 튀기', hairSwayPresetBigBounce: '크게 튀기', hairSwayCount: '흔들림 횟수', hairSwayStrength: '강도', hairSwaySeconds: '흔들림 애니메이션 시간(초)', hairSwayTargets: '대상 파라미터', hairSwaySelectCandidates: '머리 후보 선택', insertHairSway: '삽입', close: '닫기', hairSwayInserted: '머리 흔들림 키프레임을 삽입했습니다.', noHairSwayTargets: '대상 파라미터를 선택하세요.', hairSwayNoCharacter: '머리 흔들림을 삽입할 캐릭터를 선택하세요.', hairSwayNoParams: '이 모델에는 선택 가능한 파라미터가 없습니다.', rightTabMain: '현재 설정', rightTabKeyframe: '키프레임 설정 속성', loop: '루프', loopKeysButton: '루프 삽입', loopDialogTitle: '루프 삽입', loopDialogHint: '선택한 파라미터 트랙의 키 배열을 지정한 횟수만큼 뒤에 복제해 삽입합니다.', loopTargetTrack: '루프할 키가 있는 파라미터', loopCount: '루프 횟수', insertLoopKeys: '루프하기', noLoopTracks: '루프할 수 있는 키프레임 트랙이 없습니다.', loopKeysInserted: '루프 키프레임을 삽입했습니다.', loopNeedsTwoKeys: '루프에는 2개 이상의 키프레임이 필요합니다.', duplicateKeyframe: '키 복제', keyframeDuplicated: '키프레임을 복제했습니다.', timelineFilterAll: '표시 트랙: 전체', timelineFilterSelected: '표시 트랙: {count}개', timelineFilterEmpty: '입력된 키프레임이 있는 파라미터가 아직 없습니다.', timelineFilterTitle: '표시할 키프레임 항목', timelineFilterHint: '체크가 없으면 입력된 키프레임이 있는 모든 파라미터를 표시합니다. 체크가 있으면 선택한 항목만 표시합니다.', clearTimelineFilter: '필터 해제', sceneManagement: '씬 관리 / 프로젝트', sceneSelect: 'Scene 선택', addScene: '씬 추가', deleteScene: '씬 삭제', saveProjectJson: '프로젝트 JSON 저장', loadProjectJson: '프로젝트 JSON 불러오기', projectSaveHint: '씬, 모델 데이터, 이미지, 오디오, 키프레임을 하나의 JSON으로 저장할 수 있습니다.', sceneAdded: '씬을 추가했습니다.', sceneDeleted: '씬을 삭제했습니다.', sceneSwitched: '씬을 전환했습니다.', projectSaved: '프로젝트 JSON을 저장했습니다.', projectLoaded: '프로젝트 JSON을 불러왔습니다.', cannotDeleteLastScene: '마지막 씬은 삭제할 수 없습니다.', mouthLipsyncButton: '립싱크 자동 입력', mouthLipsyncTitle: '립싱크 자동 입력', mouthLipsyncHint: '입 열림 파라미터에 오디오 분석 또는 횟수 지정으로 자연스러운 립싱크 키프레임을 삽입합니다.', mouthLipsyncTarget: '대상 입 파라미터', mouthLipsyncModeAudio: '오디오에 맞춰 자동 입력', mouthLipsyncModeCount: '횟수 지정으로 삽입', mouthLipsyncMax: '최대 열림 값', mouthLipsyncCount: '립싱크 횟수', mouthLipsyncAutoMaxCount: '최대 립싱크 수', mouthLipsyncSeconds: '삽입 시간(초)', mouthLipsyncSensitivity: '볼륨 감도', mouthLipsyncThreshold: '무음 판정', mouthLipsyncPreview: '미리보기', mouthLipsyncPreviewPlay: '재생', mouthLipsyncPreviewStop: '정지', mouthLipsyncPreviewTime: '재생 위치', mouthLipsyncPreviewValue: '입 열림 값', mouthLipsyncPreviewMax: '최대 설정값', insertAudioLipsync: '오디오에서 삽입', insertCountLipsync: '횟수로 삽입', mouthLipsyncInserted: '립싱크 키프레임을 삽입했습니다.', mouthLipsyncNoCharacter: '립싱크를 삽입할 캐릭터를 선택하세요.', mouthLipsyncNoParam: '입 열림 파라미터를 찾을 수 없습니다.', mouthLipsyncNoAudio: '먼저 오디오를 불러오세요.', mouthLipsyncAudioDecodeFailed: '오디오 분석에 실패했습니다. 다른 형식으로 시도해 주세요.', mouthLipsyncAudioHint: '불러온 오디오 전체를 분석하여 볼륨에 따라 입 열림 값을 변화시킵니다.', mouthLipsyncCountHint: '현재 시간부터 닫힘→열림→닫힘을 1회로 하여 지정한 횟수만큼 삽입합니다. 열림 정도는 매번 조금씩 랜덤하게 달라집니다.'
   });
 
   const state = {
@@ -185,7 +185,15 @@
     recentTrackEntry: null,
     rightPanelTab: 'main',
     loopTrackEntries: [],
-    timelineFilterTrackKeys: []
+    timelineFilterTrackKeys: [],
+    mouthLipsyncPreviewRaf: 0,
+    mouthLipsyncPreviewStartedAt: 0,
+    mouthLipsyncPreviewBase: null,
+    mouthLipsyncPreviewIsPlaying: false,
+    mouthLipsyncPreviewAudio: null,
+    mouthLipsyncPreviewAnalysis: null,
+    mouthLipsyncPreviewSmoothed: 0,
+    mouthLipsyncAudioSegmentCache: null
   };
 
   const $ = (id) => document.getElementById(id);
@@ -277,6 +285,35 @@
     prevKeyframeButton: $('prevKeyframeButton'),
     nextKeyframeButton: $('nextKeyframeButton'),
     hairSwayButton: $('hairSwayButton'),
+    mouthLipsyncButton: $('mouthLipsyncButton'),
+    mouthLipsyncDialog: $('mouthLipsyncDialog'),
+    mouthLipsyncParamSelect: $('mouthLipsyncParamSelect'),
+    mouthLipsyncModeAudio: $('mouthLipsyncModeAudio'),
+    mouthLipsyncModeCount: $('mouthLipsyncModeCount'),
+    mouthLipMaxRange: $('mouthLipMaxRange'),
+    mouthLipMaxNumber: $('mouthLipMaxNumber'),
+    mouthLipCountRange: $('mouthLipCountRange'),
+    mouthLipCountNumber: $('mouthLipCountNumber'),
+    mouthLipDurationRange: $('mouthLipDurationRange'),
+    mouthLipDurationNumber: $('mouthLipDurationNumber'),
+    mouthLipAutoMaxCountRange: $('mouthLipAutoMaxCountRange'),
+    mouthLipAutoMaxCountNumber: $('mouthLipAutoMaxCountNumber'),
+    mouthLipSensitivityRange: $('mouthLipSensitivityRange'),
+    mouthLipSensitivityNumber: $('mouthLipSensitivityNumber'),
+    mouthLipThresholdRange: $('mouthLipThresholdRange'),
+    mouthLipThresholdNumber: $('mouthLipThresholdNumber'),
+    mouthLipsyncPreviewCanvas: $('mouthLipsyncPreviewCanvas'),
+    mouthLipsyncPreviewPlayButton: $('mouthLipsyncPreviewPlayButton'),
+    mouthLipsyncPreviewStopButton: $('mouthLipsyncPreviewStopButton'),
+    mouthLipsyncPreviewTimeLabel: $('mouthLipsyncPreviewTimeLabel'),
+    mouthLipsyncPreviewValueLabel: $('mouthLipsyncPreviewValueLabel'),
+    mouthLipsyncPreviewMaxLabel: $('mouthLipsyncPreviewMaxLabel'),
+    mouthAutoControlPanel: $('mouthAutoControlPanel'),
+    mouthCountControlPanel: $('mouthCountControlPanel'),
+    mouthAudioInsertCard: $('mouthAudioInsertCard'),
+    mouthCountInsertCard: $('mouthCountInsertCard'),
+    insertAudioLipsyncButton: $('insertAudioLipsyncButton'),
+    insertCountLipsyncButton: $('insertCountLipsyncButton'),
     loopKeysButton: $('loopKeysButton'),
     loopKeysDialog: $('loopKeysDialog'),
     loopTrackSelect: $('loopTrackSelect'),
@@ -342,6 +379,8 @@
     renderTimelineLayerList();
     renderTimelineTrackFilter();
     renderHairSwayParamList();
+    renderMouthLipsyncParamOptions();
+    drawMouthLipsyncPreview();
     renderLoopTrackOptions();
     updateRightPanelTabs();
     updateTimelineUi();
@@ -2047,6 +2086,641 @@
     els.hairSwayDialog?.close();
   }
 
+
+  function isMouthOpenCandidateParam(param) {
+    const text = normalizeTextForSearch(`${param?.id || ''} ${param?.name || ''}`);
+    return /mouthopen|mouthopeny|mouthy|openmouth|kuchi|lip|口|くち|입/.test(text);
+  }
+
+  function mouthOpenCandidateParams(character = activeCharacter()) {
+    const params = character?.parameters || [];
+    const targets = getPoseToolTargets('mouth', character);
+    const result = [];
+    const pushUnique = (param) => {
+      if (param && !result.some((item) => item.id === param.id)) result.push(param);
+    };
+    pushUnique(targets.open);
+    for (const param of params) if (isMouthOpenCandidateParam(param)) pushUnique(param);
+    return result.length ? result : (targets.open ? [targets.open] : []);
+  }
+
+  function mouthCloseValue(param) {
+    if (Number.isFinite(Number(param?.min)) && Number(param.min) >= 0) return Number(param.min);
+    if (Number.isFinite(Number(param?.defaultValue))) return Math.max(Number(param?.min) || 0, Math.min(Number(param.defaultValue), Number(param?.max) || 1));
+    return 0;
+  }
+
+  function mouthOpenLimit(param) {
+    const close = mouthCloseValue(param);
+    const max = Number.isFinite(Number(param?.max)) ? Number(param.max) : Math.max(1, close + 1);
+    return max > close ? max : close + 1;
+  }
+
+  function mouthStep(param) {
+    const range = Math.max(0.001, mouthOpenLimit(param) - mouthCloseValue(param));
+    return Math.max(0.001, Math.round(range / 1000 * 1000000) / 1000000);
+  }
+
+  function renderMouthLipsyncParamOptions() {
+    if (!els.mouthLipsyncParamSelect) return;
+    const character = activeCharacter();
+    const previous = els.mouthLipsyncParamSelect.value;
+    els.mouthLipsyncParamSelect.innerHTML = '';
+    const params = mouthOpenCandidateParams(character);
+    if (!character || !params.length) {
+      const option = document.createElement('option');
+      option.value = '';
+      option.textContent = character ? t('mouthLipsyncNoParam') : t('mouthLipsyncNoCharacter');
+      els.mouthLipsyncParamSelect.appendChild(option);
+      els.mouthLipsyncParamSelect.disabled = true;
+      return;
+    }
+    els.mouthLipsyncParamSelect.disabled = false;
+    for (const param of params) {
+      const option = document.createElement('option');
+      option.value = param.id;
+      option.textContent = `${param.id}${param.name && param.name !== param.id ? ` / ${param.name}` : ''}`;
+      if (param.id === previous) option.selected = true;
+      els.mouthLipsyncParamSelect.appendChild(option);
+    }
+    if (!els.mouthLipsyncParamSelect.value && params[0]) els.mouthLipsyncParamSelect.value = params[0].id;
+    updateMouthLipsyncMaxBounds();
+  }
+
+  function selectedMouthLipsyncParam() {
+    const character = activeCharacter();
+    if (!character) return null;
+    const id = els.mouthLipsyncParamSelect?.value || mouthOpenCandidateParams(character)[0]?.id || '';
+    return character.parameters?.find((param) => param.id === id) || null;
+  }
+
+  function setMouthPair(rangeEl, numberEl, value) {
+    if (rangeEl) rangeEl.value = String(value);
+    if (numberEl) numberEl.value = String(value);
+  }
+
+  function syncMouthPair(a, b, min, max, fallback) {
+    const value = clampNumber(a?.value, min, max, fallback);
+    if (a) a.value = String(value);
+    if (b) b.value = String(value);
+    if (state.mouthLipsyncPreviewIsPlaying) drawMouthLipsyncPreview();
+    else startMouthLipsyncPreview();
+    return value;
+  }
+
+  function updateMouthLipsyncMaxBounds() {
+    const param = selectedMouthLipsyncParam();
+    if (!param) return;
+    const min = mouthCloseValue(param);
+    const max = mouthOpenLimit(param);
+    const step = mouthStep(param);
+    const current = clampNumber(els.mouthLipMaxNumber?.value, min, max, max);
+    for (const node of [els.mouthLipMaxRange, els.mouthLipMaxNumber]) {
+      if (!node) continue;
+      node.min = String(min);
+      node.max = String(max);
+      node.step = String(step);
+    }
+    setMouthPair(els.mouthLipMaxRange, els.mouthLipMaxNumber, current);
+    if (state.mouthLipsyncPreviewIsPlaying) drawMouthLipsyncPreview();
+    else startMouthLipsyncPreview();
+  }
+
+  function selectedMouthMaxValue(param = selectedMouthLipsyncParam()) {
+    if (!param) return 1;
+    return clampNumber(els.mouthLipMaxNumber?.value, mouthCloseValue(param), mouthOpenLimit(param), mouthOpenLimit(param));
+  }
+
+  function mouthAutoMaxCount() {
+    return Math.max(1, Math.min(300, Math.round(Number(els.mouthLipAutoMaxCountNumber?.value) || 40)));
+  }
+
+  function updateMouthLipsyncModePanels() {
+    const isAudio = !!els.mouthLipsyncModeAudio?.checked;
+    els.mouthAutoControlPanel?.classList.toggle('is-hidden', !isAudio);
+    els.mouthCountControlPanel?.classList.toggle('is-hidden', isAudio);
+    els.mouthAudioInsertCard?.classList.toggle('is-hidden', !isAudio);
+    els.mouthCountInsertCard?.classList.toggle('is-hidden', isAudio);
+    drawMouthLipsyncPreview();
+  }
+
+  function seededRandom01(seed) {
+    const x = Math.sin(seed * 12.9898 + 78.233) * 43758.5453123;
+    return x - Math.floor(x);
+  }
+
+  function mouthCountPreviewPoints(count, duration, close, max) {
+    const total = Math.max(1, Math.round(count));
+    const seconds = Math.max(0.1, duration);
+    const points = [];
+    const samples = Math.max(80, total * 24);
+    const cycle = seconds / total;
+    for (let i = 0; i <= samples; i++) {
+      const time = seconds * (i / samples);
+      const index = Math.min(total - 1, Math.floor(time / cycle));
+      const phase = (time - index * cycle) / Math.max(0.000001, cycle);
+      const natural = 0.45 + seededRandom01(index + 4) * 0.55;
+      const shape = Math.sin(Math.PI * Math.max(0, Math.min(1, phase)));
+      points.push({ time, value: close + (max - close) * natural * shape });
+    }
+    return points;
+  }
+
+  function updateMouthLipsyncPreviewInfo(currentValue = null, currentTime = 0, duration = 0) {
+    const param = selectedMouthLipsyncParam();
+    const max = selectedMouthMaxValue(param);
+    if (els.mouthLipsyncPreviewMaxLabel) els.mouthLipsyncPreviewMaxLabel.textContent = formatNumber(max);
+    if (els.mouthLipsyncPreviewValueLabel) {
+      const character = activeCharacter();
+      const value = currentValue == null ? (character && param ? getCurrentParamValue(character, param) : 0) : currentValue;
+      els.mouthLipsyncPreviewValueLabel.textContent = formatNumber(value || 0);
+    }
+    if (els.mouthLipsyncPreviewTimeLabel) {
+      const safeTime = Math.max(0, currentTime || 0);
+      const safeDuration = Math.max(0, duration || 0);
+      els.mouthLipsyncPreviewTimeLabel.textContent = `${safeTime.toFixed(2)} / ${safeDuration.toFixed(2)}s`;
+    }
+  }
+
+  function drawMouthLipsyncPreview() {
+    const canvas = els.mouthLipsyncPreviewCanvas;
+    if (!canvas) return;
+    const source = els.canvas;
+    const sourceW = Math.max(1, Number(source?.width) || 520);
+    const sourceH = Math.max(1, Number(source?.height) || 320);
+    const baseW = 720;
+    const baseH = Math.max(160, Math.min(720, Math.round(baseW * (sourceH / sourceW))));
+    if (canvas.width !== baseW) canvas.width = baseW;
+    if (canvas.height !== baseH) canvas.height = baseH;
+    const ctx = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+    ctx.clearRect(0, 0, width, height);
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, width, height);
+    ctx.strokeStyle = '#d8e6e2';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(0.5, 0.5, width - 1, height - 1);
+    if (source && source.width > 0 && source.height > 0) {
+      const margin = 12;
+      const availW = Math.max(1, width - margin * 2);
+      const availH = Math.max(1, height - margin * 2);
+      const scale = Math.min(availW / source.width, availH / source.height);
+      const drawW = Math.max(1, source.width * scale);
+      const drawH = Math.max(1, source.height * scale);
+      const x = (width - drawW) / 2;
+      const y = (height - drawH) / 2;
+      ctx.drawImage(source, x, y, drawW, drawH);
+    } else {
+      ctx.fillStyle = '#6b7d7a';
+      ctx.font = '14px system-ui, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(t('mouthLipsyncPreview'), width / 2, height / 2);
+      ctx.textAlign = 'start';
+      ctx.textBaseline = 'alphabetic';
+    }
+    updateMouthLipsyncPreviewInfo();
+  }
+
+  function captureMouthLipsyncPreviewBase() {
+    const character = activeCharacter();
+    const param = selectedMouthLipsyncParam();
+    if (!character || !param) return null;
+    if (!state.mouthLipsyncPreviewBase || state.mouthLipsyncPreviewBase.characterId !== character.id || state.mouthLipsyncPreviewBase.paramId !== param.id) {
+      state.mouthLipsyncPreviewBase = {
+        characterId: character.id,
+        paramId: param.id,
+        value: getCurrentParamValue(character, param),
+        hadManual: character.manualValues.has(param.id)
+      };
+    }
+    return { character, param };
+  }
+
+  function restoreMouthLipsyncPreviewBase() {
+    const base = state.mouthLipsyncPreviewBase;
+    state.mouthLipsyncPreviewBase = null;
+    if (base) {
+      const character = findCharacterTrack(base.characterId);
+      const param = character?.parameters?.find((item) => item.id === base.paramId);
+      if (character && param) {
+        if (base.hadManual) character.manualValues.set(param.id, base.value);
+        else character.manualValues.delete(param.id);
+        param.value = base.value;
+        setCoreParameter(character, param, base.value);
+        refreshParameterControls([param.id]);
+        state.app?.renderer?.render(state.app.stage);
+        drawMouthLipsyncPreview();
+        updateMouthLipsyncPreviewInfo(base.value, 0, 0);
+        return;
+      }
+    }
+    applyTimelineAt(state.currentTime || 0, true);
+    drawMouthLipsyncPreview();
+  }
+
+  function renderMouthLipsyncPreviewValue(value, currentTime = 0, duration = 0) {
+    const info = captureMouthLipsyncPreviewBase();
+    if (!info) {
+      drawMouthLipsyncPreview();
+      return;
+    }
+    const { character, param } = info;
+    const next = clampParameterValue(param, value);
+    param.value = next;
+    setCoreParameter(character, param, next);
+    refreshParameterControls([param.id]);
+    state.app?.renderer?.render(state.app.stage);
+    drawMouthLipsyncPreview();
+    updateMouthLipsyncPreviewInfo(next, currentTime, duration);
+  }
+
+  function buildMouthAudioSegments(buffer, maxCount, sensitivity, thresholdPercent) {
+    const duration = Math.max(0.1, Number(buffer?.duration) || 0.1);
+    const count = Math.max(1, Math.min(300, Math.round(maxCount || 40)));
+    const probeStep = 1 / Math.max(20, Math.min(60, Math.round(Number(els.timelineFps?.value) || state.fps || 24)));
+    const values = [];
+    for (let time = 0; time <= duration + 0.0005; time += probeStep) values.push(rmsAtTime(buffer, time));
+    const peak = Math.max(0.000001, percentile(values, 0.96));
+    const threshold = peak * Math.max(0, Math.min(0.8, thresholdPercent));
+    const segmentLength = duration / count;
+    const segments = [];
+    for (let index = 0; index < count; index++) {
+      const start = index * segmentLength;
+      const end = index === count - 1 ? duration : (index + 1) * segmentLength;
+      const samples = Math.max(5, Math.min(15, Math.ceil((end - start) / Math.max(0.01, probeStep))));
+      let peakRms = 0;
+      let peakTime = start + (end - start) * 0.5;
+      for (let i = 0; i < samples; i++) {
+        const ratio = samples === 1 ? 0.5 : i / (samples - 1);
+        const time = start + (end - start) * ratio;
+        const rms = rmsAtTime(buffer, time);
+        if (rms > peakRms) {
+          peakRms = rms;
+          peakTime = time;
+        }
+      }
+      const normalized = Math.max(0, Math.min(1, ((peakRms - threshold) / Math.max(0.000001, peak - threshold)) * sensitivity));
+      const openness = normalized <= 0.015 ? 0 : Math.pow(normalized, 0.72);
+      segments.push({ start, end, peakTime, openness });
+    }
+    return { duration, peak, threshold, segments, cacheKey: `${state.audioUrl}|${count}|${sensitivity}|${thresholdPercent}|${Math.round(duration * 1000)}` };
+  }
+
+  function currentMouthAudioSegments(buffer) {
+    const maxCount = mouthAutoMaxCount();
+    const sensitivity = clampNumber(els.mouthLipSensitivityNumber?.value, 10, 200, 100) / 100;
+    const thresholdPercent = clampNumber(els.mouthLipThresholdNumber?.value, 0, 80, 8) / 100;
+    const duration = Math.max(0.1, Number(buffer?.duration) || 0.1);
+    const cacheKey = `${state.audioUrl}|${maxCount}|${sensitivity}|${thresholdPercent}|${Math.round(duration * 1000)}`;
+    if (state.mouthLipsyncAudioSegmentCache?.cacheKey === cacheKey) return state.mouthLipsyncAudioSegmentCache;
+    const built = buildMouthAudioSegments(buffer, maxCount, sensitivity, thresholdPercent);
+    state.mouthLipsyncAudioSegmentCache = built;
+    return built;
+  }
+
+  function mouthAudioValueAtTime(segmentsData, time, close, max) {
+    const segments = segmentsData?.segments || [];
+    if (!segments.length) return close;
+    const duration = Math.max(0.1, segmentsData.duration || 0.1);
+    const t = Math.max(0, Math.min(duration, time));
+    const index = Math.max(0, Math.min(segments.length - 1, Math.floor((t / duration) * segments.length)));
+    const segment = segments[index];
+    if (!segment || !segment.openness) return close;
+    const start = segment.start;
+    const end = Math.max(start + 0.001, segment.end);
+    const peakTime = Math.max(start + 0.001, Math.min(end - 0.001, segment.peakTime));
+    const shape = t <= peakTime
+      ? (t - start) / Math.max(0.001, peakTime - start)
+      : (end - t) / Math.max(0.001, end - peakTime);
+    const smooth = Math.sin(Math.PI * 0.5 * Math.max(0, Math.min(1, shape)));
+    return close + (max - close) * segment.openness * smooth;
+  }
+
+  async function ensureMouthLipsyncPreviewAnalysis() {
+    if (state.mouthLipsyncPreviewAnalysis && state.mouthLipsyncPreviewAnalysis.url === state.audioUrl) return state.mouthLipsyncPreviewAnalysis;
+    const buffer = await decodeLoadedAudioBuffer();
+    if (!buffer) return null;
+    const probeStep = 1 / Math.max(20, Math.min(60, Math.round(Number(els.timelineFps?.value) || state.fps || 24)));
+    const values = [];
+    for (let time = 0; time <= buffer.duration + 0.0005; time += probeStep) values.push(rmsAtTime(buffer, time));
+    const peak = Math.max(0.000001, percentile(values, 0.96));
+    state.mouthLipsyncPreviewAnalysis = { url: state.audioUrl, buffer, peak };
+    return state.mouthLipsyncPreviewAnalysis;
+  }
+
+  function stopMouthLipsyncPreviewPlayback(restore = false) {
+    if (state.mouthLipsyncPreviewRaf) cancelAnimationFrame(state.mouthLipsyncPreviewRaf);
+    state.mouthLipsyncPreviewRaf = 0;
+    state.mouthLipsyncPreviewStartedAt = 0;
+    state.mouthLipsyncPreviewIsPlaying = false;
+    state.mouthLipsyncPreviewSmoothed = 0;
+    if (state.mouthLipsyncPreviewAudio) {
+      try {
+        state.mouthLipsyncPreviewAudio.pause();
+        state.mouthLipsyncPreviewAudio.currentTime = 0;
+        state.mouthLipsyncPreviewAudio.src = '';
+      } catch (_) {}
+    }
+    state.mouthLipsyncPreviewAudio = null;
+    if (els.mouthLipsyncPreviewPlayButton) els.mouthLipsyncPreviewPlayButton.disabled = false;
+    if (restore) {
+      restoreMouthLipsyncPreviewBase();
+      return;
+    }
+    const info = captureMouthLipsyncPreviewBase();
+    if (info) {
+      const close = mouthCloseValue(info.param);
+      renderMouthLipsyncPreviewValue(close, 0, els.mouthLipsyncModeCount?.checked ? clampNumber(els.mouthLipDurationNumber?.value, 0.1, 60, 2) : (state.mouthLipsyncPreviewAnalysis?.buffer?.duration || 0));
+    } else {
+      drawMouthLipsyncPreview();
+    }
+  }
+
+  async function playMouthLipsyncPreview() {
+    const info = captureMouthLipsyncPreviewBase();
+    if (!info) {
+      if (!activeCharacter()) log(t('mouthLipsyncNoCharacter'), 'error');
+      else log(t('mouthLipsyncNoParam'), 'error');
+      return;
+    }
+    const isAudio = !!els.mouthLipsyncModeAudio?.checked;
+    if (isAudio && !state.audioFile && !state.audioUrl) {
+      log(t('mouthLipsyncNoAudio'), 'error');
+      return;
+    }
+    stopMouthLipsyncPreviewPlayback(false);
+    state.mouthLipsyncPreviewStartedAt = performance.now();
+    state.mouthLipsyncPreviewIsPlaying = true;
+    state.mouthLipsyncPreviewSmoothed = 0;
+    if (els.mouthLipsyncPreviewPlayButton) els.mouthLipsyncPreviewPlayButton.disabled = true;
+    if (isAudio) {
+      let analysis = null;
+      try { analysis = await ensureMouthLipsyncPreviewAnalysis(); }
+      catch (err) { console.error(err); }
+      if (!analysis) {
+        stopMouthLipsyncPreviewPlayback(false);
+        log(t('mouthLipsyncAudioDecodeFailed'), 'error');
+        return;
+      }
+      const audio = new Audio(state.audioUrl);
+      audio.preload = 'auto';
+      audio.currentTime = 0;
+      audio.addEventListener('ended', () => stopMouthLipsyncPreviewPlayback(false), { once: true });
+      state.mouthLipsyncPreviewAudio = audio;
+      try { await audio.play(); }
+      catch (err) {
+        console.error(err);
+        stopMouthLipsyncPreviewPlayback(false);
+        return;
+      }
+    }
+    state.mouthLipsyncPreviewRaf = requestAnimationFrame(previewMouthLipsyncFrame);
+  }
+
+  function previewMouthLipsyncFrame(now) {
+    const dialogOpen = !!els.mouthLipsyncDialog?.open;
+    if (!dialogOpen || !state.mouthLipsyncPreviewIsPlaying) {
+      state.mouthLipsyncPreviewRaf = 0;
+      return;
+    }
+    const info = captureMouthLipsyncPreviewBase();
+    if (!info) {
+      stopMouthLipsyncPreviewPlayback(false);
+      return;
+    }
+    const { param } = info;
+    const close = mouthCloseValue(param);
+    const max = selectedMouthMaxValue(param);
+    let currentTime = 0;
+    let duration = 0;
+    let value = close;
+    if (els.mouthLipsyncModeAudio?.checked) {
+      const analysis = state.mouthLipsyncPreviewAnalysis;
+      const audio = state.mouthLipsyncPreviewAudio;
+      if (!analysis || !audio) {
+        stopMouthLipsyncPreviewPlayback(false);
+        return;
+      }
+      currentTime = Math.max(0, audio.currentTime || 0);
+      duration = Math.max(0.1, Number(analysis.buffer?.duration) || Number(audio.duration) || 0.1);
+      const segmentsData = currentMouthAudioSegments(analysis.buffer);
+      value = mouthAudioValueAtTime(segmentsData, currentTime, close, max);
+      if (audio.ended || currentTime >= duration) {
+        stopMouthLipsyncPreviewPlayback(false);
+        return;
+      }
+    } else {
+      duration = clampNumber(els.mouthLipDurationNumber?.value, 0.1, 60, 2);
+      currentTime = Math.min(duration, Math.max(0, (now - state.mouthLipsyncPreviewStartedAt) / 1000));
+      const count = clampNumber(els.mouthLipCountNumber?.value, 1, 80, 6);
+      if (currentTime >= duration) {
+        stopMouthLipsyncPreviewPlayback(false);
+        return;
+      }
+      const cycle = Math.max(0.04, duration / Math.max(1, count));
+      const index = Math.min(Math.max(0, count - 1), Math.floor(currentTime / cycle));
+      const phase = (currentTime - index * cycle) / Math.max(0.000001, cycle);
+      const natural = 0.45 + seededRandom01(index + 4) * 0.55;
+      value = close + (max - close) * natural * Math.sin(Math.PI * Math.max(0, Math.min(1, phase)));
+    }
+    renderMouthLipsyncPreviewValue(value, currentTime, duration);
+    state.mouthLipsyncPreviewRaf = requestAnimationFrame(previewMouthLipsyncFrame);
+  }
+
+  function startMouthLipsyncPreview() {
+    stopMouthLipsyncPreviewPlayback(false);
+    const info = captureMouthLipsyncPreviewBase();
+    if (!info) {
+      drawMouthLipsyncPreview();
+      return;
+    }
+    const close = mouthCloseValue(info.param);
+    const duration = els.mouthLipsyncModeCount?.checked ? clampNumber(els.mouthLipDurationNumber?.value, 0.1, 60, 2) : (state.mouthLipsyncPreviewAnalysis?.buffer?.duration || 0);
+    renderMouthLipsyncPreviewValue(close, 0, duration);
+  }
+
+  function stopMouthLipsyncPreview() {
+    stopMouthLipsyncPreviewPlayback(true);
+  }
+
+  function openMouthLipsyncDialog() {
+    if (!activeCharacter()) {
+      log(t('mouthLipsyncNoCharacter'), 'error');
+      return;
+    }
+    renderMouthLipsyncParamOptions();
+    if (!selectedMouthLipsyncParam()) {
+      log(t('mouthLipsyncNoParam'), 'error');
+      return;
+    }
+    updateMouthLipsyncMaxBounds();
+    if (!els.mouthLipAutoMaxCountNumber?.value) setMouthPair(els.mouthLipAutoMaxCountRange, els.mouthLipAutoMaxCountNumber, 40);
+    if (!els.mouthLipCountNumber?.value) setMouthPair(els.mouthLipCountRange, els.mouthLipCountNumber, 6);
+    if (!els.mouthLipDurationNumber?.value) setMouthPair(els.mouthLipDurationRange, els.mouthLipDurationNumber, 2);
+    updateMouthLipsyncModePanels();
+    els.mouthLipsyncDialog?.showModal();
+    startMouthLipsyncPreview();
+  }
+
+  function prepareMouthTrackRange(character, param, start, end) {
+    const trackKey = `param:${param.id}`;
+    const track = ensureAnimationTrack(character, 'character', trackKey);
+    normalizeKeyframes(track);
+    track.keyframes = track.keyframes.filter((key) => Number(key.time) < start - 0.0005 || Number(key.time) > end + 0.0005);
+    rememberEditedTrack({ type: 'character', id: character.id, trackKey });
+    return { track, trackKey };
+  }
+
+  function insertCountMouthLipsyncKeyframes() {
+    const character = activeCharacter();
+    const param = selectedMouthLipsyncParam();
+    if (!character) { log(t('mouthLipsyncNoCharacter'), 'error'); return; }
+    if (!param) { log(t('mouthLipsyncNoParam'), 'error'); return; }
+    const count = Math.max(1, Math.min(80, Math.round(Number(els.mouthLipCountNumber?.value) || 6)));
+    const seconds = clampNumber(els.mouthLipDurationNumber?.value, 0.1, 60, 2);
+    const start = timelineTime();
+    const end = roundTime(start + seconds);
+    const close = mouthCloseValue(param);
+    const max = selectedMouthMaxValue(param);
+    const { track, trackKey } = prepareMouthTrackRange(character, param, start, end);
+    const cycle = seconds / count;
+    let firstKey = null;
+    const insert = (time, value) => {
+      const key = upsertKeyframe(track, {
+        time,
+        kind: 'characterTrack',
+        trackKey,
+        value: clampParameterValue(param, value),
+        interpolation: 'linear'
+      });
+      if (!firstKey) firstKey = key;
+      return key;
+    };
+    insert(start, close);
+    for (let i = 0; i < count; i++) {
+      const cycleStart = start + i * cycle;
+      const openTime = cycleStart + cycle * 0.45;
+      const closeTime = start + (i + 1) * cycle;
+      const natural = 0.45 + seededRandom01(i + count + 3) * 0.55;
+      insert(openTime, close + (max - close) * natural);
+      insert(closeTime, close);
+    }
+    extendTimelineDurationIfNeeded(end);
+    state.mouthLipsyncPreviewBase = null;
+    character.manualValues.set(param.id, close);
+    param.value = close;
+    setCoreParameter(character, param, close);
+    if (firstKey) state.selectedKeyframe = { type: 'character', id: character.id, trackKey, keyId: firstKey.id };
+    applyTimelineAt(start, true);
+    renderTimelineTrackFilter();
+    renderTimelineLayerList();
+    renderKeyframeEditor();
+    log(t('mouthLipsyncInserted'), 'ok');
+  }
+
+  async function decodeLoadedAudioBuffer() {
+    let blob = state.audioFile instanceof Blob ? state.audioFile : null;
+    if (!blob) blob = await blobFromObjectUrl(state.audioUrl);
+    if (!blob) return null;
+    const arrayBuffer = await blob.arrayBuffer();
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContextClass) throw new Error('AudioContext unsupported');
+    const audioContext = new AudioContextClass();
+    try {
+      const buffer = await audioContext.decodeAudioData(arrayBuffer.slice(0));
+      return buffer;
+    } finally {
+      try { await audioContext.close(); } catch (_) {}
+    }
+  }
+
+  function rmsAtTime(buffer, time, windowSeconds = 0.035) {
+    const sampleRate = buffer.sampleRate || 44100;
+    const center = Math.max(0, Math.min(buffer.length - 1, Math.round(time * sampleRate)));
+    const half = Math.max(16, Math.round(windowSeconds * sampleRate / 2));
+    const start = Math.max(0, center - half);
+    const end = Math.min(buffer.length, center + half);
+    if (end <= start) return 0;
+    let sum = 0;
+    let count = 0;
+    for (let channel = 0; channel < buffer.numberOfChannels; channel++) {
+      const data = buffer.getChannelData(channel);
+      for (let i = start; i < end; i++) {
+        const sample = data[i] || 0;
+        sum += sample * sample;
+        count += 1;
+      }
+    }
+    return count ? Math.sqrt(sum / count) : 0;
+  }
+
+  function percentile(values, ratio) {
+    const list = values.filter((value) => Number.isFinite(value)).sort((a, b) => a - b);
+    if (!list.length) return 0;
+    const index = Math.max(0, Math.min(list.length - 1, Math.floor((list.length - 1) * ratio)));
+    return list[index];
+  }
+
+  async function insertAudioMouthLipsyncKeyframes() {
+    const character = activeCharacter();
+    const param = selectedMouthLipsyncParam();
+    if (!character) { log(t('mouthLipsyncNoCharacter'), 'error'); return; }
+    if (!param) { log(t('mouthLipsyncNoParam'), 'error'); return; }
+    if (!state.audioFile && !state.audioUrl) { log(t('mouthLipsyncNoAudio'), 'error'); return; }
+    let buffer = null;
+    try { buffer = await decodeLoadedAudioBuffer(); }
+    catch (err) { console.error(err); }
+    if (!buffer) {
+      log(t('mouthLipsyncAudioDecodeFailed'), 'error');
+      return;
+    }
+
+    const segmentsData = currentMouthAudioSegments(buffer);
+    const audioDuration = Math.max(0.1, Number(buffer.duration) || Number(els.audioPlayer?.duration) || state.duration || 5);
+    const start = 0;
+    const end = roundTime(audioDuration);
+    const close = mouthCloseValue(param);
+    const max = selectedMouthMaxValue(param);
+    const { track, trackKey } = prepareMouthTrackRange(character, param, start, end);
+    let firstKey = null;
+    const insert = (time, value) => {
+      const key = upsertKeyframe(track, {
+        time: roundTime(Math.max(start, Math.min(end, time))),
+        kind: 'characterTrack',
+        trackKey,
+        value: clampParameterValue(param, value),
+        interpolation: 'linear'
+      });
+      if (!firstKey) firstKey = key;
+      return key;
+    };
+
+    insert(start, close);
+    for (const segment of segmentsData.segments || []) {
+      if (!segment.openness || segment.openness <= 0.015) continue;
+      const openValue = close + (max - close) * segment.openness;
+      insert(segment.start, close);
+      insert(segment.peakTime, openValue);
+      insert(segment.end, close);
+    }
+    insert(end, close);
+    normalizeKeyframes(track);
+    extendTimelineDurationIfNeeded(end);
+    state.mouthLipsyncPreviewBase = null;
+    character.manualValues.set(param.id, close);
+    param.value = close;
+    setCoreParameter(character, param, close);
+    if (firstKey) state.selectedKeyframe = { type: 'character', id: character.id, trackKey, keyId: firstKey.id };
+    applyTimelineAt(start, true);
+    renderTimelineTrackFilter();
+    renderTimelineLayerList();
+    renderKeyframeEditor();
+    drawMouthLipsyncPreview();
+    log(t('mouthLipsyncInserted'), 'ok');
+  }
+
   function characterTrackKeys(character) {
     const keys = CHARACTER_VIEW_TRACKS.map((item) => item.key);
     const paramKeys = (character?.parameters || []).map((param) => `param:${param.id}`);
@@ -2859,6 +3533,8 @@
     if (state.audioUrl) URL.revokeObjectURL(state.audioUrl);
     state.audioFile = file;
     state.audioUrl = URL.createObjectURL(file);
+    state.mouthLipsyncPreviewAnalysis = null;
+    state.mouthLipsyncAudioSegmentCache = null;
     els.audioPlayer.src = state.audioUrl;
     els.audioPlayer.load();
     els.audioPlayer.onloadedmetadata = () => {
@@ -4017,6 +4693,9 @@
     if (state.audioUrl) URL.revokeObjectURL(state.audioUrl);
     state.audioUrl = '';
     state.audioFile = null;
+    state.mouthLipsyncPreviewAnalysis = null;
+    state.mouthLipsyncAudioSegmentCache = null;
+    stopMouthLipsyncPreviewPlayback(false);
     if (els.audioPlayer) {
       els.audioPlayer.removeAttribute('src');
       els.audioPlayer.load();
@@ -4192,6 +4871,27 @@
     els.prevKeyframeButton?.addEventListener('click', () => jumpKeyframe(-1));
     els.nextKeyframeButton?.addEventListener('click', () => jumpKeyframe(1));
     els.hairSwayButton?.addEventListener('click', openHairSwayDialog);
+    els.mouthLipsyncButton?.addEventListener('click', openMouthLipsyncDialog);
+    els.mouthLipsyncDialog?.addEventListener('close', stopMouthLipsyncPreview);
+    els.mouthLipsyncParamSelect?.addEventListener('change', () => { updateMouthLipsyncMaxBounds(); startMouthLipsyncPreview(); });
+    els.mouthLipsyncModeAudio?.addEventListener('change', () => { updateMouthLipsyncModePanels(); startMouthLipsyncPreview(); });
+    els.mouthLipsyncModeCount?.addEventListener('change', () => { updateMouthLipsyncModePanels(); startMouthLipsyncPreview(); });
+    els.mouthLipMaxRange?.addEventListener('input', () => syncMouthPair(els.mouthLipMaxRange, els.mouthLipMaxNumber, Number(els.mouthLipMaxRange.min) || 0, Number(els.mouthLipMaxRange.max) || 1, Number(els.mouthLipMaxRange.max) || 1));
+    els.mouthLipMaxNumber?.addEventListener('input', () => syncMouthPair(els.mouthLipMaxNumber, els.mouthLipMaxRange, Number(els.mouthLipMaxNumber.min) || 0, Number(els.mouthLipMaxNumber.max) || 1, Number(els.mouthLipMaxNumber.max) || 1));
+    els.mouthLipAutoMaxCountRange?.addEventListener('input', () => { state.mouthLipsyncAudioSegmentCache = null; syncMouthPair(els.mouthLipAutoMaxCountRange, els.mouthLipAutoMaxCountNumber, 1, 300, 40); });
+    els.mouthLipAutoMaxCountNumber?.addEventListener('input', () => { state.mouthLipsyncAudioSegmentCache = null; syncMouthPair(els.mouthLipAutoMaxCountNumber, els.mouthLipAutoMaxCountRange, 1, 300, 40); });
+    els.mouthLipCountRange?.addEventListener('input', () => syncMouthPair(els.mouthLipCountRange, els.mouthLipCountNumber, 1, 80, 6));
+    els.mouthLipCountNumber?.addEventListener('input', () => syncMouthPair(els.mouthLipCountNumber, els.mouthLipCountRange, 1, 80, 6));
+    els.mouthLipDurationRange?.addEventListener('input', () => syncMouthPair(els.mouthLipDurationRange, els.mouthLipDurationNumber, 0.1, 60, 2));
+    els.mouthLipDurationNumber?.addEventListener('input', () => syncMouthPair(els.mouthLipDurationNumber, els.mouthLipDurationRange, 0.1, 60, 2));
+    els.mouthLipSensitivityRange?.addEventListener('input', () => { state.mouthLipsyncAudioSegmentCache = null; syncMouthPair(els.mouthLipSensitivityRange, els.mouthLipSensitivityNumber, 10, 200, 100); });
+    els.mouthLipSensitivityNumber?.addEventListener('input', () => { state.mouthLipsyncAudioSegmentCache = null; syncMouthPair(els.mouthLipSensitivityNumber, els.mouthLipSensitivityRange, 10, 200, 100); });
+    els.mouthLipThresholdRange?.addEventListener('input', () => { state.mouthLipsyncAudioSegmentCache = null; syncMouthPair(els.mouthLipThresholdRange, els.mouthLipThresholdNumber, 0, 80, 8); });
+    els.mouthLipThresholdNumber?.addEventListener('input', () => { state.mouthLipsyncAudioSegmentCache = null; syncMouthPair(els.mouthLipThresholdNumber, els.mouthLipThresholdRange, 0, 80, 8); });
+    els.mouthLipsyncPreviewPlayButton?.addEventListener('click', playMouthLipsyncPreview);
+    els.mouthLipsyncPreviewStopButton?.addEventListener('click', () => stopMouthLipsyncPreviewPlayback(false));
+    els.insertAudioLipsyncButton?.addEventListener('click', insertAudioMouthLipsyncKeyframes);
+    els.insertCountLipsyncButton?.addEventListener('click', insertCountMouthLipsyncKeyframes);
     els.loopKeysButton?.addEventListener('click', openLoopKeysDialog);
     els.hairSwayPreset?.addEventListener('change', () => applyHairSwayPreset(els.hairSwayPreset.value));
     els.hairSwayCountRange?.addEventListener('input', () => syncHairSwayPair(els.hairSwayCountRange, els.hairSwayCountNumber, 1, 12, 4));

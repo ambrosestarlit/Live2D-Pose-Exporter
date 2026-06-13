@@ -209,6 +209,7 @@
               <button id="prevKeyframeButton" type="button" data-i18n="prevKeyframe">前キー</button>
               <button id="nextKeyframeButton" type="button" data-i18n="nextKeyframe">次キー</button>
               <button id="hairSwayButton" type="button" data-i18n="hairSwayButton">髪揺れ自動入力</button>
+              <button id="mouthLipsyncButton" type="button" data-i18n="mouthLipsyncButton">口パク自動入力</button>
               <button id="loopKeysButton" type="button" data-i18n="loopKeysButton">ループ挿入</button>
               <label class="field timeline-inline-field duration-field"><span data-i18n="duration">長さ(秒)</span><input id="timelineDuration" type="number" min="0.1" max="600" step="0.1" value="5" /></label>
               <label class="field timeline-inline-field fps-field"><span data-i18n="fps">FPS</span><input id="timelineFps" type="number" min="1" max="60" step="1" value="24" /></label>
@@ -389,6 +390,105 @@
   </dialog>
 
 
+  <dialog id="mouthLipsyncDialog" class="help-dialog mouth-lipsync-dialog">
+    <form method="dialog">
+      <div class="dialog-head">
+        <h2 data-i18n="mouthLipsyncTitle">口パク自動入力</h2>
+        <button value="close" class="ghost" type="submit">×</button>
+      </div>
+      <div class="help-body mouth-lipsync-body">
+        <p class="hint" data-i18n="mouthLipsyncHint">口の開閉パラメーターに、音声解析または回数指定で自然な口パクキーフレームを挿入します。</p>
+        <label class="field stacked">
+          <span data-i18n="mouthLipsyncTarget">対象の口パラメーター</span>
+          <select id="mouthLipsyncParamSelect"></select>
+        </label>
+
+        <div class="mouth-mode-row" role="radiogroup" aria-label="Mouth lip sync mode">
+          <label class="mouth-mode-card">
+            <input id="mouthLipsyncModeAudio" type="radio" name="mouthLipsyncMode" value="audio" checked />
+            <span data-i18n="mouthLipsyncModeAudio">音声に合わせて自動入力</span>
+          </label>
+          <label class="mouth-mode-card">
+            <input id="mouthLipsyncModeCount" type="radio" name="mouthLipsyncMode" value="count" />
+            <span data-i18n="mouthLipsyncModeCount">回数指定で挿入</span>
+          </label>
+        </div>
+
+        <div class="mouth-preview-card">
+          <div class="mouth-preview-head">
+            <strong data-i18n="mouthLipsyncPreview">プレビュー</strong>
+            <span class="hint">model preview</span>
+          </div>
+          <canvas id="mouthLipsyncPreviewCanvas" width="520" height="320"></canvas>
+          <div class="mouth-preview-toolbar">
+            <button id="mouthLipsyncPreviewPlayButton" class="primary" type="button" data-i18n="mouthLipsyncPreviewPlay">再生</button>
+            <button id="mouthLipsyncPreviewStopButton" type="button" data-i18n="mouthLipsyncPreviewStop">停止</button>
+            <span class="mouth-preview-meta"><span data-i18n="mouthLipsyncPreviewTime">再生位置</span>: <strong id="mouthLipsyncPreviewTimeLabel">0.00 / 0.00s</strong></span>
+            <span class="mouth-preview-meta"><span data-i18n="mouthLipsyncPreviewValue">口の開き値</span>: <strong id="mouthLipsyncPreviewValueLabel">0.000</strong></span>
+            <span class="mouth-preview-meta"><span data-i18n="mouthLipsyncPreviewMax">最大設定値</span>: <strong id="mouthLipsyncPreviewMaxLabel">0.000</strong></span>
+          </div>
+        </div>
+
+        <div class="sway-control-grid mouth-control-grid mouth-common-panel">
+          <label class="field stacked">
+            <span data-i18n="mouthLipsyncMax">最大の開き値</span>
+            <input id="mouthLipMaxRange" type="range" min="0" max="1" step="0.001" value="1" />
+            <input id="mouthLipMaxNumber" type="number" min="0" max="1" step="0.001" value="1" />
+          </label>
+        </div>
+
+        <div id="mouthAutoControlPanel" class="sway-control-grid mouth-control-grid mouth-mode-panel">
+          <label class="field stacked">
+            <span data-i18n="mouthLipsyncAutoMaxCount">最大口パク数</span>
+            <input id="mouthLipAutoMaxCountRange" type="range" min="1" max="300" step="1" value="40" />
+            <input id="mouthLipAutoMaxCountNumber" type="number" min="1" max="300" step="1" value="40" />
+          </label>
+          <label class="field stacked">
+            <span data-i18n="mouthLipsyncSensitivity">音量感度</span>
+            <input id="mouthLipSensitivityRange" type="range" min="10" max="200" step="1" value="100" />
+            <input id="mouthLipSensitivityNumber" type="number" min="10" max="200" step="1" value="100" />
+          </label>
+          <label class="field stacked">
+            <span data-i18n="mouthLipsyncThreshold">無音判定</span>
+            <input id="mouthLipThresholdRange" type="range" min="0" max="80" step="1" value="8" />
+            <input id="mouthLipThresholdNumber" type="number" min="0" max="80" step="1" value="8" />
+          </label>
+        </div>
+
+        <div id="mouthCountControlPanel" class="sway-control-grid mouth-control-grid mouth-mode-panel">
+          <label class="field stacked">
+            <span data-i18n="mouthLipsyncCount">口パク回数</span>
+            <input id="mouthLipCountRange" type="range" min="1" max="80" step="1" value="6" />
+            <input id="mouthLipCountNumber" type="number" min="1" max="80" step="1" value="6" />
+          </label>
+          <label class="field stacked">
+            <span data-i18n="mouthLipsyncSeconds">挿入秒数</span>
+            <input id="mouthLipDurationRange" type="range" min="0.1" max="60" step="0.1" value="2" />
+            <input id="mouthLipDurationNumber" type="number" min="0.1" max="60" step="0.1" value="2" />
+          </label>
+        </div>
+
+        <div class="mouth-insert-grid">
+          <section id="mouthAudioInsertCard" class="mouth-insert-card mouth-mode-panel">
+            <h3 data-i18n="mouthLipsyncModeAudio">音声に合わせて自動入力</h3>
+            <p class="hint" data-i18n="mouthLipsyncAudioHint">読み込んだ音声全体を解析し、音量に合わせて口の開き値を変化させます。</p>
+            <button id="insertAudioLipsyncButton" class="primary" type="button" data-i18n="insertAudioLipsync">音声から挿入</button>
+          </section>
+          <section id="mouthCountInsertCard" class="mouth-insert-card mouth-mode-panel">
+            <h3 data-i18n="mouthLipsyncModeCount">回数指定で挿入</h3>
+            <p class="hint" data-i18n="mouthLipsyncCountHint">現在秒から、閉じ口→開ける→閉じるを1回として指定回数ぶん挿入します。開き量は毎回少しランダムに変化します。</p>
+            <button id="insertCountLipsyncButton" class="primary" type="button" data-i18n="insertCountLipsync">回数指定で挿入</button>
+          </section>
+        </div>
+
+        <div class="dialog-actions">
+          <button type="submit" data-i18n="close">閉じる</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+
   <dialog id="loopKeysDialog" class="help-dialog loop-keys-dialog">
     <form method="dialog">
       <div class="dialog-head">
@@ -518,6 +618,18 @@
               <li>対象パラメーターを選び、<strong>挿入</strong> を押すと、複数のキーフレームが自動入力されます。</li>
             </ol>
             <p class="hint">髪候補は <code>Hair</code>、<code>髪</code>、<code>sway</code>、<code>physics</code> などの名前を含むパラメーターから自動検出します。モデルによって名称が違うため、必要に応じて手動で対象を選んでください。</p>
+          </div>
+
+          <div class="manual-section">
+            <h3>9. 口パク自動入力</h3>
+            <ol>
+              <li>音声を使う場合は、先に <strong>音声を読み込み</strong> で音声ファイルを読み込みます。</li>
+              <li><strong>口パク自動入力</strong> を押します。</li>
+              <li>対象の口パラメーターを確認し、最大の開き値を調整します。スライダー変更中はポップアップ内プレビューとモデル側の口がリアルタイムで動きます。</li>
+              <li><strong>音声から挿入</strong> は、音声全体の音量を解析して口の開き値を自動で変化させます。</li>
+              <li><strong>回数指定で挿入</strong> は、現在秒から「閉じ口→開ける→閉じる」を1回として指定回数ぶん挿入します。開き量は毎回少しランダムに変わります。</li>
+            </ol>
+            <p class="hint">音声解析では、音量感度を上げると小さい声にも反応しやすくなり、無音判定を上げると小さいノイズでは口が開きにくくなります。</p>
           </div>
 
           <div class="manual-section">
